@@ -1,26 +1,1219 @@
 
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Marco Demange - Especialista em Cirurgia do Joelho</title>
-    <meta name="description" content="Dr. Marco Demange é especialista em cirurgia do joelho, cirurgia robótica e preservação articular. Graduado pela Unicamp, professor da USP com pós-doutorado em Harvard." />
-    <meta name="author" content="Dr. Marco Demange" />
-    <meta name="keywords" content="cirurgia joelho, cirurgia robótica, ortopedia, Dr. Marco Demange, prótese joelho, artrose, lesão ligamentar" />
+    <meta name="description" content="Dr. Marco Demange é especialista em cirurgia do joelho, cirurgia robótica e preservação articular. Graduado pela Unicamp, professor da USP com pós-doutorado em Harvard.">
+    <meta name="author" content="Dr. Marco Demange">
+    <meta name="keywords" content="cirurgia joelho, cirurgia robótica, ortopedia, Dr. Marco Demange, prótese joelho, artrose, lesão ligamentar">
+    
+    <meta property="og:title" content="Dr. Marco Demange - Especialista em Cirurgia do Joelho">
+    <meta property="og:description" content="Especialista em cirurgia robótica e preservação articular. Referência nacional e internacional em tratamentos do joelho.">
+    <meta property="og:type" content="website">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <meta property="og:title" content="Dr. Marco Demange - Especialista em Cirurgia do Joelho" />
-    <meta property="og:description" content="Especialista em cirurgia robótica e preservação articular. Referência nacional e internacional em tratamentos do joelho." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #374151;
+            scroll-behavior: smooth;
+        }
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(229, 231, 235, 0.2);
+            transition: all 0.3s ease;
+            height: 80px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: #111827;
+            text-decoration: none;
+            letter-spacing: -0.025em;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #374151;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #111827;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: #374151;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i.ibb.co/F49SN5b8/DSC02425-no-edit.jpg');
+            background-size: cover;
+            background-position: left center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 5rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            letter-spacing: -0.025em;
+        }
+
+        .hero .subtitle {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 300;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+        }
+
+        .hero .description {
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            font-weight: 300;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #111827;
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(17, 24, 39, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background: #1f2937;
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(17, 24, 39, 0.4);
+        }
+
+        /* Sections */
+        section {
+            padding: 6rem 0;
+        }
+
+        .section-bg {
+            background: #f9fafb;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 1rem;
+        }
+
+        .section-divider {
+            width: 100px;
+            height: 4px;
+            background: #111827;
+            margin: 0 auto 2rem;
+            border-radius: 2px;
+        }
+
+        .section-description {
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            color: #6b7280;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .about-text {
+            background: white;
+            padding: 3rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+            font-size: 1.2rem;
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        .highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+
+        .highlight-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .highlight-icon {
+            width: 60px;
+            height: 60px;
+            background: #b7bfce;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight-card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 0.75rem;
+        }
+
+        .highlight-card p {
+            color: #6b7280;
+        }
+
+        /* Treatments Section */
+        .treatments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .treatment-card {
+            background: #f9fafb;
+            padding: 2.5rem 2rem;
+            border-radius: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .treatment-card:hover {
+            background: white;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .treatment-card h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 1rem;
+        }
+
+        .treatment-card p {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        /* Technology Section */
+        .tech-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .tech-main {
+            background: white;
+            padding: 4rem;
+            border-radius: 2rem;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .tech-icon {
+            width: 100px;
+            height: 100px;
+            background: #b7bfce;
+            border-radius: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+        }
+
+        .tech-main h3 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .tech-feature {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 1rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .tech-feature-icon {
+            width: 80px;
+            height: 80px;
+            background: #b7bfce;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+
+        /* Testimonials Section */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .quote-icon {
+            width: 40px;
+            height: 40px;
+            background: #111827;
+            border-radius: 8px;
+            margin-right: 1rem;
+        }
+
+        .stars {
+            display: flex;
+            gap: 3px;
+        }
+
+        .star {
+            width: 20px;
+            height: 20px;
+            background: #fbbf24;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #374151;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #111827;
+            border-top: 1px solid #e5e7eb;
+            padding-top: 1rem;
+        }
+
+        /* Contact Section */
+        .contact-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-card h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: #b7bfce;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .contact-item h4 {
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-item p {
+            color: #6b7280;
+            line-height: 1.5;
+        }
+
+        .contact-item a {
+            color: #111827;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: #374151;
+        }
+
+        .hospitals-grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .hospital-item {
+            background: #f9fafb;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .hospital-item p {
+            color: #374151;
+            font-weight: 500;
+        }
+
+        /* Form */
+        .contact-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 4rem;
+        }
+
+        .contact-form h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem 1.25rem;
+            border: 1px solid #d1d5db;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #111827;
+            box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-submit {
+            width: 100%;
+            background: #111827;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .form-submit:hover {
+            background: #1f2937;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(17, 24, 39, 0.2);
+        }
+
+        /* Map */
+        .map-container {
+            background: white;
+            padding: 3rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .map-container h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .map-wrapper {
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 400px;
+            border: 0;
+        }
+
+        /* Footer */
+        footer {
+            background: #111827;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-content h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer-content p {
+            color: #9ca3af;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-links a {
+            width: 50px;
+            height: 50px;
+            background: #374151;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: #4b5563;
+            transform: translateY(-2px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 2rem;
+            color: #9ca3af;
+            font-size: 0.9rem;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .hero {
+                background-attachment: scroll;
+                padding: 0 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.5rem;
+            }
+
+            .hero .description {
+                font-size: 1.1rem;
+            }
+
+            section {
+                padding: 4rem 0;
+            }
+
+            .about-text {
+                padding: 2rem;
+            }
+
+            .highlights {
+                grid-template-columns: 1fr;
+            }
+
+            .treatments-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tech-main {
+                padding: 2.5rem;
+            }
+
+            .tech-features {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact-card {
+                padding: 2rem;
+            }
+
+            .contact-form {
+                padding: 2rem;
+            }
+
+            .map-container {
+                padding: 2rem;
+            }
+
+            .map-wrapper iframe {
+                height: 300px;
+            }
+
+            .whatsapp-button {
+                bottom: 1rem;
+                right: 1rem;
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 0.75rem;
+            }
+
+            .treatments-grid,
+            .highlights {
+                grid-template-columns: 1fr;
+            }
+
+            .treatment-card {
+                min-width: auto;
+            }
+        }
+
+        /* Icons using CSS shapes */
+        .icon-graduation::before {
+            content: "🎓";
+            font-size: 24px;
+        }
+
+        .icon-users::before {
+            content: "👥";
+            font-size: 24px;
+        }
+
+        .icon-book::before {
+            content: "📖";
+            font-size: 24px;
+        }
+
+        .icon-award::before {
+            content: "🏆";
+            font-size: 24px;
+        }
+
+        .icon-cpu::before {
+            content: "💻";
+            font-size: 32px;
+        }
+
+        .icon-target::before {
+            content: "🎯";
+            font-size: 24px;
+        }
+
+        .icon-zap::before {
+            content: "⚡";
+            font-size: 24px;
+        }
+
+        .icon-trending::before {
+            content: "📈";
+            font-size: 24px;
+        }
+
+        .icon-quote::before {
+            content: "💬";
+            color: white;
+            font-size: 20px;
+        }
+
+        .icon-map::before {
+            content: "📍";
+            font-size: 20px;
+        }
+
+        .icon-message::before {
+            content: "💬";
+            font-size: 20px;
+        }
+
+        .icon-mail::before {
+            content: "✉️";
+            font-size: 20px;
+        }
+
+        .icon-instagram::before {
+            content: "📷";
+            font-size: 20px;
+        }
+
+        .icon-facebook::before {
+            content: "📘";
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">Dr. Marco Demange</a>
+                <nav>
+                    <ul>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#tratamentos">Tratamentos</a></li>
+                        <li><a href="#tecnologia">Tecnologia</a></li>
+                        <li><a href="#depoimentos">Depoimentos</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Dr. Marco Demange</h1>
+            <p class="subtitle">Cuidando do seu joelho com excelência e precisão</p>
+            <p class="description">Especialista em cirurgia robótica e preservação articular</p>
+            <a href="#contato" class="cta-button">Agende sua consulta</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="section-bg">
+        <div class="container">
+            <div class="section-title">
+                <h2>Marco Demange</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Dr. Marco Demange é especialista em cirurgia do joelho, graduado pela Unicamp, professor da USP e pós-doutorado por Harvard e pelo Hospital for Special Surgery (EUA). Atua com foco em cirurgia robótica e preservação articular, sendo referência nacional e internacional.</p>
+                </div>
+
+                <div class="highlights">
+                    <div class="highlight-card">
+                        <div class="highlight-icon icon-graduation"></div>
+                        <h3>Pós-doutorado em Harvard e HSS – EUA</h3>
+                        <p>Formação internacional de excelência</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon icon-users"></div>
+                        <h3>Chefe do Grupo de Joelho na USP</h3>
+                        <p>Liderança em ensino e pesquisa</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon icon-book"></div>
+                        <h3>Mais de 60 publicações científicas</h3>
+                        <p>Contribuição para o avanço da medicina</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon icon-award"></div>
+                        <h3>Membro SBOT, SBCJ, ICRS, AAOS</h3>
+                        <p>Reconhecimento em sociedades médicas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatments Section -->
+    <section id="tratamentos">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tratamentos</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">Soluções avançadas e personalizadas para cada tipo de lesão ou problema no joelho</p>
+            </div>
+
+            <div class="treatments-grid">
+                <div class="treatment-card">
+                    <h3>Artrose do Joelho</h3>
+                    <p>Desgaste da cartilagem que causa dor e limitação. Tratamento clínico ou cirúrgico, conforme o grau da lesão.</p>
+                </div>
+                <div class="treatment-card">
+                    <h3>Lesões Ligamentares</h3>
+                    <p>Como LCA, que afetam a estabilidade. Tratamento moderno com foco no retorno funcional.</p>
+                </div>
+                <div class="treatment-card">
+                    <h3>Prótese de Joelho</h3>
+                    <p>Indicado em artrose avançada. Restaura mobilidade e alivia a dor com alta precisão.</p>
+                </div>
+                <div class="treatment-card">
+                    <h3>Cirurgia Robótica</h3>
+                    <p>Técnica de ponta para colocação de prótese com máxima precisão e recuperação rápida.</p>
+                </div>
+                <div class="treatment-card">
+                    <h3>Técnicas de Preservação</h3>
+                    <p>Alternativas à prótese como realinhamento, transplante de cartilagem e outras técnicas biológicas.</p>
+                </div>
+                <div class="treatment-card">
+                    <h3>Condromalácia Patelar</h3>
+                    <p>Desgaste da cartilagem atrás da patela. Tratamento clínico e/ou cirúrgico com foco na função e dor.</p>
+                </div>
+                <div class="treatment-card">
+                    <h3>Lesões Meniscais</h3>
+                    <p>Rompimentos nos meniscos causam dor e bloqueio no joelho. Tratamento clínico ou cirúrgico, buscando preservar a função.</p>
+                </div>
+                <div class="treatment-card">
+                    <h3>Instabilidade Patelar</h3>
+                    <p>Desalinhamento da patela que causa dor e sensação de falseio. Corrigido com fisioterapia ou cirurgia de realinhamento.</p>
+                </div>
+                <div class="treatment-card">
+                    <h3>Lesões na Cartilagem</h3>
+                    <p>Áreas danificadas da cartilagem articular. Tratadas com técnicas modernas de regeneração e reparo cirúrgico localizado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="tecnologia" class="section-bg">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tecnologia Avançada</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">Utilizamos as mais modernas tecnologias em cirurgia robótica e técnicas minimamente invasivas para garantir precisão, segurança e recuperação acelerada</p>
+            </div>
+
+            <div class="tech-content">
+                <div class="tech-main">
+                    <div class="tech-icon icon-cpu"></div>
+                    <h3>Cirurgia Robótica</h3>
+                    <p>A cirurgia robótica representa o futuro da medicina ortopédica. Com esta tecnologia de ponta, conseguimos realizar procedimentos com precisão milimétrica, reduzindo significativamente o tempo de recuperação e melhorando os resultados para nossos pacientes.</p>
+                </div>
+
+                <div class="tech-features">
+                    <div class="tech-feature">
+                        <div class="tech-feature-icon icon-target"></div>
+                        <h4>Precisão Cirúrgica</h4>
+                        <p>Tecnologia robótica que oferece precisão milimétrica em cada procedimento</p>
+                    </div>
+                    <div class="tech-feature">
+                        <div class="tech-feature-icon icon-zap"></div>
+                        <h4>Recuperação Rápida</h4>
+                        <p>Técnicas minimamente invasivas que reduzem o tempo de recuperação</p>
+                    </div>
+                    <div class="tech-feature">
+                        <div class="tech-feature-icon icon-trending"></div>
+                        <h4>Futuro da Medicina</h4>
+                        <p>Abordagens regenerativas e tecnologias de ponta em constante evolução</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="depoimentos">
+        <div class="container">
+            <div class="section-title">
+                <h2>Depoimentos</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">Veja o que nossos pacientes dizem sobre os tratamentos e resultados</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="quote-icon icon-quote"></div>
+                        <div class="stars">
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Dr. Marco Demange mudou minha vida. Após anos sofrendo com dores no joelho, a cirurgia robótica que ele realizou me devolveu a mobilidade. Profissional excepcional e muito humano."</p>
+                    <div class="testimonial-author">Maria S.</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="quote-icon icon-quote"></div>
+                        <div class="stars">
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Excelente médico! A precisão da cirurgia robótica superou todas as minhas expectativas. Recuperação rápida e resultado perfeito. Recomendo sem hesitar."</p>
+                    <div class="testimonial-author">Carlos R.</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="quote-icon icon-quote"></div>
+                        <div class="stars">
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                            <div class="star"></div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Profissional de altíssimo nível. Dr. Marco explicou todo o procedimento com clareza e cuidou de mim com muita atenção. Hoje posso voltar a praticar esportes sem dor."</p>
+                    <div class="testimonial-author">Ana L.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="section-bg">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contato</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">Entre em contato conosco para agendar sua consulta ou esclarecer dúvidas</p>
+            </div>
+
+            <div class="contact-content">
+                <!-- Contact Info Grid -->
+                <div class="contact-info-grid">
+                    <!-- Contact Information -->
+                    <div class="contact-card">
+                        <h3>Informações de Contato</h3>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon icon-map"></div>
+                            <div>
+                                <h4>Endereço</h4>
+                                <p>Rua Mato Grosso, 306 – 12º andar<br>
+                                Higienópolis – São Paulo – SP<br>
+                                CEP 01239‑040</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon icon-message"></div>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p>(11) 95055-5000</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon icon-mail"></div>
+                            <div>
+                                <h4>E-mail</h4>
+                                <a href="mailto:contato@joelho.com">contato@joelho.com</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hospitals -->
+                    <div class="contact-card">
+                        <h3>Hospitais Credenciados</h3>
+                        <div class="hospitals-grid">
+                            <div class="hospital-item">
+                                <p>Hospital Vila Nova Star</p>
+                            </div>
+                            <div class="hospital-item">
+                                <p>Hospital São Luiz</p>
+                            </div>
+                            <div class="hospital-item">
+                                <p>Hospital Albert Einstein</p>
+                            </div>
+                            <div class="hospital-item">
+                                <p>Hospital Moriah</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h3>Envie sua Mensagem</h3>
+                    
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" name="name" required placeholder="Seu nome completo">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" required placeholder="Descreva sua dúvida ou necessidade..."></textarea>
+                        </div>
+
+                        <button type="submit" class="form-submit">Enviar</button>
+                    </form>
+                </div>
+
+                <!-- Google Maps -->
+                <div class="map-container">
+                    <h3>Localização</h3>
+                    <div class="map-wrapper">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.157844284899!2d-46.656570584455444!3d-23.562834267401658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c29eb63d47%3A0x322f11ceafc3c75a!2sR.%20Mato%20Grosso%2C%20306%20-%2012%C2%BA%20andar%20-%20Higien%C3%B3polis%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001239-040!5e0!3m2!1spt-BR!2sbr!4v1719253288762!5m2!1spt-BR!2sbr" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>Dr. Marco Demange</h3>
+                <p>Especialista em cirurgia do joelho, cirurgia robótica e preservação articular</p>
+
+                <div class="social-links">
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="icon-instagram"></a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="icon-facebook"></a>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>© 2025 Dr. Marco Demange. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/5511950555000" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
+        <span style="color: white; font-size: 24px;">💬</span>
+    </a>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = targetElement.offsetTop - headerHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+            this.reset();
+        });
+
+        // Mobile menu toggle (basic functionality)
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            const nav = document.querySelector('nav ul');
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        });
+    </script>
+</body>
 </html>
