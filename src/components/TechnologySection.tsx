@@ -22,28 +22,28 @@ const TechnologySection = () => {
   ];
 
   return (
-    <section id="tecnologia" className="py-24 bg-gradient-to-br from-blue-50 to-indigo-100">
+    <section id="tecnologia" className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Tecnologia Avançada
           </h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto mb-10 rounded-full"></div>
-          <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <div className="w-20 h-1 bg-blue-600 mx-auto mb-8"></div>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Utilizamos as mais modernas tecnologias em cirurgia robótica e técnicas minimamente invasivas
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto">
-          <div className="bg-white rounded-3xl shadow-2xl p-10 md:p-16 mb-16">
+        <div className="max-w-5xl mx-auto">
+          <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 mb-12">
             <div className="text-center mb-8">
-              <div className="bg-blue-100 w-24 h-24 rounded-2xl flex items-center justify-center mx-auto mb-8">
-                <Cpu className="w-12 h-12 text-blue-600" />
+              <div className="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Cpu className="w-10 h-10 text-blue-600" />
               </div>
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">
                 Cirurgia Robótica
               </h3>
-              <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
+              <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
                 A cirurgia robótica representa o futuro da medicina ortopédica. Com esta tecnologia 
                 de ponta, conseguimos realizar procedimentos com precisão milimétrica, reduzindo 
                 significativamente o tempo de recuperação e melhorando os resultados para nossos pacientes.
@@ -53,18 +53,32 @@ const TechnologySection = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                <div className="bg-blue-100 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <feature.icon className="w-10 h-10 text-blue-600" />
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <feature.icon className="w-8 h-8 text-blue-600" />
                 </div>
-                <h4 className="text-xl font-semibold text-gray-900 mb-4">
+                <h4 className="text-xl font-semibold text-gray-900 mb-3">
                   {feature.title}
                 </h4>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600">
                   {feature.description}
                 </p>
               </div>
             ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-gray-600 mb-4">
+              Explorando também abordagens regenerativas e tecnologias emergentes
+            </p>
+            <a 
+              href="https://regenerativa.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200"
+            >
+              Saiba mais sobre medicina regenerativa
+            </a>
           </div>
         </div>
       </div>
