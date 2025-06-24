@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -14,7 +15,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -43,12 +44,12 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            background: rgba(255, 255, 255, 0.90);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border-bottom: 1px solid rgba(229, 231, 235, 0.3);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(229, 231, 235, 0.2);
             transition: all 0.3s ease;
-            height: 90px;
+            height: 80px;
         }
 
         .header-content {
@@ -56,12 +57,11 @@
             justify-content: space-between;
             align-items: center;
             height: 100%;
-            padding: 0 1rem;
         }
 
         .logo {
-            font-size: 1.6rem;
-            font-weight: 800;
+            font-size: 1.5rem;
+            font-weight: 300;
             color: #111827;
             text-decoration: none;
             letter-spacing: -0.025em;
@@ -70,7 +70,7 @@
         nav ul {
             display: flex;
             list-style: none;
-            gap: 2.5rem;
+            gap: 2rem;
         }
 
         nav a {
@@ -79,7 +79,6 @@
             font-weight: 500;
             font-size: 1rem;
             transition: color 0.3s ease;
-            padding: 0.5rem 0;
         }
 
         nav a:hover {
@@ -103,25 +102,20 @@
         /* Hero Section */
         .hero {
             min-height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/hero-dr-marco.jpg');
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i.ibb.co/F49SN5b8/DSC02425-no-edit.jpg');
             background-size: cover;
             background-position: left center;
             background-attachment: fixed;
             display: flex;
             align-items: center;
+            justify-content: center;
             color: white;
+            text-align: center;
         }
 
         .hero-content {
-            width: 100%;
-            display: flex;
-            justify-content: flex-end;
+            max-width: 800px;
             padding: 0 2rem;
-        }
-
-        .hero-text {
-            max-width: 600px;
-            text-align: right;
         }
 
         .hero h1 {
@@ -445,7 +439,7 @@
         .contact-icon {
             width: 50px;
             height: 50px;
-            background: #111827;
+            background: #b7bfce;
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -690,14 +684,6 @@
                 padding: 0 1rem;
             }
 
-            .hero-content {
-                justify-content: center;
-            }
-
-            .hero-text {
-                text-align: center;
-            }
-
             .hero h1 {
                 font-size: 2.5rem;
             }
@@ -720,10 +706,6 @@
 
             .highlights {
                 grid-template-columns: 1fr;
-            }
-
-            .highlight-icon {
-                margin: 0 auto 1.5rem;
             }
 
             .treatments-grid {
@@ -790,73 +772,62 @@
         .icon-graduation::before {
             content: "🎓";
             font-size: 24px;
-            color: #111827;
         }
 
         .icon-users::before {
             content: "👥";
             font-size: 24px;
-            color: #111827;
         }
 
         .icon-book::before {
             content: "📖";
             font-size: 24px;
-            color: #111827;
         }
 
         .icon-award::before {
             content: "🏆";
             font-size: 24px;
-            color: #111827;
         }
 
         .icon-cpu::before {
             content: "💻";
             font-size: 32px;
-            color: #111827;
         }
 
         .icon-target::before {
             content: "🎯";
             font-size: 24px;
-            color: #111827;
         }
 
         .icon-zap::before {
             content: "⚡";
             font-size: 24px;
-            color: #111827;
         }
 
         .icon-trending::before {
             content: "📈";
             font-size: 24px;
-            color: #111827;
         }
 
         .icon-quote::before {
             content: "💬";
-            color: #b7bfce;
+            color: white;
             font-size: 20px;
         }
 
         .icon-map::before {
             content: "📍";
             font-size: 20px;
-            color: #b7bfce;
         }
 
         .icon-message::before {
             content: "💬";
             font-size: 20px;
-            color: #b7bfce;
         }
 
         .icon-mail::before {
             content: "✉️";
             font-size: 20px;
-            color: #b7bfce;
         }
 
         .icon-instagram::before {
@@ -896,15 +867,11 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Dr. Marco Demange</h1>
-                    <p class="subtitle">Cuidando do seu joelho com excelência e precisão</p>
-                    <p class="description">Especialista em cirurgia robótica e preservação articular</p>
-                    <a href="#contato" class="cta-button">Agende sua consulta</a>
-                </div>
-            </div>
+        <div class="hero-content">
+            <h1>Dr. Marco Demange</h1>
+            <p class="subtitle">Cuidando do seu joelho com excelência e precisão</p>
+            <p class="description">Especialista em cirurgia robótica e preservação articular</p>
+            <a href="#contato" class="cta-button">Agende sua consulta</a>
         </div>
     </section>
 
@@ -1201,7 +1168,7 @@
                 <p>Especialista em cirurgia do joelho, cirurgia robótica e preservação articular</p>
 
                 <div class="social-links">
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" data-feather="instagram"></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="icon-instagram"></a>
                     <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="icon-facebook"></a>
                 </div>
 
@@ -1248,9 +1215,5 @@
             nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
         });
     </script>
-
-<script src="https://unpkg.com/feather-icons"></script>
-<script>feather.replace()</script>
-
 </body>
 </html>
