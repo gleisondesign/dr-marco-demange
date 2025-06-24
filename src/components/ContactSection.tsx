@@ -1,12 +1,11 @@
 
 import React, { useState } from 'react';
-import { MapPin, Phone, MessageCircle, Mail, Globe, Building } from 'lucide-react';
+import { MapPin, MessageCircle, Mail, Building } from 'lucide-react';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: '',
     message: ''
   });
 
@@ -20,10 +19,9 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Aqui você pode implementar o envio do formulário
     console.log('Formulário enviado:', formData);
     alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
-    setFormData({ name: '', email: '', phone: '', message: '' });
+    setFormData({ name: '', email: '', message: '' });
   };
 
   const hospitals = [
@@ -34,33 +32,35 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contato" className="py-20 bg-white">
+    <section id="contato" className="py-24 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Contato
           </h2>
-          <div className="w-20 h-1 bg-blue-600 mx-auto mb-8"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <div className="w-24 h-1 bg-blue-600 mx-auto mb-10 rounded-full"></div>
+          <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Entre em contato conosco para agendar sua consulta ou esclarecer dúvidas
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 mb-16">
             {/* Informações de Contato */}
             <div className="space-y-8">
-              <div className="bg-gray-50 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              <div className="bg-white rounded-3xl shadow-xl p-10">
+                <h3 className="text-2xl font-bold text-gray-900 mb-8">
                   Informações de Contato
                 </h3>
                 
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <MapPin className="w-6 h-6 text-blue-600 mt-1" />
+                <div className="space-y-8">
+                  <div className="flex items-start space-x-6">
+                    <div className="bg-blue-100 p-3 rounded-xl">
+                      <MapPin className="w-6 h-6 text-blue-600" />
+                    </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">Endereço</h4>
-                      <p className="text-gray-600">
+                      <h4 className="font-semibold text-gray-900 mb-2 text-lg">Endereço</h4>
+                      <p className="text-gray-600 leading-relaxed">
                         Rua Mato Grosso, 306 – 12º andar<br />
                         Higienópolis – São Paulo – SP<br />
                         CEP 01239‑040
@@ -68,41 +68,27 @@ const ContactSection = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-start space-x-4">
-                    <Phone className="w-6 h-6 text-blue-600 mt-1" />
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">Telefone</h4>
-                      <p className="text-gray-600">(11) 5055-5000</p>
+                  <div className="flex items-start space-x-6">
+                    <div className="bg-blue-100 p-3 rounded-xl">
+                      <MessageCircle className="w-6 h-6 text-blue-600" />
                     </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <MessageCircle className="w-6 h-6 text-blue-600 mt-1" />
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">WhatsApp</h4>
+                      <h4 className="font-semibold text-gray-900 mb-2 text-lg">WhatsApp</h4>
                       <p className="text-gray-600">(11) 95055-5000</p>
                     </div>
                   </div>
 
-                  <div className="flex items-start space-x-4">
-                    <Mail className="w-6 h-6 text-blue-600 mt-1" />
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">E-mail</h4>
-                      <p className="text-gray-600">contato@joelho.com</p>
+                  <div className="flex items-start space-x-6">
+                    <div className="bg-blue-100 p-3 rounded-xl">
+                      <Mail className="w-6 h-6 text-blue-600" />
                     </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <Globe className="w-6 h-6 text-blue-600 mt-1" />
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">Website</h4>
+                      <h4 className="font-semibold text-gray-900 mb-2 text-lg">E-mail</h4>
                       <a 
-                        href="https://joelho.com" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
+                        href="mailto:contato@joelho.com"
                         className="text-blue-600 hover:text-blue-800 transition-colors"
                       >
-                        https://joelho.com
+                        contato@joelho.com
                       </a>
                     </div>
                   </div>
@@ -110,14 +96,16 @@ const ContactSection = () => {
               </div>
 
               {/* Hospitais */}
-              <div className="bg-blue-50 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                  <Building className="w-6 h-6 text-blue-600 mr-3" />
+              <div className="bg-white rounded-3xl shadow-xl p-10">
+                <h3 className="text-2xl font-bold text-gray-900 mb-8 flex items-center">
+                  <div className="bg-blue-100 p-3 rounded-xl mr-4">
+                    <Building className="w-6 h-6 text-blue-600" />
+                  </div>
                   Hospitais Credenciados
                 </h3>
-                <div className="grid grid-cols-1 gap-3">
+                <div className="grid grid-cols-1 gap-4">
                   {hospitals.map((hospital, index) => (
-                    <div key={index} className="bg-white rounded-lg p-3 shadow-sm">
+                    <div key={index} className="bg-gray-50 rounded-xl p-4 border border-gray-100">
                       <p className="text-gray-700 font-medium">{hospital}</p>
                     </div>
                   ))}
@@ -126,14 +114,14 @@ const ContactSection = () => {
             </div>
 
             {/* Formulário */}
-            <div className="bg-gray-50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+            <div className="bg-white rounded-3xl shadow-xl p-10">
+              <h3 className="text-2xl font-bold text-gray-900 mb-8">
                 Envie sua Mensagem
               </h3>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-8">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-3">
                     Nome Completo
                   </label>
                   <input
@@ -143,13 +131,13 @@ const ContactSection = () => {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                    className="w-full px-5 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all duration-200"
                     placeholder="Seu nome completo"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-3">
                     E-mail
                   </label>
                   <input
@@ -159,58 +147,53 @@ const ContactSection = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                    className="w-full px-5 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all duration-200"
                     placeholder="seu@email.com"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                    Telefone
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
-                    placeholder="(11) 99999-9999"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-3">
                     Mensagem
                   </label>
                   <textarea
                     id="message"
                     name="message"
-                    rows={4}
+                    rows={5}
                     value={formData.message}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                    className="w-full px-5 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all duration-200 resize-none"
                     placeholder="Descreva sua dúvida ou necessidade..."
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-200"
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 px-8 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
                 >
-                  Enviar Mensagem
+                  Enviar
                 </button>
               </form>
             </div>
           </div>
 
           {/* Google Maps */}
-          <div className="mt-12">
-            <div className="bg-gray-200 rounded-2xl h-64 flex items-center justify-center">
-              <p className="text-gray-600">
-                [Google Maps será integrado aqui - Rua Mato Grosso, 306, Higienópolis, São Paulo]
-              </p>
+          <div className="bg-white rounded-3xl shadow-xl p-10">
+            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+              Localização
+            </h3>
+            <div className="bg-gray-100 rounded-2xl h-80 flex items-center justify-center">
+              <div className="text-center">
+                <MapPin className="w-12 h-12 text-gray-400 mx-auto mb-4" />
+                <p className="text-gray-600 text-lg">
+                  Rua Mato Grosso, 306 – 12º andar<br />
+                  Higienópolis – São Paulo – SP
+                </p>
+                <p className="text-gray-500 text-sm mt-2">
+                  [Mapa interativo será integrado]
+                </p>
+              </div>
             </div>
           </div>
         </div>
