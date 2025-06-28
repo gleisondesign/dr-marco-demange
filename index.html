@@ -44,12 +44,12 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(229, 231, 235, 0.2);
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(229, 231, 235, 0.3);
             transition: all 0.3s ease;
-            height: 80px;
+            height: 90px;
         }
 
         .header-content {
@@ -57,17 +57,14 @@
             justify-content: space-between;
             align-items: center;
             height: 100%;
-            margin-top: 20px;
-
         }
 
         .logo {
             font-size: 1.5rem;
-            font-weight: 300;
+            font-weight: 700;
             color: #111827;
             text-decoration: none;
             letter-spacing: -0.025em;
-            font-weight: bold;
         }
 
         nav ul {
@@ -92,6 +89,7 @@
             display: none;
             flex-direction: column;
             cursor: pointer;
+            padding: 5px;
         }
 
         .mobile-menu span {
@@ -100,47 +98,83 @@
             background: #374151;
             margin: 3px 0;
             transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        .mobile-nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(229, 231, 235, 0.3);
+            padding: 1rem 0;
+        }
+
+        .mobile-nav.active {
+            display: block;
+        }
+
+        .mobile-nav ul {
+            flex-direction: column;
+            gap: 1rem;
+            padding: 0 1rem;
         }
 
         /* Hero Section */
         .hero {
             min-height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i.ibb.co/F49SN5b8/DSC02425-no-edit.jpg');
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i.ibb.co/gDqR3SK/DSC02425-no-edit.jpg');
             background-size: cover;
-            background-position: left center;
+            background-position: center;
             background-attachment: fixed;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            text-align: center;
+            position: relative;
         }
 
         .hero-content {
-            max-width: 800px;
+            width: 100%;
+            max-width: 1200px;
             padding: 0 2rem;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .hero-text {
+            max-width: 600px;
+            text-align: right;
+            margin-right: 2rem;
         }
 
         .hero h1 {
-            font-size: clamp(3rem, 8vw, 5rem);
+            font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 700;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             line-height: 1.1;
             letter-spacing: -0.025em;
         }
 
         .hero .subtitle {
-            font-size: clamp(1.5rem, 4vw, 2.5rem);
-            font-weight: 300;
-            margin-bottom: 1rem;
+            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+            font-weight: 400;
+            margin-bottom: 0.5rem;
             opacity: 0.95;
+            line-height: 1.3;
         }
 
         .hero .description {
-            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            font-size: clamp(1rem, 2vw, 1.3rem);
             font-weight: 300;
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
             opacity: 0.9;
+            line-height: 1.4;
         }
 
         .cta-button {
@@ -151,7 +185,7 @@
             border-radius: 0.75rem;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             transition: all 0.3s ease;
             box-shadow: 0 10px 25px rgba(17, 24, 39, 0.3);
             border: none;
@@ -244,6 +278,7 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 1.5rem;
+            color: #111827;
         }
 
         .highlight-card h3 {
@@ -316,6 +351,7 @@
             align-items: center;
             justify-content: center;
             margin: 0 auto 2rem;
+            color: #111827;
         }
 
         .tech-main h3 {
@@ -348,6 +384,7 @@
             align-items: center;
             justify-content: center;
             margin: 0 auto 1.5rem;
+            color: #111827;
         }
 
         /* Testimonials Section */
@@ -378,6 +415,10 @@
             background: #111827;
             border-radius: 8px;
             margin-right: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #b7bfce;
         }
 
         .stars {
@@ -449,6 +490,7 @@
             justify-content: center;
             margin-right: 1.5rem;
             flex-shrink: 0;
+            color: #111827;
         }
 
         .contact-item h4 {
@@ -665,6 +707,7 @@
             box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
             z-index: 1000;
             transition: all 0.3s ease;
+            color: white;
         }
 
         .whatsapp-button:hover {
@@ -687,16 +730,20 @@
                 padding: 0 1rem;
             }
 
-            .hero h1 {
-                font-size: 2.5rem;
+            .hero-content {
+                justify-content: center;
+                text-align: center;
             }
 
-            .hero .subtitle {
-                font-size: 1.5rem;
+            .hero-text {
+                text-align: center;
+                margin-right: 0;
+                max-width: none;
             }
 
-            .hero .description {
-                font-size: 1.1rem;
+            .highlights {
+                grid-template-columns: 1fr;
+                text-align: center;
             }
 
             section {
@@ -705,10 +752,6 @@
 
             .about-text {
                 padding: 2rem;
-            }
-
-            .highlights {
-                grid-template-columns: 1fr;
             }
 
             .treatments-grid {
@@ -770,78 +813,6 @@
                 min-width: auto;
             }
         }
-
-        /* Icons using CSS shapes */
-        .icon-graduation::before {
-            content: "🎓";
-            font-size: 24px;
-        }
-
-        .icon-users::before {
-            content: "👥";
-            font-size: 24px;
-        }
-
-        .icon-book::before {
-            content: "📖";
-            font-size: 24px;
-        }
-
-        .icon-award::before {
-            content: "🏆";
-            font-size: 24px;
-        }
-
-        .icon-cpu::before {
-            content: "💻";
-            font-size: 32px;
-        }
-
-        .icon-target::before {
-            content: "🎯";
-            font-size: 24px;
-        }
-
-        .icon-zap::before {
-            content: "⚡";
-            font-size: 24px;
-        }
-
-        .icon-trending::before {
-            content: "📈";
-            font-size: 24px;
-        }
-
-        .icon-quote::before {
-            content: "💬";
-            color: white;
-            font-size: 20px;
-        }
-
-        .icon-map::before {
-            content: "📍";
-            font-size: 20px;
-        }
-
-        .icon-message::before {
-            content: "💬";
-            font-size: 20px;
-        }
-
-        .icon-mail::before {
-            content: "✉️";
-            font-size: 20px;
-        }
-
-        .icon-instagram::before {
-            content: "📷";
-            font-size: 20px;
-        }
-
-        .icon-facebook::before {
-            content: "📘";
-            font-size: 20px;
-        }
     </style>
 </head>
 <body>
@@ -859,10 +830,19 @@
                         <li><a href="#contato">Contato</a></li>
                     </ul>
                 </nav>
-                <div class="mobile-menu">
+                <div class="mobile-menu" onclick="toggleMobileMenu()">
                     <span></span>
                     <span></span>
                     <span></span>
+                </div>
+                <div class="mobile-nav" id="mobileNav">
+                    <ul>
+                        <li><a href="#sobre" onclick="closeMobileMenu()">Sobre</a></li>
+                        <li><a href="#tratamentos" onclick="closeMobileMenu()">Tratamentos</a></li>
+                        <li><a href="#tecnologia" onclick="closeMobileMenu()">Tecnologia</a></li>
+                        <li><a href="#depoimentos" onclick="closeMobileMenu()">Depoimentos</a></li>
+                        <li><a href="#contato" onclick="closeMobileMenu()">Contato</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -871,10 +851,12 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Dr. Marco Demange</h1>
-            <p class="subtitle">Cuidando do seu joelho com excelência e precisão</p>
-            <p class="description">Especialista em cirurgia robótica e preservação articular</p>
-            <a href="#contato" class="cta-button">Agende sua consulta</a>
+            <div class="hero-text">
+                <h1>Dr. Marco Demange</h1>
+                <p class="subtitle">Cuidando do seu joelho com excelência e precisão</p>
+                <p class="description">Especialista em cirurgia robótica e preservação articular</p>
+                <a href="#contato" class="cta-button">Agende sua consulta</a>
+            </div>
         </div>
     </section>
 
@@ -893,22 +875,30 @@
 
                 <div class="highlights">
                     <div class="highlight-card">
-                        <div class="highlight-icon icon-graduation"></div>
+                        <div class="highlight-icon">
+                            <i data-feather="award"></i>
+                        </div>
                         <h3>Pós-doutorado em Harvard e HSS – EUA</h3>
                         <p>Formação internacional de excelência</p>
                     </div>
                     <div class="highlight-card">
-                        <div class="highlight-icon icon-users"></div>
+                        <div class="highlight-icon">
+                            <i data-feather="users"></i>
+                        </div>
                         <h3>Chefe do Grupo de Joelho na USP</h3>
                         <p>Liderança em ensino e pesquisa</p>
                     </div>
                     <div class="highlight-card">
-                        <div class="highlight-icon icon-book"></div>
+                        <div class="highlight-icon">
+                            <i data-feather="file-text"></i>
+                        </div>
                         <h3>Mais de 60 publicações científicas</h3>
                         <p>Contribuição para o avanço da medicina</p>
                     </div>
                     <div class="highlight-card">
-                        <div class="highlight-icon icon-award"></div>
+                        <div class="highlight-icon">
+                            <i data-feather="check"></i>
+                        </div>
                         <h3>Membro SBOT, SBCJ, ICRS, AAOS</h3>
                         <p>Reconhecimento em sociedades médicas</p>
                     </div>
@@ -978,24 +968,32 @@
 
             <div class="tech-content">
                 <div class="tech-main">
-                    <div class="tech-icon icon-cpu"></div>
+                    <div class="tech-icon">
+                        <i data-feather="cpu" style="width: 48px; height: 48px;"></i>
+                    </div>
                     <h3>Cirurgia Robótica</h3>
                     <p>A cirurgia robótica representa o futuro da medicina ortopédica. Com esta tecnologia de ponta, conseguimos realizar procedimentos com precisão milimétrica, reduzindo significativamente o tempo de recuperação e melhorando os resultados para nossos pacientes.</p>
                 </div>
 
                 <div class="tech-features">
                     <div class="tech-feature">
-                        <div class="tech-feature-icon icon-target"></div>
+                        <div class="tech-feature-icon">
+                            <i data-feather="target" style="width: 32px; height: 32px;"></i>
+                        </div>
                         <h4>Precisão Cirúrgica</h4>
                         <p>Tecnologia robótica que oferece precisão milimétrica em cada procedimento</p>
                     </div>
                     <div class="tech-feature">
-                        <div class="tech-feature-icon icon-zap"></div>
+                        <div class="tech-feature-icon">
+                            <i data-feather="zap" style="width: 32px; height: 32px;"></i>
+                        </div>
                         <h4>Recuperação Rápida</h4>
                         <p>Técnicas minimamente invasivas que reduzem o tempo de recuperação</p>
                     </div>
                     <div class="tech-feature">
-                        <div class="tech-feature-icon icon-trending"></div>
+                        <div class="tech-feature-icon">
+                            <i data-feather="trending-up" style="width: 32px; height: 32px;"></i>
+                        </div>
                         <h4>Futuro da Medicina</h4>
                         <p>Abordagens regenerativas e tecnologias de ponta em constante evolução</p>
                     </div>
@@ -1016,7 +1014,9 @@
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-header">
-                        <div class="quote-icon icon-quote"></div>
+                        <div class="quote-icon">
+                            <i data-feather="message-circle"></i>
+                        </div>
                         <div class="stars">
                             <div class="star"></div>
                             <div class="star"></div>
@@ -1030,7 +1030,9 @@
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-header">
-                        <div class="quote-icon icon-quote"></div>
+                        <div class="quote-icon">
+                            <i data-feather="message-circle"></i>
+                        </div>
                         <div class="stars">
                             <div class="star"></div>
                             <div class="star"></div>
@@ -1044,7 +1046,9 @@
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-header">
-                        <div class="quote-icon icon-quote"></div>
+                        <div class="quote-icon">
+                            <i data-feather="message-circle"></i>
+                        </div>
                         <div class="stars">
                             <div class="star"></div>
                             <div class="star"></div>
@@ -1077,7 +1081,9 @@
                         <h3>Informações de Contato</h3>
                         
                         <div class="contact-item">
-                            <div class="contact-icon icon-map"></div>
+                            <div class="contact-icon">
+                                <i data-feather="map-pin"></i>
+                            </div>
                             <div>
                                 <h4>Endereço</h4>
                                 <p>Rua Mato Grosso, 306 – 12º andar<br>
@@ -1087,7 +1093,9 @@
                         </div>
 
                         <div class="contact-item">
-                            <div class="contact-icon icon-message"></div>
+                            <div class="contact-icon">
+                                <i data-feather="phone"></i>
+                            </div>
                             <div>
                                 <h4>WhatsApp</h4>
                                 <p>(11) 95055-5000</p>
@@ -1095,7 +1103,9 @@
                         </div>
 
                         <div class="contact-item">
-                            <div class="contact-icon icon-mail"></div>
+                            <div class="contact-icon">
+                                <i data-feather="mail"></i>
+                            </div>
                             <div>
                                 <h4>E-mail</h4>
                                 <a href="mailto:contato@joelho.com">contato@joelho.com</a>
@@ -1171,8 +1181,12 @@
                 <p>Especialista em cirurgia do joelho, cirurgia robótica e preservação articular</p>
 
                 <div class="social-links">
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="icon-instagram"></a>
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="icon-facebook"></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                        <i data-feather="instagram"></i>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                        <i data-feather="facebook"></i>
+                    </a>
                 </div>
 
                 <div class="footer-bottom">
@@ -1184,10 +1198,25 @@
 
     <!-- WhatsApp Button -->
     <a href="https://wa.me/5511950555000" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
-        <span style="color: white; font-size: 24px;">💬</span>
+        <i data-feather="message-circle"></i>
     </a>
 
+    <script src="https://unpkg.com/feather-icons"></script>
     <script>
+        // Initialize Feather Icons
+        feather.replace();
+
+        // Mobile menu functions
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.toggle('active');
+        }
+
+        function closeMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.remove('active');
+        }
+
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1212,10 +1241,14 @@
             this.reset();
         });
 
-        // Mobile menu toggle (basic functionality)
-        document.querySelector('.mobile-menu').addEventListener('click', function() {
-            const nav = document.querySelector('nav ul');
-            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const mobileNav = document.getElementById('mobileNav');
+            
+            if (!mobileMenu.contains(e.target) && !mobileNav.contains(e.target)) {
+                mobileNav.classList.remove('active');
+            }
         });
     </script>
 </body>
