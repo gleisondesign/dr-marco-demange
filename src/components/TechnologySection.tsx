@@ -5,22 +5,22 @@ import { Bot, Target, Timer, Stethoscope } from 'lucide-react';
 const TechnologySection = () => {
   const technologies = [
     {
-      icon: <Bot className="w-12 h-12 text-teal-600" />,
+      icon: <Bot className="w-12 h-12 text-blue-600" />,
       title: "Cirurgia Robótica",
       description: "A cirurgia robótica representa o futuro da medicina ortopédica. Com esta tecnologia de ponta, conseguimos realizar procedimentos com precisão milimétrica, reduzindo significativamente o tempo de recuperação e melhorando os resultados."
     },
     {
-      icon: <Target className="w-12 h-12 text-teal-600" />,
+      icon: <Target className="w-12 h-12 text-blue-600" />,
       title: "Precisão Cirúrgica",
       description: "Nossa abordagem utiliza as mais avançadas técnicas de navegação e planejamento pré-operatório. Isso nos permite alcançar níveis excepcionais de precisão, garantindo os melhores resultados possíveis para cada paciente."
     },
     {
-      icon: <Timer className="w-12 h-12 text-teal-600" />,
+      icon: <Timer className="w-12 h-12 text-blue-600" />,
       title: "Recuperação Rápida",
       description: "Através de técnicas minimamente invasivas e protocolos de recuperação acelerada, nossos pacientes experimentam menos dor pós-operatória e retornam às suas atividades normais de forma mais rápida e segura."
     },
     {
-      icon: <Stethoscope className="w-12 h-12 text-teal-600" />,
+      icon: <Stethoscope className="w-12 h-12 text-blue-600" />,
       title: "Futuro da Medicina",
       description: "Estamos constantemente inovando e incorporando as mais recentes descobertas científicas em nossa prática. Nosso compromisso é oferecer aos pacientes acesso às tecnologias mais avançadas disponíveis na medicina ortopédica."
     }

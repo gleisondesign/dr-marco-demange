@@ -19,7 +19,7 @@ const HeroSection = () => {
         }}
       >
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-teal-900/80 to-teal-700/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-700/60"></div>
       </div>
 
       {/* Content */}
@@ -34,7 +34,7 @@ const HeroSection = () => {
             </p>
             <button
               onClick={scrollToContact}
-              className="bg-teal-600 hover:bg-teal-700 text-white px-10 py-4 rounded-xl text-lg md:text-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-teal-500/25"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-xl text-lg md:text-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-blue-500/25"
             >
               Agende sua consulta
             </button>

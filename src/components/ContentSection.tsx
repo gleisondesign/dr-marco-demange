@@ -108,15 +108,15 @@ const ContentSection = () => {
 
         <div className="relative">
           {/* Desktop Carousel */}
-          <div className="hidden md:flex items-center">
+          <div className="hidden md:flex items-center justify-center">
             <button
               onClick={prevSlide}
-              className="p-2 rounded-full bg-teal-100 hover:bg-teal-200 text-teal-600 transition-colors mr-4"
+              className="absolute left-0 z-10 p-3 rounded-full bg-white shadow-lg hover:shadow-xl text-blue-600 hover:text-blue-700 transition-all duration-200 border border-gray-200"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
 
-            <div className="flex-1 overflow-hidden">
+            <div className="overflow-hidden px-16">
               <div
                 className="flex gap-6 transition-transform duration-300 ease-in-out"
                 style={{ transform: `translateX(-${currentIndex * 25}%)` }}
@@ -138,7 +138,7 @@ const ContentSection = () => {
                       <h3 className="text-lg font-semibold text-gray-900 mb-4">
                         {content.title}
                       </h3>
-                      <button className="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                      <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
                         Acessar
                       </button>
                     </div>
@@ -149,22 +149,22 @@ const ContentSection = () => {
 
             <button
               onClick={nextSlide}
-              className="p-2 rounded-full bg-teal-100 hover:bg-teal-200 text-teal-600 transition-colors ml-4"
+              className="absolute right-0 z-10 p-3 rounded-full bg-white shadow-lg hover:shadow-xl text-blue-600 hover:text-blue-700 transition-all duration-200 border border-gray-200"
             >
               <ChevronRight className="w-6 h-6" />
             </button>
           </div>
 
           {/* Mobile Carousel */}
-          <div className="md:hidden flex items-center">
+          <div className="md:hidden flex items-center justify-center">
             <button
               onClick={prevSlide}
-              className="p-2 rounded-full bg-teal-100 hover:bg-teal-200 text-teal-600 transition-colors mr-4"
+              className="absolute left-4 z-10 p-3 rounded-full bg-white shadow-lg hover:shadow-xl text-blue-600 hover:text-blue-700 transition-all duration-200 border border-gray-200"
             >
-              <ChevronLeft className="w-6 h-6" />
+              <ChevronLeft className="w-5 h-5" />
             </button>
 
-            <div className="flex-1 overflow-hidden">
+            <div className="overflow-hidden px-16">
               <div
                 className="flex transition-transform duration-300 ease-in-out"
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -187,7 +187,7 @@ const ContentSection = () => {
                         <h3 className="text-lg font-semibold text-gray-900 mb-4">
                           {content.title}
                         </h3>
-                        <button className="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                        <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
                           Acessar
                         </button>
                       </div>
@@ -199,9 +199,9 @@ const ContentSection = () => {
 
             <button
               onClick={nextSlide}
-              className="p-2 rounded-full bg-teal-100 hover:bg-teal-200 text-teal-600 transition-colors ml-4"
+              className="absolute right-4 z-10 p-3 rounded-full bg-white shadow-lg hover:shadow-xl text-blue-600 hover:text-blue-700 transition-all duration-200 border border-gray-200"
             >
-              <ChevronRight className="w-6 h-6" />
+              <ChevronRight className="w-5 h-5" />
             </button>
           </div>
         </div>
