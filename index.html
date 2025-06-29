@@ -15,7 +15,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -27,7 +27,7 @@
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             line-height: 1.6;
-            color: #374151;
+            color: #334155;
             scroll-behavior: smooth;
         }
 
@@ -44,13 +44,18 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            background: rgba(17, 24, 39, 0.95);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+            border-bottom: 1px solid rgba(15, 23, 42, 0.1);
             transition: all 0.3s ease;
             height: 70px;
-            box-shadow: 0 4px 20px rgba(17, 24, 39, 0.3);
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+            transform: translateY(0);
+        }
+
+        header.hidden {
+            transform: translateY(-100%);
         }
 
         .header-content {
@@ -62,17 +67,17 @@
         }
 
         .logo {
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.4rem;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
             font-weight: 600;
-            color: #ffffff;
+            color: #0f172a;
             text-decoration: none;
-            letter-spacing: 0.5px;
+            letter-spacing: -0.02em;
             transition: color 0.3s ease;
         }
 
         .logo:hover {
-            color: #3b82f6;
+            color: #1e40af;
         }
 
         nav ul {
@@ -84,22 +89,18 @@
 
         nav a {
             text-decoration: none;
-            color: #e5e7eb;
+            color: #475569;
             font-weight: 500;
             font-size: 0.95rem;
             transition: all 0.3s ease;
-            padding: 0.75rem 1.25rem;
-            border-radius: 10px;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
             position: relative;
-            background: rgba(59, 130, 246, 0.1);
-            border: 1px solid rgba(59, 130, 246, 0.2);
         }
 
         nav a:hover {
-            color: #ffffff;
-            background: rgba(59, 130, 246, 0.2);
-            border-color: rgba(59, 130, 246, 0.4);
-            transform: translateY(-2px);
+            color: #1e40af;
+            background: rgba(30, 64, 175, 0.08);
         }
 
         .mobile-menu {
@@ -109,18 +110,16 @@
             padding: 8px;
             border-radius: 8px;
             transition: background 0.3s ease;
-            background: rgba(59, 130, 246, 0.1);
-            border: 1px solid rgba(59, 130, 246, 0.2);
         }
 
         .mobile-menu:hover {
-            background: rgba(59, 130, 246, 0.2);
+            background: rgba(30, 64, 175, 0.08);
         }
 
         .mobile-menu span {
             width: 22px;
             height: 2px;
-            background: #ffffff;
+            background: #0f172a;
             margin: 2px 0;
             transition: 0.3s;
             border-radius: 2px;
@@ -132,11 +131,11 @@
             top: 100%;
             left: 0;
             right: 0;
-            background: rgba(17, 24, 39, 0.98);
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+            border-bottom: 1px solid rgba(15, 23, 42, 0.1);
             padding: 1.5rem 0;
-            box-shadow: 0 8px 30px rgba(17, 24, 39, 0.4);
+            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.12);
         }
 
         .mobile-nav.active {
@@ -156,19 +155,19 @@
             border-radius: 12px;
             text-align: center;
             font-weight: 500;
-            background: rgba(59, 130, 246, 0.1);
-            border: 1px solid rgba(59, 130, 246, 0.2);
+            background: rgba(30, 64, 175, 0.05);
+            border: 1px solid rgba(30, 64, 175, 0.1);
         }
 
         .mobile-nav a:hover {
-            background: rgba(59, 130, 246, 0.2);
-            border-color: rgba(59, 130, 246, 0.4);
+            background: rgba(30, 64, 175, 0.1);
+            border-color: rgba(30, 64, 175, 0.2);
         }
 
         /* Hero Section */
         .hero {
             min-height: 100vh;
-            background: linear-gradient(rgba(17, 24, 39, 0.4), rgba(17, 24, 39, 0.4)), url('https://i.ibb.co/gDqR3SK/DSC02425-no-edit.jpg');
+            background: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.4)), url('https://raw.githubusercontent.com/gleisondesign/dr-marco-demange/refs/heads/main/src/foto.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -213,7 +212,7 @@
 
         .cta-button {
             display: inline-block;
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
             color: white;
             padding: 1rem 2.5rem;
             border-radius: 12px;
@@ -221,7 +220,7 @@
             font-weight: 600;
             font-size: 1rem;
             transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+            box-shadow: 0 8px 25px rgba(30, 64, 175, 0.4);
             border: none;
             cursor: pointer;
             text-transform: uppercase;
@@ -231,9 +230,9 @@
         }
 
         .cta-button:hover {
-            background: linear-gradient(135deg, #1d4ed8, #1e40af);
+            background: linear-gradient(135deg, #1d4ed8, #2563eb);
             transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(59, 130, 246, 0.5);
+            box-shadow: 0 12px 35px rgba(30, 64, 175, 0.5);
         }
 
         /* Sections */
@@ -253,21 +252,21 @@
         .section-title h2 {
             font-size: clamp(1.8rem, 3.5vw, 2.2rem);
             font-weight: 700;
-            color: #1f2937;
+            color: #0f172a;
             margin-bottom: 1rem;
         }
 
         .section-divider {
             width: 60px;
             height: 3px;
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
             margin: 0 auto 1rem;
             border-radius: 2px;
         }
 
         .section-description {
             font-size: clamp(0.95rem, 1.8vw, 1.1rem);
-            color: #6b7280;
+            color: #64748b;
             max-width: 600px;
             margin: 0 auto;
             line-height: 1.6;
@@ -283,12 +282,12 @@
             background: white;
             padding: 2.5rem;
             border-radius: 1.5rem;
-            box-shadow: 0 8px 30px rgba(17, 24, 39, 0.06);
+            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
             margin-bottom: 3rem;
             font-size: 1.1rem;
             text-align: center;
             line-height: 1.7;
-            border: 1px solid rgba(17, 24, 39, 0.05);
+            border: 1px solid rgba(15, 23, 42, 0.05);
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -301,14 +300,14 @@
             left: 0;
             right: 0;
             height: 3px;
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
             transform: scaleX(0);
             transition: transform 0.3s ease;
         }
 
         .about-text:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(17, 24, 39, 0.12);
+            box-shadow: 0 15px 40px rgba(15, 23, 42, 0.12);
         }
 
         .about-text:hover:before {
@@ -325,9 +324,9 @@
             background: white;
             padding: 2.5rem;
             border-radius: 1.5rem;
-            box-shadow: 0 8px 30px rgba(17, 24, 39, 0.06);
+            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
             transition: all 0.3s ease;
-            border: 1px solid rgba(17, 24, 39, 0.05);
+            border: 1px solid rgba(15, 23, 42, 0.05);
             position: relative;
             overflow: hidden;
         }
@@ -339,14 +338,14 @@
             left: 0;
             right: 0;
             height: 3px;
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
             transform: scaleX(0);
             transition: transform 0.3s ease;
         }
 
         .highlight-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(17, 24, 39, 0.15);
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
         }
 
         .highlight-card:hover:before {
@@ -356,13 +355,13 @@
         .highlight-icon {
             width: 60px;
             height: 60px;
-            background: #1f2937;
+            background: #e2e8f0;
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 1.5rem;
-            color: #b7bfce;
+            color: #475569;
             margin-left: auto;
             margin-right: auto;
         }
@@ -370,13 +369,13 @@
         .highlight-card h3 {
             font-size: 1.2rem;
             font-weight: 600;
-            color: #1f2937;
+            color: #0f172a;
             margin-bottom: 1rem;
             text-align: center;
         }
 
         .highlight-card p {
-            color: #6b7280;
+            color: #64748b;
             text-align: center;
             line-height: 1.6;
         }
@@ -396,7 +395,7 @@
             border-radius: 1.5rem;
             text-align: center;
             transition: all 0.4s ease;
-            border: 1px solid rgba(17, 24, 39, 0.05);
+            border: 1px solid rgba(15, 23, 42, 0.05);
             position: relative;
             overflow: hidden;
         }
@@ -408,7 +407,7 @@
             left: 0;
             right: 0;
             height: 3px;
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
             transform: scaleX(0);
             transition: transform 0.3s ease;
         }
@@ -416,7 +415,7 @@
         .treatment-card:hover {
             background: white;
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(17, 24, 39, 0.15);
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
         }
 
         .treatment-card:hover:before {
@@ -426,12 +425,12 @@
         .treatment-card h3 {
             font-size: 1.3rem;
             font-weight: 600;
-            color: #1f2937;
+            color: #0f172a;
             margin-bottom: 1rem;
         }
 
         .treatment-card p {
-            color: #6b7280;
+            color: #64748b;
             line-height: 1.6;
         }
 
@@ -442,44 +441,62 @@
         }
 
         .tech-main {
-            background: linear-gradient(135deg, #1f2937, #3b82f6);
+            background: white;
             padding: 3.5rem;
             border-radius: 2rem;
-            box-shadow: 0 20px 50px rgba(17, 24, 39, 0.2);
+            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
             text-align: center;
             margin-bottom: 3rem;
-            color: white;
             transition: all 0.3s ease;
+            border: 1px solid rgba(15, 23, 42, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tech-main:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
         }
 
         .tech-main:hover {
             transform: translateY(-5px);
-            box-shadow: 0 25px 60px rgba(17, 24, 39, 0.25);
+            box-shadow: 0 15px 40px rgba(15, 23, 42, 0.12);
+        }
+
+        .tech-main:hover:before {
+            transform: scaleX(1);
         }
 
         .tech-icon {
             width: 80px;
             height: 80px;
-            background: rgba(255, 255, 255, 0.1);
+            background: #e2e8f0;
             border-radius: 1.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 2rem;
-            color: #ffffff;
-            border: 2px solid rgba(255, 255, 255, 0.2);
+            color: #475569;
         }
 
         .tech-main h3 {
             font-size: 2rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
+            color: #0f172a;
         }
 
         .tech-main p {
             font-size: 1.1rem;
-            opacity: 0.9;
             line-height: 1.6;
+            color: #64748b;
         }
 
         .tech-features {
@@ -493,8 +510,8 @@
             padding: 2.5rem;
             border-radius: 1.5rem;
             text-align: center;
-            box-shadow: 0 8px 30px rgba(17, 24, 39, 0.06);
-            border: 1px solid rgba(17, 24, 39, 0.05);
+            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
+            border: 1px solid rgba(15, 23, 42, 0.05);
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -507,14 +524,14 @@
             left: 0;
             right: 0;
             height: 3px;
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
             transform: scaleX(0);
             transition: transform 0.3s ease;
         }
 
         .tech-feature:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(17, 24, 39, 0.15);
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
         }
 
         .tech-feature:hover:before {
@@ -524,21 +541,26 @@
         .tech-feature-icon {
             width: 70px;
             height: 70px;
-            background: #b7bfce;
+            background: #e2e8f0;
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 1.5rem;
-            color: #1f2937;
+            color: #475569;
         }
 
         /* Content Section */
-        .content-carousel {
+        .content-section {
             position: relative;
             max-width: 1200px;
             margin: 0 auto;
+        }
+
+        .content-carousel {
+            position: relative;
             overflow: hidden;
+            padding: 0 50px;
         }
 
         .carousel-container {
@@ -553,8 +575,8 @@
             background: white;
             border-radius: 1.5rem;
             overflow: hidden;
-            box-shadow: 0 8px 30px rgba(17, 24, 39, 0.06);
-            border: 1px solid rgba(17, 24, 39, 0.05);
+            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
+            border: 1px solid rgba(15, 23, 42, 0.05);
             transition: all 0.3s ease;
             cursor: pointer;
             position: relative;
@@ -567,14 +589,14 @@
             left: 0;
             right: 0;
             height: 3px;
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
             transform: scaleX(0);
             transition: transform 0.3s ease;
         }
 
         .content-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(17, 24, 39, 0.15);
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
         }
 
         .content-card:hover:before {
@@ -584,12 +606,30 @@
         .content-image {
             width: 100%;
             height: 200px;
-            background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+            background: url('https://raw.githubusercontent.com/gleisondesign/dr-marco-demange/refs/heads/main/src/foto.jpg');
+            background-size: cover;
+            background-position: center;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #6b7280;
+            color: white;
             font-size: 2rem;
+            position: relative;
+        }
+
+        .content-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(15, 23, 42, 0.6);
+        }
+
+        .content-image i {
+            position: relative;
+            z-index: 1;
         }
 
         .content-info {
@@ -599,13 +639,13 @@
         .content-title {
             font-size: 1.1rem;
             font-weight: 600;
-            color: #1f2937;
+            color: #0f172a;
             margin-bottom: 1rem;
             line-height: 1.4;
         }
 
         .content-cta {
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
             color: white;
             padding: 0.75rem 1.5rem;
             border-radius: 8px;
@@ -617,37 +657,46 @@
         }
 
         .content-cta:hover {
-            background: linear-gradient(135deg, #1d4ed8, #1e40af);
+            background: linear-gradient(135deg, #1d4ed8, #2563eb);
             transform: translateY(-2px);
         }
 
-        .carousel-nav {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .carousel-btn {
-            background: #3b82f6;
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(30, 64, 175, 0.9);
             color: white;
             border: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
             cursor: pointer;
-            font-weight: 500;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             transition: all 0.3s ease;
+            z-index: 10;
         }
 
-        .carousel-btn:hover {
-            background: #1d4ed8;
-            transform: translateY(-2px);
+        .carousel-arrow:hover {
+            background: rgba(30, 64, 175, 1);
+            transform: translateY(-50%) scale(1.1);
         }
 
-        .carousel-btn:disabled {
-            background: #9ca3af;
+        .carousel-arrow.prev {
+            left: 10px;
+        }
+
+        .carousel-arrow.next {
+            right: 10px;
+        }
+
+        .carousel-arrow:disabled {
+            background: rgba(100, 116, 139, 0.5);
             cursor: not-allowed;
-            transform: none;
+            transform: translateY(-50%);
         }
 
         /* Testimonials Section */
@@ -663,8 +712,8 @@
             background: white;
             padding: 2.5rem;
             border-radius: 1.5rem;
-            box-shadow: 0 8px 30px rgba(17, 24, 39, 0.06);
-            border: 1px solid rgba(17, 24, 39, 0.05);
+            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
+            border: 1px solid rgba(15, 23, 42, 0.05);
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -677,14 +726,14 @@
             left: 0;
             right: 0;
             height: 3px;
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
             transform: scaleX(0);
             transition: transform 0.3s ease;
         }
 
         .testimonial-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(17, 24, 39, 0.15);
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
         }
 
         .testimonial-card:hover:before {
@@ -700,13 +749,13 @@
         .quote-icon {
             width: 50px;
             height: 50px;
-            background: #1f2937;
+            background: #e2e8f0;
             border-radius: 12px;
             margin-right: 1rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #b7bfce;
+            color: #475569;
         }
 
         .stars {
@@ -723,14 +772,14 @@
 
         .testimonial-text {
             font-style: italic;
-            color: #374151;
+            color: #475569;
             margin-bottom: 1.5rem;
             line-height: 1.6;
         }
 
         .testimonial-author {
             font-weight: 600;
-            color: #1f2937;
+            color: #0f172a;
             border-top: 1px solid #e5e7eb;
             padding-top: 1rem;
         }
@@ -752,8 +801,8 @@
             background: white;
             padding: 2.5rem;
             border-radius: 1.5rem;
-            box-shadow: 0 8px 30px rgba(17, 24, 39, 0.06);
-            border: 1px solid rgba(17, 24, 39, 0.05);
+            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
+            border: 1px solid rgba(15, 23, 42, 0.05);
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -766,14 +815,14 @@
             left: 0;
             right: 0;
             height: 3px;
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
             transform: scaleX(0);
             transition: transform 0.3s ease;
         }
 
         .contact-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(17, 24, 39, 0.12);
+            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.12);
         }
 
         .contact-card:hover:before {
@@ -783,7 +832,7 @@
         .contact-card h3 {
             font-size: 1.5rem;
             font-weight: 700;
-            color: #1f2937;
+            color: #0f172a;
             margin-bottom: 2rem;
         }
 
@@ -796,36 +845,36 @@
         .contact-icon {
             width: 45px;
             height: 45px;
-            background: #b7bfce;
+            background: #e2e8f0;
             border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-right: 1.5rem;
             flex-shrink: 0;
-            color: #1f2937;
+            color: #475569;
         }
 
         .contact-item h4 {
             font-weight: 600;
-            color: #1f2937;
+            color: #0f172a;
             margin-bottom: 0.5rem;
             font-size: 1rem;
         }
 
         .contact-item p {
-            color: #6b7280;
+            color: #64748b;
             line-height: 1.5;
         }
 
         .contact-item a {
-            color: #1f2937;
+            color: #0f172a;
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
         .contact-item a:hover {
-            color: #3b82f6;
+            color: #1e40af;
         }
 
         .hospitals-grid {
@@ -837,7 +886,7 @@
             background: linear-gradient(135deg, #f8fafc, #f1f5f9);
             padding: 1rem 1.25rem;
             border-radius: 10px;
-            border: 1px solid rgba(17, 24, 39, 0.05);
+            border: 1px solid rgba(15, 23, 42, 0.05);
             transition: all 0.3s ease;
         }
 
@@ -847,7 +896,7 @@
         }
 
         .hospital-item p {
-            color: #1f2937;
+            color: #0f172a;
             font-weight: 500;
         }
 
@@ -856,15 +905,15 @@
             background: white;
             padding: 2.5rem;
             border-radius: 1.5rem;
-            box-shadow: 0 8px 30px rgba(17, 24, 39, 0.06);
+            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
             margin-bottom: 3rem;
-            border: 1px solid rgba(17, 24, 39, 0.05);
+            border: 1px solid rgba(15, 23, 42, 0.05);
         }
 
         .contact-form h3 {
             font-size: 1.5rem;
             font-weight: 700;
-            color: #1f2937;
+            color: #0f172a;
             margin-bottom: 2rem;
             text-align: center;
         }
@@ -876,7 +925,7 @@
         .form-group label {
             display: block;
             font-weight: 600;
-            color: #1f2937;
+            color: #0f172a;
             margin-bottom: 0.5rem;
             font-size: 0.9rem;
         }
@@ -896,8 +945,8 @@
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: #3b82f6;
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+            border-color: #1e40af;
+            box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
             background: white;
         }
 
@@ -908,7 +957,7 @@
 
         .form-submit {
             width: 100%;
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
             color: white;
             padding: 1rem 2rem;
             border: none;
@@ -923,14 +972,14 @@
         }
 
         .form-submit:hover {
-            background: linear-gradient(135deg, #1d4ed8, #1e40af);
+            background: linear-gradient(135deg, #1d4ed8, #2563eb);
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 8px 25px rgba(30, 64, 175, 0.3);
         }
 
         /* Footer */
         footer {
-            background: linear-gradient(135deg, #1f2937, #111827);
+            background: linear-gradient(135deg, #0f172a, #1e293b);
             color: white;
             padding: 3rem 0;
             text-align: center;
@@ -948,7 +997,7 @@
         }
 
         .footer-content p {
-            color: #9ca3af;
+            color: #94a3b8;
             margin-bottom: 2rem;
             max-width: 600px;
             margin-left: auto;
@@ -985,7 +1034,7 @@
         .footer-bottom {
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             padding-top: 2rem;
-            color: #9ca3af;
+            color: #94a3b8;
             font-size: 0.9rem;
         }
 
@@ -1072,10 +1121,28 @@
                 grid-template-columns: 1fr;
             }
 
+            .content-carousel {
+                padding: 0 30px;
+            }
+
             .content-card {
                 width: 100%;
                 margin-right: 0;
                 margin-bottom: 1.5rem;
+            }
+
+            .carousel-arrow {
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
+            }
+
+            .carousel-arrow.prev {
+                left: 5px;
+            }
+
+            .carousel-arrow.next {
+                right: 5px;
             }
 
             .testimonials-grid {
@@ -1121,7 +1188,7 @@
 </head>
 <body>
     <!-- Header -->
-    <header>
+    <header id="header">
         <div class="container">
             <div class="header-content">
                 <a href="#" class="logo">Dr. Marco Demange</a>
@@ -1317,121 +1384,120 @@
                 <p class="section-description">Vídeos e posts em destaque com informações relevantes sobre cirurgia do joelho e tratamentos.</p>
             </div>
 
-            <div class="content-carousel">
-                <div class="carousel-container" id="carouselContainer">
-                    <div class="content-card" onclick="window.open('https://example.com/video1', '_blank')">
-                        <div class="content-image">
-                            <i data-feather="play-circle"></i>
+            <div class="content-section">
+                <div class="content-carousel">
+                    <button class="carousel-arrow prev" id="prevArrow" onclick="moveCarousel(-1)">‹</button>
+                    <div class="carousel-container" id="carouselContainer">
+                        <div class="content-card" onclick="window.open('https://example.com/video1', '_blank')">
+                            <div class="content-image">
+                                <i data-feather="play-circle"></i>
+                            </div>
+                            <div class="content-info">
+                                <h4 class="content-title">Cirurgia Robótica: O Futuro dos Tratamentos</h4>
+                                <a href="https://example.com/video1" target="_blank" class="content-cta">Acessar</a>
+                            </div>
                         </div>
-                        <div class="content-info">
-                            <h4 class="content-title">Cirurgia Robótica: O Futuro dos Tratamentos</h4>
-                            <a href="https://example.com/video1" target="_blank" class="content-cta">Acessar</a>
+                        <div class="content-card" onclick="window.open('https://example.com/post1', '_blank')">
+                            <div class="content-image">
+                                <i data-feather="file-text"></i>
+                            </div>
+                            <div class="content-info">
+                                <h4 class="content-title">Artrose no Joelho: Sintomas e Tratamentos</h4>
+                                <a href="https://example.com/post1" target="_blank" class="content-cta">Acessar</a>
+                            </div>
+                        </div>
+                        <div class="content-card" onclick="window.open('https://example.com/video2', '_blank')">
+                            <div class="content-image">
+                                <i data-feather="play-circle"></i>
+                            </div>
+                            <div class="content-info">
+                                <h4 class="content-title">Lesão do LCA: Diagnóstico e Recuperação</h4>
+                                <a href="https://example.com/video2" target="_blank" class="content-cta">Acessar</a>
+                            </div>
+                        </div>
+                        <div class="content-card" onclick="window.open('https://example.com/post2', '_blank')">
+                            <div class="content-image">
+                                <i data-feather="heart"></i>
+                            </div>
+                            <div class="content-info">
+                                <h4 class="content-title">Prótese de Joelho: Quando é Necessária</h4>
+                                <a href="https://example.com/post2" target="_blank" class="content-cta">Acessar</a>
+                            </div>
+                        </div>
+                        <div class="content-card" onclick="window.open('https://example.com/video3', '_blank')">
+                            <div class="content-image">
+                                <i data-feather="play-circle"></i>
+                            </div>
+                            <div class="content-info">
+                                <h4 class="content-title">Exercícios para Fortalecimento do Joelho</h4>
+                                <a href="https://example.com/video3" target="_blank" class="content-cta">Acessar</a>
+                            </div>
+                        </div>
+                        <div class="content-card" onclick="window.open('https://example.com/post3', '_blank')">
+                            <div class="content-image">
+                                <i data-feather="book-open"></i>
+                            </div>
+                            <div class="content-info">
+                                <h4 class="content-title">Prevenção de Lesões no Joelho no Esporte</h4>
+                                <a href="https://example.com/post3" target="_blank" class="content-cta">Acessar</a>
+                            </div>
+                        </div>
+                        <div class="content-card" onclick="window.open('https://example.com/video4', '_blank')">
+                            <div class="content-image">
+                                <i data-feather="play-circle"></i>
+                            </div>
+                            <div class="content-info">
+                                <h4 class="content-title">Técnicas Minimamente Invasivas em Ortopedia</h4>
+                                <a href="https://example.com/video4" target="_blank" class="content-cta">Acessar</a>
+                            </div>
+                        </div>
+                        <div class="content-card" onclick="window.open('https://example.com/post4', '_blank')">
+                            <div class="content-image">
+                                <i data-feather="activity"></i>
+                            </div>
+                            <div class="content-info">
+                                <h4 class="content-title">Recuperação Pós-Cirúrgica: Dicas Importantes</h4>
+                                <a href="https://example.com/post4" target="_blank" class="content-cta">Acessar</a>
+                            </div>
+                        </div>
+                        <div class="content-card" onclick="window.open('https://example.com/video5', '_blank')">
+                            <div class="content-image">
+                                <i data-feather="play-circle"></i>
+                            </div>
+                            <div class="content-info">
+                                <h4 class="content-title">Condromalácia Patelar: Causas e Tratamento</h4>
+                                <a href="https://example.com/video5" target="_blank" class="content-cta">Acessar</a>
+                            </div>
+                        </div>
+                        <div class="content-card" onclick="window.open('https://example.com/post5', '_blank')">
+                            <div class="content-image">
+                                <i data-feather="shield"></i>
+                            </div>
+                            <div class="content-info">
+                                <h4 class="content-title">Medicina Regenerativa aplicada ao Joelho</h4>
+                                <a href="https://example.com/post5" target="_blank" class="content-cta">Acessar</a>
+                            </div>
+                        </div>
+                        <div class="content-card" onclick="window.open('https://example.com/video6', '_blank')">
+                            <div class="content-image">
+                                <i data-feather="play-circle"></i>
+                            </div>
+                            <div class="content-info">
+                                <h4 class="content-title">Lesões Meniscais: Diagnóstico Preciso</h4>
+                                <a href="https://example.com/video6" target="_blank" class="content-cta">Acessar</a>
+                            </div>
+                        </div>
+                        <div class="content-card" onclick="window.open('https://example.com/post6', '_blank')">
+                            <div class="content-image">
+                                <i data-feather="compass"></i>
+                            </div>
+                            <div class="content-info">
+                                <h4 class="content-title">Inovações em Cirurgia Ortopédica Mundial</h4>
+                                <a href="https://example.com/post6" target="_blank" class="content-cta">Acessar</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="content-card" onclick="window.open('https://example.com/post1', '_blank')">
-                        <div class="content-image">
-                            <i data-feather="file-text"></i>
-                        </div>
-                        <div class="content-info">
-                            <h4 class="content-title">Artrose no Joelho: Sintomas e Tratamentos</h4>
-                            <a href="https://example.com/post1" target="_blank" class="content-cta">Acessar</a>
-                        </div>
-                    </div>
-                    <div class="content-card" onclick="window.open('https://example.com/video2', '_blank')">
-                        <div class="content-image">
-                            <i data-feather="play-circle"></i>
-                        </div>
-                        <div class="content-info">
-                            <h4 class="content-title">Lesão do LCA: Diagnóstico e Recuperação</h4>
-                            <a href="https://example.com/video2" target="_blank" class="content-cta">Acessar</a>
-                        </div>
-                    </div>
-                    <div class="content-card" onclick="window.open('https://example.com/post2', '_blank')">
-                        <div class="content-image">
-                            <i data-feather="heart"></i>
-                        </div>
-                        <div class="content-info">
-                            <h4 class="content-title">Prótese de Joelho: Quando é Necessária</h4>
-                            <a href="https://example.com/post2" target="_blank" class="content-cta">Acessar</a>
-                        </div>
-                    </div>
-                    <div class="content-card" onclick="window.open('https://example.com/video3', '_blank')">
-                        <div class="content-image">
-                            <i data-feather="play-circle"></i>
-                        </div>
-                        <div class="content-info">
-                            <h4 class="content-title">Exercícios para Fortalecimento do Joelho</h4>
-                            <a href="https://example.com/video3" target="_blank" class="content-cta">Acessar</a>
-                        </div>
-                    </div>
-                    <div class="content-card" onclick="window.open('https://example.com/post3', '_blank')">
-                        <div class="content-image">
-                            <i data-feather="book-open"></i>
-                        </div>
-                        <div class="content-info">
-                            <h4 class="content-title">Prevenção de Lesões no Joelho no Esporte</h4>
-                            <a href="https://example.com/post3" target="_blank" class="content-cta">Acessar</a>
-                        </div>
-                    </div>
-                    <div class="content-card" onclick="window.open('https://example.com/video4', '_blank')">
-                        <div class="content-image">
-                            <i data-feather="play-circle"></i>
-                        </div>
-                        <div class="content-info">
-                            <h4 class="content-title">Técnicas Minimamente Invasivas em Ortopedia</h4>
-                            <a href="https://example.com/video4" target="_blank" class="content-cta">Acessar</a>
-                        </div>
-                    </div>
-                    <div class="content-card" onclick="window.open('https://example.com/post4', '_blank')">
-                        <div class="content-image">
-                            <i data-feather="activity"></i>
-                        </div>
-                        <div class="content-info">
-                            <h4 class="content-title">Recuperação Pós-Cirúrgica: Dicas Importantes</h4>
-                            <a href="https://example.com/post4" target="_blank" class="content-cta">Acessar</a>
-                        </div>
-                    </div>
-                    <div class="content-card" onclick="window.open('https://example.com/video5', '_blank')">
-                        <div class="content-image">
-                            <i data-feather="play-circle"></i>
-                        </div>
-                        <div class="content-info">
-                            <h4 class="content-title">Condromalácia Patelar: Causas e Tratamento</h4>
-                            <a href="https://example.com/video5" target="_blank" class="content-cta">Acessar</a>
-                        </div>
-                    </div>
-                    <div class="content-card" onclick="window.open('https://example.com/post5', '_blank')">
-                        <div class="content-image">
-                            <i data-feather="shield"></i>
-                        </div>
-                        <div class="content-info">
-                            <h4 class="content-title">Medicina Regenerativa aplicada ao Joelho</h4>
-                            <a href="https://example.com/post5" target="_blank" class="content-cta">Acessar</a>
-                        </div>
-                    </div>
-                    <div class="content-card" onclick="window.open('https://example.com/video6', '_blank')">
-                        <div class="content-image">
-                            <i data-feather="play-circle"></i>
-                        </div>
-                        <div class="content-info">
-                            <h4 class="content-title">Lesões Meniscais: Diagnóstico Preciso</h4>
-                            <a href="https://example.com/video6" target="_blank" class="content-cta">Acessar</a>
-                        </div>
-                    </div>
-                    <div class="content-card" onclick="window.open('https://example.com/post6', '_blank')">
-                        <div class="content-image">
-                            <i data-feather="compass"></i>
-                        </div>
-                        <div class="content-info">
-                            <h4 class="content-title">Inovações em Cirurgia Ortopédica Mundial</h4>
-                            <a href="https://example.com/post6" target="_blank" class="content-cta">Acessar</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="carousel-nav">
-                    <button class="carousel-btn" id="prevBtn" onclick="moveCarousel(-1)">Anterior</button>
-                    <button class="carousel-btn" id="nextBtn" onclick="moveCarousel(1)">Próximo</button>
+                    <button class="carousel-arrow next" id="nextArrow" onclick="moveCarousel(1)">›</button>
                 </div>
             </div>
         </div>
@@ -1628,6 +1694,24 @@
         // Initialize Feather Icons
         feather.replace();
 
+        // Header scroll behavior
+        let lastScrollTop = 0;
+        const header = document.getElementById('header');
+
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                // Scrolling down
+                header.classList.add('hidden');
+            } else {
+                // Scrolling up
+                header.classList.remove('hidden');
+            }
+            
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+        });
+
         // Mobile menu functions
         function toggleMobileMenu() {
             const mobileNav = document.getElementById('mobileNav');
@@ -1657,8 +1741,8 @@
             container.style.transform = `translateX(${translateX}px)`;
             
             // Update button states
-            document.getElementById('prevBtn').disabled = currentIndex === 0;
-            document.getElementById('nextBtn').disabled = currentIndex === maxIndex;
+            document.getElementById('prevArrow').disabled = currentIndex === 0;
+            document.getElementById('nextArrow').disabled = currentIndex === maxIndex;
         }
 
         // Initialize carousel
