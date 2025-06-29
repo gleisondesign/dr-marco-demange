@@ -10,25 +10,22 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center">
+    <section id="inicio" className="relative min-h-screen flex items-center">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-left-center"
+        className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: 'url(/hero-dr-marco.jpg)',
+          backgroundImage: 'url(https://raw.githubusercontent.com/gleisondesign/dr-marco-demange/refs/heads/main/src/foto.jpg)',
         }}
       >
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-teal-900/80 to-teal-700/60"></div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4">
-        <div className="flex justify-end">
-          <div className="max-w-2xl text-white text-right mr-8 md:mr-16">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
-              Dr. Marco Demange
-            </h1>
+        <div className="flex justify-center text-center">
+          <div className="max-w-4xl text-white">
             <p className="text-2xl md:text-3xl lg:text-4xl mb-4 font-light leading-relaxed">
               Cuidando do seu joelho com excelência e precisão
             </p>
@@ -37,7 +34,7 @@ const HeroSection = () => {
             </p>
             <button
               onClick={scrollToContact}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-xl text-lg md:text-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-blue-500/25"
+              className="bg-teal-600 hover:bg-teal-700 text-white px-10 py-4 rounded-xl text-lg md:text-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-teal-500/25"
             >
               Agende sua consulta
             </button>
