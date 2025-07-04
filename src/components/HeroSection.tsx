@@ -13,30 +13,30 @@ const HeroSection = () => {
     <section id="inicio" className="relative min-h-screen flex items-center">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url(https://raw.githubusercontent.com/gleisondesign/dr-marco-demange/refs/heads/main/src/foto.jpg)',
+          backgroundImage: 'url(https://gleisondesign.github.io/dr-marco-demange/src/imagem-home.jpg)',
         }}
       >
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-700/60"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4">
-        <div className="flex justify-center text-center">
-          <div className="max-w-4xl text-white">
-            <p className="text-2xl md:text-3xl lg:text-4xl mb-4 font-light leading-relaxed">
-              Cuidando do seu joelho com excelência e precisão
-            </p>
-            <p className="text-lg md:text-xl lg:text-2xl mb-12 opacity-90 font-light">
-              Especialista em cirurgia robótica e preservação articular
+      <div className="relative z-10 container mx-auto px-6 lg:px-8">
+        <div className="max-w-2xl">
+          <div className="text-white space-y-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light leading-tight">
+              Excelência em cirurgia do joelho com precisão, tecnologia e cuidado personalizado
+            </h1>
+            <p className="text-lg md:text-xl font-light opacity-90 leading-relaxed">
+              Mais de 20 anos de experiência, formação internacional e atuação nos principais centros médicos do país. Precisão cirúrgica, recuperação mais rápida e resultados personalizados.
             </p>
             <button
               onClick={scrollToContact}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-xl text-lg md:text-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-blue-500/25"
+              className="inline-block bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 text-sm font-light uppercase tracking-wide transition-all duration-300 transform hover:scale-105"
             >
-              Agende sua consulta
+              Agendar Consulta
             </button>
           </div>
         </div>
