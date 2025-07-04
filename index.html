@@ -1,1794 +1,717 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dr. Marco Demange - Especialista em Cirurgia do Joelho</title>
-    <meta name="description" content="Dr. Marco Demange é especialista em cirurgia do joelho, cirurgia robótica e preservação articular. Graduado pela Unicamp, professor da USP com pós-doutorado em Harvard.">
-    <meta name="author" content="Dr. Marco Demange">
-    <meta name="keywords" content="cirurgia joelho, cirurgia robótica, ortopedia, Dr. Marco Demange, prótese joelho, artrose, lesão ligamentar">
-    
-    <meta property="og:title" content="Dr. Marco Demange - Especialista em Cirurgia do Joelho">
-    <meta property="og:description" content="Especialista em cirurgia robótica e preservação articular. Referência nacional e internacional em tratamentos do joelho.">
-    <meta property="og:type" content="website">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            color: #334155;
-            scroll-behavior: smooth;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding-top: 15px;
-        }
-
-        /* Header */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(15, 23, 42, 0.1);
-            transition: all 0.3s ease;
-            height: 70px;
-            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
-            transform: translateY(0);
-        }
-
-        header.hidden {
-            transform: translateY(-100%);
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 100%;
-            padding: 0 2rem;
-        }
-
-        .logo {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #0f172a;
-            text-decoration: none;
-            letter-spacing: -0.02em;
-            transition: color 0.3s ease;
-        }
-
-        .logo:hover {
-            color: #1e40af;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #475569;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            position: relative;
-        }
-
-        nav a:hover {
-            color: #1e40af;
-            background: rgba(30, 64, 175, 0.08);
-        }
-
-        .mobile-menu {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            padding: 8px;
-            border-radius: 8px;
-            transition: background 0.3s ease;
-        }
-
-        .mobile-menu:hover {
-            background: rgba(30, 64, 175, 0.08);
-        }
-
-        .mobile-menu span {
-            width: 22px;
-            height: 2px;
-            background: #0f172a;
-            margin: 2px 0;
-            transition: 0.3s;
-            border-radius: 2px;
-        }
-
-        .mobile-nav {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(15, 23, 42, 0.1);
-            padding: 1.5rem 0;
-            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.12);
-        }
-
-        .mobile-nav.active {
-            display: block;
-        }
-
-        .mobile-nav ul {
-            flex-direction: column;
-            gap: 0.5rem;
-            padding: 0 2rem;
-        }
-
-        .mobile-nav a {
-            display: block;
-            padding: 1rem 1.5rem;
-            margin: 0.25rem 0;
-            border-radius: 12px;
-            text-align: center;
-            font-weight: 500;
-            background: rgba(30, 64, 175, 0.05);
-            border: 1px solid rgba(30, 64, 175, 0.1);
-        }
-
-        .mobile-nav a:hover {
-            background: rgba(30, 64, 175, 0.1);
-            border-color: rgba(30, 64, 175, 0.2);
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            background: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.4)), url('https://raw.githubusercontent.com/gleisondesign/dr-marco-demange/refs/heads/main/src/foto.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            position: relative;
-        }
-
-        .hero-content {
-            width: 100%;
-            max-width: 1200px;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        .hero-text {
-            max-width: 450px;
-            text-align: right;
-            margin-right: 3rem;
-        }
-
-        .hero .subtitle {
-            font-size: clamp(1.3rem, 2.8vw, 2rem);
-            font-weight: 500;
-            margin-bottom: 1rem;
-            opacity: 0.95;
-            line-height: 1.3;
-        }
-
-        .hero .description {
-            font-size: clamp(1rem, 2vw, 1.4rem);
-            font-weight: 400;
-            margin-bottom: 2.5rem;
-            opacity: 0.9;
-            line-height: 1.4;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #1e40af, #3b82f6);
-            color: white;
-            padding: 1rem 2.5rem;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(30, 64, 175, 0.4);
-            border: none;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-button:hover {
-            background: linear-gradient(135deg, #1d4ed8, #2563eb);
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(30, 64, 175, 0.5);
-        }
-
-        /* Sections */
-        section {
-            padding: 4rem 0;
-        }
-
-        .section-bg {
-            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .section-title h2 {
-            font-size: clamp(1.8rem, 3.5vw, 2.2rem);
-            font-weight: 700;
-            color: #0f172a;
-            margin-bottom: 1rem;
-        }
-
-        .section-divider {
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(135deg, #1e40af, #3b82f6);
-            margin: 0 auto 1rem;
-            border-radius: 2px;
-        }
-
-        .section-description {
-            font-size: clamp(0.95rem, 1.8vw, 1.1rem);
-            color: #64748b;
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        /* About Section */
-        .about-content {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .about-text {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 1.5rem;
-            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
-            margin-bottom: 3rem;
-            font-size: 1.1rem;
-            text-align: center;
-            line-height: 1.7;
-            border: 1px solid rgba(15, 23, 42, 0.05);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .about-text:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(135deg, #1e40af, #3b82f6);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .about-text:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(15, 23, 42, 0.12);
-        }
-
-        .about-text:hover:before {
-            transform: scaleX(1);
-        }
-
-        .highlights {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .highlight-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 1.5rem;
-            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
-            transition: all 0.3s ease;
-            border: 1px solid rgba(15, 23, 42, 0.05);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .highlight-card:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(135deg, #1e40af, #3b82f6);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .highlight-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
-        }
-
-        .highlight-card:hover:before {
-            transform: scaleX(1);
-        }
-
-        .highlight-icon {
-            width: 60px;
-            height: 60px;
-            background: #e2e8f0;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            color: #475569;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .highlight-card h3 {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #0f172a;
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-
-        .highlight-card p {
-            color: #64748b;
-            text-align: center;
-            line-height: 1.6;
-        }
-
-        /* Treatments Section */
-        .treatments-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .treatment-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 1.5rem;
-            text-align: center;
-            transition: all 0.4s ease;
-            border: 1px solid rgba(15, 23, 42, 0.05);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .treatment-card:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(135deg, #1e40af, #3b82f6);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .treatment-card:hover {
-            background: white;
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
-        }
-
-        .treatment-card:hover:before {
-            transform: scaleX(1);
-        }
-
-        .treatment-card h3 {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #0f172a;
-            margin-bottom: 1rem;
-        }
-
-        .treatment-card p {
-            color: #64748b;
-            line-height: 1.6;
-        }
-
-        /* Technology Section */
-        .tech-content {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .tech-main {
-            background: white;
-            padding: 3.5rem;
-            border-radius: 2rem;
-            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
-            text-align: center;
-            margin-bottom: 3rem;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(15, 23, 42, 0.05);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .tech-main:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(135deg, #1e40af, #3b82f6);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .tech-main:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(15, 23, 42, 0.12);
-        }
-
-        .tech-main:hover:before {
-            transform: scaleX(1);
-        }
-
-        .tech-icon {
-            width: 80px;
-            height: 80px;
-            background: #e2e8f0;
-            border-radius: 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 2rem;
-            color: #475569;
-        }
-
-        .tech-main h3 {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            color: #0f172a;
-        }
-
-        .tech-main p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #64748b;
-        }
-
-        .tech-features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .tech-feature {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 1.5rem;
-            text-align: center;
-            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
-            border: 1px solid rgba(15, 23, 42, 0.05);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .tech-feature:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(135deg, #1e40af, #3b82f6);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .tech-feature:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
-        }
-
-        .tech-feature:hover:before {
-            transform: scaleX(1);
-        }
-
-        .tech-feature-icon {
-            width: 70px;
-            height: 70px;
-            background: #e2e8f0;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            color: #475569;
-        }
-
-        /* Content Section */
-        .content-section {
-            position: relative;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .content-carousel {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .carousel-container {
-            display: flex;
-            transition: transform 0.3s ease;
-        }
-
-        .content-card {
-            flex-shrink: 0;
-            width: calc(25% - 15px);
-            margin-right: 20px;
-            background: white;
-            border-radius: 1.5rem;
-            overflow: hidden;
-            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
-            border: 1px solid rgba(15, 23, 42, 0.05);
-            transition: all 0.3s ease;
-            cursor: pointer;
-            position: relative;
-        }
-
-        .content-card:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(135deg, #1e40af, #3b82f6);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .content-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
-        }
-
-        .content-card:hover:before {
-            transform: scaleX(1);
-        }
-
-        .content-image {
-            width: 100%;
-            height: 200px;
-            background: url('https://raw.githubusercontent.com/gleisondesign/dr-marco-demange/refs/heads/main/src/foto.jpg');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 2rem;
-            position: relative;
-        }
-
-        .content-image::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(15, 23, 42, 0.6);
-        }
-
-        .content-image i {
-            position: relative;
-            z-index: 1;
-        }
-
-        .content-info {
-            padding: 1.5rem;
-        }
-
-        .content-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #0f172a;
-            margin-bottom: 1rem;
-            line-height: 1.4;
-        }
-
-        .content-cta {
-            background: linear-gradient(135deg, #1e40af, #3b82f6);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
-
-        .content-cta:hover {
-            background: linear-gradient(135deg, #1d4ed8, #2563eb);
-            transform: translateY(-2px);
-        }
-
-        .carousel-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(30, 64, 175, 0.9);
-            color: white;
-            border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 1.2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            z-index: 10;
-        }
-
-        .carousel-arrow:hover {
-            background: rgba(30, 64, 175, 1);
-            transform: translateY(-50%) scale(1.1);
-        }
-
-        .carousel-arrow.prev {
-            left: 10px;
-        }
-
-        .carousel-arrow.next {
-            right: 10px;
-        }
-
-        .carousel-arrow:disabled {
-            background: rgba(100, 116, 139, 0.5);
-            cursor: not-allowed;
-            transform: translateY(-50%);
-        }
-
-        /* Testimonials Section */
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .testimonial-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 1.5rem;
-            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
-            border: 1px solid rgba(15, 23, 42, 0.05);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .testimonial-card:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(135deg, #1e40af, #3b82f6);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
-        }
-
-        .testimonial-card:hover:before {
-            transform: scaleX(1);
-        }
-
-        .testimonial-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .quote-icon {
-            width: 50px;
-            height: 50px;
-            background: #e2e8f0;
-            border-radius: 12px;
-            margin-right: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #475569;
-        }
-
-        .stars {
-            display: flex;
-            gap: 3px;
-        }
-
-        .star {
-            width: 18px;
-            height: 18px;
-            background: #fbbf24;
-            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            color: #475569;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-
-        .testimonial-author {
-            font-weight: 600;
-            color: #0f172a;
-            border-top: 1px solid #e5e7eb;
-            padding-top: 1rem;
-        }
-
-        /* Contact Section */
-        .contact-content {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .contact-info-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .contact-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 1.5rem;
-            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
-            border: 1px solid rgba(15, 23, 42, 0.05);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .contact-card:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(135deg, #1e40af, #3b82f6);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .contact-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.12);
-        }
-
-        .contact-card:hover:before {
-            transform: scaleX(1);
-        }
-
-        .contact-card h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #0f172a;
-            margin-bottom: 2rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 2rem;
-        }
-
-        .contact-icon {
-            width: 45px;
-            height: 45px;
-            background: #e2e8f0;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 1.5rem;
-            flex-shrink: 0;
-            color: #475569;
-        }
-
-        .contact-item h4 {
-            font-weight: 600;
-            color: #0f172a;
-            margin-bottom: 0.5rem;
-            font-size: 1rem;
-        }
-
-        .contact-item p {
-            color: #64748b;
-            line-height: 1.5;
-        }
-
-        .contact-item a {
-            color: #0f172a;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .contact-item a:hover {
-            color: #1e40af;
-        }
-
-        .hospitals-grid {
-            display: grid;
-            gap: 1rem;
-        }
-
-        .hospital-item {
-            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
-            padding: 1rem 1.25rem;
-            border-radius: 10px;
-            border: 1px solid rgba(15, 23, 42, 0.05);
-            transition: all 0.3s ease;
-        }
-
-        .hospital-item:hover {
-            background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
-            transform: translateX(5px);
-        }
-
-        .hospital-item p {
-            color: #0f172a;
-            font-weight: 500;
-        }
-
-        /* Form */
-        .contact-form {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 1.5rem;
-            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
-            margin-bottom: 3rem;
-            border: 1px solid rgba(15, 23, 42, 0.05);
-        }
-
-        .contact-form h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #0f172a;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            font-weight: 600;
-            color: #0f172a;
-            margin-bottom: 0.5rem;
-            font-size: 0.9rem;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.875rem 1rem;
-            border: 2px solid #e5e7eb;
-            border-radius: 10px;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-            font-family: inherit;
-            background: #f9fafb;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #1e40af;
-            box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
-            background: white;
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-
-        .form-submit {
-            width: 100%;
-            background: linear-gradient(135deg, #1e40af, #3b82f6);
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 10px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-family: inherit;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .form-submit:hover {
-            background: linear-gradient(135deg, #1d4ed8, #2563eb);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(30, 64, 175, 0.3);
-        }
-
-        /* Footer */
-        footer {
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            color: white;
-            padding: 3rem 0;
-            text-align: center;
-        }
-
-        .footer-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .footer-content h3 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .footer-content p {
-            color: #94a3b8;
-            margin-bottom: 2rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            font-size: 1rem;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .social-links a {
-            width: 50px;
-            height: 50px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            color: white;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-        }
-
-        .social-links a:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-3px);
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 2rem;
-            color: #94a3b8;
-            font-size: 0.9rem;
-        }
-
-        /* WhatsApp Button */
-        .whatsapp-button {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            width: 60px;
-            height: 60px;
-            background: #25d366;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
-            z-index: 1000;
-            transition: all 0.3s ease;
-            color: white;
-        }
-
-        .whatsapp-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.6);
-        }
-
-        /* Mobile Styles */
-        @media (max-width: 768px) {
-            .header-content {
-                padding: 0 1rem;
-            }
-
-            nav ul {
-                display: none;
-            }
-
-            .mobile-menu {
-                display: flex;
-            }
-
-            .hero {
-                background-attachment: scroll;
-                padding: 0 1rem;
-            }
-
-            .hero-content {
-                justify-content: center;
-                text-align: center;
-            }
-
-            .hero-text {
-                text-align: center;
-                margin-right: 0;
-                max-width: none;
-            }
-
-            .highlights {
-                grid-template-columns: 1fr;
-            }
-
-            .highlight-icon {
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            section {
-                padding: 3rem 0;
-            }
-
-            .about-text {
-                padding: 2rem;
-            }
-
-            .treatments-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .tech-main {
-                padding: 2.5rem;
-            }
-
-            .tech-features {
-                grid-template-columns: 1fr;
-            }
-
-            .content-carousel {
-            }
-
-            .content-card {
-                width: 100%;
-                margin-right: 0;
-                margin-bottom: 1.5rem;
-            }
-
-            .carousel-arrow {
-                width: 35px;
-                height: 35px;
-                font-size: 1rem;
-            }
-
-            .carousel-arrow.prev {
-                left: 5px;
-            }
-
-            .carousel-arrow.next {
-                right: 5px;
-            }
-
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-info-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .contact-card {
-                padding: 2rem;
-            }
-
-            .contact-form {
-                padding: 2rem;
-            }
-
-            .whatsapp-button {
-                bottom: 1rem;
-                right: 1rem;
-                width: 50px;
-                height: 50px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding-top: 13px;
-            }
-
-            .treatments-grid,
-            .highlights {
-                grid-template-columns: 1fr;
-            }
-
-            .treatment-card {
-                min-width: auto;
-            }
-        }
+      /* Tipografia premium */
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-weight: 300;
+        line-height: 1.7;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+        font-weight: 300;
+      }
+
+      /* Smooth scroll behavior */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Animações suaves e premium */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .animate-fade-in-up {
+        animation: fadeInUp 1s ease-out forwards;
+      }
+
+      .animate-fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+      }
+
+      /* Intersection Observer classes - animações ao rolar */
+      .fade-in-section {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+      }
+
+      .fade-in-section.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Menu mobile */
+      .mobile-menu {
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.5s ease-out;
+      }
+
+      .mobile-menu.open {
+        max-height: 500px;
+      }
+
+      /* Carousel styles */
+      .carousel-container {
+        overflow: hidden;
+      }
+
+      .carousel-track {
+        display: flex;
+        transition: transform 0.5s ease-out;
+      }
+
+      .carousel-card {
+        min-width: 100%;
+        padding: 0 8px;
+      }
+
+      @media (min-width: 768px) {
+        .carousel-card {
+          min-width: calc(33.333% - 16px);
+        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body class="bg-white text-gray-900">
     <!-- Header -->
-    <header id="header">
-        <div class="container">
-            <div class="header-content">
-                <a href="#" class="logo">Dr. Marco Demange</a>
-                <nav>
-                    <ul>
-                        <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="#tratamentos">Tratamentos</a></li>
-                        <li><a href="#tecnologia">Tecnologia</a></li>
-                        <li><a href="#conteudos">Conteúdos</a></li>
-                        <li><a href="#depoimentos">Depoimentos</a></li>
-                        <li><a href="#contato">Contato</a></li>
-                    </ul>
-                </nav>
-                <div class="mobile-menu" onclick="toggleMobileMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="mobile-nav" id="mobileNav">
-                    <ul>
-                        <li><a href="#sobre" onclick="closeMobileMenu()">Sobre</a></li>
-                        <li><a href="#tratamentos" onclick="closeMobileMenu()">Tratamentos</a></li>
-                        <li><a href="#tecnologia" onclick="closeMobileMenu()">Tecnologia</a></li>
-                        <li><a href="#conteudos" onclick="closeMobileMenu()">Conteúdos</a></li>
-                        <li><a href="#depoimentos" onclick="closeMobileMenu()">Depoimentos</a></li>
-                        <li><a href="#contato" onclick="closeMobileMenu()">Contato</a></li>
-                    </ul>
-                </div>
-            </div>
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm transition-all duration-500">
+      <div class="container mx-auto px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <h1 class="text-2xl font-light text-gray-900 tracking-tight">
+              Dr. Marco Demange
+            </h1>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden lg:flex items-center space-x-10">
+            <a href="#inicio" class="text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wider transition-all duration-300 hover:scale-105">
+              Início
+            </a>
+            <a href="#sobre" class="text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wider transition-all duration-300 hover:scale-105">
+              Sobre
+            </a>
+            <a href="#cirurgia-joelho" class="text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wider transition-all duration-300 hover:scale-105">
+              Cirurgia de Joelho
+            </a>
+            <a href="#tecnologia" class="text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wider transition-all duration-300 hover:scale-105">
+              Tecnologia
+            </a>
+            <a href="#conteudos" class="text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wider transition-all duration-300 hover:scale-105">
+              Conteúdos
+            </a>
+            <a href="#depoimentos" class="text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wider transition-all duration-300 hover:scale-105">
+              Depoimentos
+            </a>
+          </nav>
+
+          <!-- CTA Button Desktop -->
+          <div class="hidden lg:block">
+            <a href="#contato" class="bg-gray-900 hover:bg-gray-700 text-white px-8 py-3 text-sm font-light uppercase tracking-wider transition-all duration-300 transform hover:scale-105">
+              Contato
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" class="lg:hidden p-2 text-gray-700 hover:text-gray-900 transition-colors duration-300">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
         </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="mobile-menu lg:hidden border-t border-gray-100">
+          <nav class="py-8 space-y-2">
+            <a href="#inicio" class="block w-full text-left py-4 px-2 text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wider transition-all duration-300">
+              Início
+            </a>
+            <a href="#sobre" class="block w-full text-left py-4 px-2 text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wider transition-all duration-300">
+              Sobre
+            </a>
+            <a href="#cirurgia-joelho" class="block w-full text-left py-4 px-2 text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wider transition-all duration-300">
+              Cirurgia de Joelho
+            </a>
+            <a href="#tecnologia" class="block w-full text-left py-4 px-2 text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wider transition-all duration-300">
+              Tecnologia
+            </a>
+            <a href="#conteudos" class="block w-full text-left py-4 px-2 text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wider transition-all duration-300">
+              Conteúdos
+            </a>
+            <a href="#depoimentos" class="block w-full text-left py-4 px-2 text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wider transition-all duration-300">
+              Depoimentos
+            </a>
+            <a href="#contato" class="block w-full text-left py-4 px-2 mt-6 bg-gray-900 text-white font-light text-sm uppercase tracking-wider transition-all duration-300">
+              Contato
+            </a>
+          </nav>
+        </div>
+      </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <p class="subtitle">Cuidando do seu joelho com excelência e precisão</p>
-                <p class="description">Especialista em cirurgia robótica e preservação articular</p>
-                <a href="#contato" class="cta-button">Agende sua consulta</a>
-            </div>
+    <section id="inicio" class="relative min-h-screen flex items-center">
+      <!-- Background Image -->
+      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://gleisondesign.github.io/dr-marco-demange/src/imagem-home.jpg');">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black/30"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="relative z-10 container mx-auto px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <div class="text-white space-y-10 animate-fade-in-up">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-light leading-tight">
+              Excelência em cirurgia do joelho com precisão, tecnologia e cuidado personalizado
+            </h1>
+            <p class="text-lg md:text-xl font-light opacity-95 leading-relaxed max-w-2xl">
+              Mais de 20 anos de experiência, formação internacional e atuação nos principais centros médicos do país. Precisão cirúrgica, recuperação mais rápida e resultados personalizados.
+            </p>
+            <a href="#contato" class="inline-block bg-white hover:bg-gray-100 text-gray-900 px-10 py-4 text-sm font-light uppercase tracking-wider transition-all duration-300 transform hover:scale-105">
+              Agendar Consulta
+            </a>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- About Section -->
-    <section id="sobre" class="section-bg">
-        <div class="container">
-            <div class="section-title">
-                <h2>Marco Demange</h2>
-                <div class="section-divider"></div>
-                <p class="section-description">Especialista em cirurgia do joelho com formação internacional de excelência e reconhecimento mundial.</p>
-            </div>
-
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Dr. Marco Demange é especialista em cirurgia do joelho, graduado pela Unicamp, professor da USP e pós-doutorado por Harvard e pelo Hospital for Special Surgery (EUA). Atua com foco em cirurgia robótica e preservação articular, sendo referência nacional e internacional.</p>
-                </div>
-
-                <div class="highlights">
-                    <div class="highlight-card">
-                        <div class="highlight-icon">
-                            <i data-feather="award"></i>
-                        </div>
-                        <h3>Pós-doutorado em Harvard e HSS – EUA</h3>
-                        <p>Formação internacional de excelência e reconhecimento mundial em cirurgia do joelho e preservação articular.</p>
-                    </div>
-                    <div class="highlight-card">
-                        <div class="highlight-icon">
-                            <i data-feather="users"></i>
-                        </div>
-                        <h3>Chefe do Grupo de Joelho na USP</h3>
-                        <p>Liderança em ensino e pesquisa com dedicação ao desenvolvimento científico nacional e internacional.</p>
-                    </div>
-                    <div class="highlight-card">
-                        <div class="highlight-icon">
-                            <i data-feather="file-text"></i>
-                        </div>
-                        <h3>Mais de 60 publicações científicas</h3>
-                        <p>Contribuição para o avanço da medicina através de pesquisas e estudos científicos relevantes mundialmente.</p>
-                    </div>
-                    <div class="highlight-card">
-                        <div class="highlight-icon">
-                            <i data-feather="check"></i>
-                        </div>
-                        <h3>Membro SBOT, SBCJ, ICRS, AAOS</h3>
-                        <p>Reconhecimento em sociedades médicas nacionais e internacionais de alta relevância científica e profissional.</p>
-                    </div>
-                </div>
-            </div>
+    <section id="sobre" class="py-32 bg-white fade-in-section">
+      <div class="container mx-auto px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-4xl md:text-5xl font-light text-gray-900 mb-8">
+            Dr. Marco Demange
+          </h2>
+          <div class="w-24 h-px bg-gray-900 mx-auto mb-12"></div>
+          <p class="text-xl text-gray-600 leading-relaxed font-light">
+            Especialista em cirurgia do joelho com mais de 20 anos de experiência, formação internacional e atuação nos principais centros médicos do país. Dedico-me à excelência em cirurgia ortopédica, sempre priorizando o cuidado personalizado e os melhores resultados para cada paciente.
+          </p>
         </div>
+      </div>
     </section>
 
-    <!-- Treatments Section -->
-    <section id="tratamentos">
-        <div class="container">
-            <div class="section-title">
-                <h2>Tratamentos</h2>
-                <div class="section-divider"></div>
-                <p class="section-description">Soluções avançadas e personalizadas para cada tipo de lesão ou problema no joelho dos pacientes.</p>
+    <!-- Cirurgia de Joelho Section -->
+    <section id="cirurgia-joelho" class="py-32 bg-gray-50 fade-in-section">
+      <div class="container mx-auto px-6 lg:px-8">
+        <div class="text-center mb-24">
+          <h2 class="text-4xl md:text-5xl font-light text-gray-900 mb-8">
+            Cirurgia de Joelho
+          </h2>
+          <div class="w-24 h-px bg-gray-900 mx-auto mb-12"></div>
+          <p class="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light">
+            Soluções avançadas e personalizadas para cada tipo de lesão ou problema no joelho
+          </p>
+        </div>
+
+        <div class="max-w-7xl mx-auto">
+          <!-- Featured Treatment - Prótese Robótica -->
+          <div class="mb-20">
+            <div class="bg-white p-12 text-center max-w-5xl mx-auto">
+              <h3 class="text-3xl md:text-4xl font-light text-gray-900 mb-10">
+                Prótese Robótica
+              </h3>
+              <p class="text-lg text-gray-600 leading-relaxed font-light">
+                Revolucionária técnica de implante de prótese de joelho assistida por robô, oferecendo precisão milimétrica no posicionamento dos componentes. Esta tecnologia de ponta proporciona melhor alinhamento, maior durabilidade da prótese, recuperação mais rápida e resultados funcionais superiores. O sistema robótico permite planejamento pré-operatório personalizado e execução cirúrgica com precisão incomparável.
+              </p>
+            </div>
+          </div>
+
+          <!-- Other Treatments -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+            <div class="text-center bg-white p-8 fade-in-section">
+              <h3 class="text-2xl font-light text-gray-900 mb-8">
+                Artrose
+              </h3>
+              <p class="text-gray-600 leading-relaxed font-light">
+                Desgaste progressivo da cartilagem articular que causa dor, rigidez e limitação funcional. Oferecemos tratamentos desde conservadores até cirúrgicos avançados, sempre priorizando a preservação da função e alívio da dor.
+              </p>
             </div>
 
-            <div class="treatments-grid">
-                <div class="treatment-card">
-                    <h3>Artrose do Joelho</h3>
-                    <p>Desgaste da cartilagem que causa dor e limitação funcional. Tratamento clínico ou cirúrgico conforme grau apresentado.</p>
-                </div>
-                <div class="treatment-card">
-                    <h3>Lesões Ligamentares</h3>
-                    <p>Como LCA, que afetam a estabilidade articular. Tratamento moderno com foco no retorno funcional completo do paciente.</p>
-                </div>
-                <div class="treatment-card">
-                    <h3>Prótese de Joelho</h3>
-                    <p>Indicado em artrose avançada irreversível. Restaura mobilidade e alivia a dor com alta precisão cirúrgica moderna.</p>
-                </div>
-                <div class="treatment-card">
-                    <h3>Cirurgia Robótica</h3>
-                    <p>Técnica de ponta para colocação de prótese. Máxima precisão cirúrgica e recuperação rápida garantida aos pacientes.</p>
-                </div>
-                <div class="treatment-card">
-                    <h3>Técnicas de Preservação</h3>
-                    <p>Alternativas à prótese como realinhamento ósseo. Transplante de cartilagem e outras técnicas biológicas modernas disponíveis.</p>
-                </div>
-                <div class="treatment-card">
-                    <h3>Condromalácia Patelar</h3>
-                    <p>Desgaste da cartilagem atrás da patela. Tratamento clínico e/ou cirúrgico especializado com foco funcional adequado.</p>
-                </div>
-                <div class="treatment-card">
-                    <h3>Lesões Meniscais</h3>
-                    <p>Rompimentos nos meniscos causam dor severa. Tratamento clínico ou cirúrgico preservativo conforme caso apresentado.</p>
-                </div>
-                <div class="treatment-card">
-                    <h3>Instabilidade Patelar</h3>
-                    <p>Desalinhamento da patela causa dor intensa. Corrigido com fisioterapia especializada e técnicas cirúrgicas quando necessário.</p>
-                </div>
-                <div class="treatment-card">
-                    <h3>Lesões na Cartilagem</h3>
-                    <p>Áreas danificadas da cartilagem articular específica. Tratadas com técnicas modernas de regeneração e reparo localizado.</p>
-                </div>
+            <div class="text-center bg-white p-8 fade-in-section">
+              <h3 class="text-2xl font-light text-gray-900 mb-8">
+                Lesões Ligamentares
+              </h3>
+              <p class="text-gray-600 leading-relaxed font-light">
+                Lesões do ligamento cruzado anterior (LCA) e outros ligamentos do joelho que comprometem a estabilidade articular. Utilizamos técnicas modernas de reconstrução para restaurar a função e permitir retorno seguro às atividades.
+              </p>
             </div>
+
+            <div class="text-center bg-white p-8 fade-in-section">
+              <h3 class="text-2xl font-light text-gray-900 mb-8">
+                Preservação Articular
+              </h3>
+              <p class="text-gray-600 leading-relaxed font-light">
+                Tratamentos focados na preservação da cartilagem e menisco através de técnicas biológicas, transplantes e procedimentos minimamente invasivos que adiam ou evitam a necessidade de próteses.
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Technology Section -->
-    <section id="tecnologia" class="section-bg">
-        <div class="container">
-            <div class="section-title">
-                <h2>Tecnologia Avançada</h2>
-                <div class="section-divider"></div>
-                <p class="section-description">Utilizamos as mais modernas tecnologias em cirurgia robótica e técnicas minimamente invasivas disponíveis.</p>
-            </div>
-
-            <div class="tech-content">
-                <div class="tech-main">
-                    <div class="tech-icon">
-                        <i data-feather="cpu" style="width: 40px; height: 40px;"></i>
-                    </div>
-                    <h3>Cirurgia Robótica</h3>
-                    <p>A cirurgia robótica representa o futuro da medicina ortopédica. Com esta tecnologia de ponta, conseguimos realizar procedimentos com precisão milimétrica, reduzindo significativamente o tempo de recuperação e melhorando os resultados para nossos pacientes.</p>
-                </div>
-
-                <div class="tech-features">
-                    <div class="tech-feature">
-                        <div class="tech-feature-icon">
-                            <i data-feather="target" style="width: 28px; height: 28px;"></i>
-                        </div>
-                        <h4>Precisão Cirúrgica</h4>
-                        <p>Tecnologia robótica que oferece precisão milimétrica em cada procedimento realizado com excelência técnica e resultados superiores.</p>
-                    </div>
-                    <div class="tech-feature">
-                        <div class="tech-feature-icon">
-                            <i data-feather="zap" style="width: 28px; height: 28px;"></i>
-                        </div>
-                        <h4>Recuperação Rápida</h4>
-                        <p>Técnicas minimamente invasivas que reduzem o tempo. Recuperação e melhoram significativamente os resultados clínicos dos pacientes.</p>
-                    </div>
-                    <div class="tech-feature">
-                        <div class="tech-feature-icon">
-                            <i data-feather="trending-up" style="width: 28px; height: 28px;"></i>
-                        </div>
-                        <h4>Futuro da Medicina</h4>
-                        <p>Abordagens regenerativas e tecnologias de ponta disponíveis. Constante evolução para melhores tratamentos médicos especializados.</p>
-                    </div>
-                </div>
-            </div>
+    <section id="tecnologia" class="py-32 bg-white fade-in-section">
+      <div class="container mx-auto px-6 lg:px-8">
+        <div class="text-center mb-24">
+          <h2 class="text-4xl md:text-5xl font-light text-gray-900 mb-8">
+            Tecnologia Avançada
+          </h2>
+          <div class="w-24 h-px bg-gray-900 mx-auto mb-12"></div>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
+            Utilizamos as mais modernas tecnologias para garantir precisão e melhores resultados
+          </p>
         </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
+          <div class="text-center fade-in-section">
+            <h3 class="text-xl font-light text-gray-900 mb-6">
+              Cirurgia Robótica
+            </h3>
+            <p class="text-gray-600 font-light leading-relaxed">
+              Precisão milimétrica com sistema robótico de última geração
+            </p>
+          </div>
+
+          <div class="text-center fade-in-section">
+            <h3 class="text-xl font-light text-gray-900 mb-6">
+              Navegação Cirúrgica
+            </h3>
+            <p class="text-gray-600 font-light leading-relaxed">
+              Orientação em tempo real durante procedimentos complexos
+            </p>
+          </div>
+
+          <div class="text-center fade-in-section">
+            <h3 class="text-xl font-light text-gray-900 mb-6">
+              Artroscopia Avançada
+            </h3>
+            <p class="text-gray-600 font-light leading-relaxed">
+              Técnicas minimamente invasivas para recuperação mais rápida
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Content Section -->
-    <section id="conteudos">
-        <div class="container">
-            <div class="section-title">
-                <h2>Conteúdos</h2>
-                <div class="section-divider"></div>
-                <p class="section-description">Vídeos e posts em destaque com informações relevantes sobre cirurgia do joelho e tratamentos.</p>
-            </div>
-
-            <div class="content-section">
-                <div class="content-carousel">
-                    <button class="carousel-arrow prev" id="prevArrow" onclick="moveCarousel(-1)">‹</button>
-                    <div class="carousel-container" id="carouselContainer">
-                        <div class="content-card" onclick="window.open('https://example.com/video1', '_blank')">
-                            <div class="content-image">
-                                <i data-feather="play-circle"></i>
-                            </div>
-                            <div class="content-info">
-                                <h4 class="content-title">Cirurgia Robótica: O Futuro dos Tratamentos</h4>
-                                <a href="https://example.com/video1" target="_blank" class="content-cta">Acessar</a>
-                            </div>
-                        </div>
-                        <div class="content-card" onclick="window.open('https://example.com/post1', '_blank')">
-                            <div class="content-image">
-                                <i data-feather="file-text"></i>
-                            </div>
-                            <div class="content-info">
-                                <h4 class="content-title">Artrose no Joelho: Sintomas e Tratamentos</h4>
-                                <a href="https://example.com/post1" target="_blank" class="content-cta">Acessar</a>
-                            </div>
-                        </div>
-                        <div class="content-card" onclick="window.open('https://example.com/video2', '_blank')">
-                            <div class="content-image">
-                                <i data-feather="play-circle"></i>
-                            </div>
-                            <div class="content-info">
-                                <h4 class="content-title">Lesão do LCA: Diagnóstico e Recuperação</h4>
-                                <a href="https://example.com/video2" target="_blank" class="content-cta">Acessar</a>
-                            </div>
-                        </div>
-                        <div class="content-card" onclick="window.open('https://example.com/post2', '_blank')">
-                            <div class="content-image">
-                                <i data-feather="heart"></i>
-                            </div>
-                            <div class="content-info">
-                                <h4 class="content-title">Prótese de Joelho: Quando é Necessária</h4>
-                                <a href="https://example.com/post2" target="_blank" class="content-cta">Acessar</a>
-                            </div>
-                        </div>
-                        <div class="content-card" onclick="window.open('https://example.com/video3', '_blank')">
-                            <div class="content-image">
-                                <i data-feather="play-circle"></i>
-                            </div>
-                            <div class="content-info">
-                                <h4 class="content-title">Exercícios para Fortalecimento do Joelho</h4>
-                                <a href="https://example.com/video3" target="_blank" class="content-cta">Acessar</a>
-                            </div>
-                        </div>
-                        <div class="content-card" onclick="window.open('https://example.com/post3', '_blank')">
-                            <div class="content-image">
-                                <i data-feather="book-open"></i>
-                            </div>
-                            <div class="content-info">
-                                <h4 class="content-title">Prevenção de Lesões no Joelho no Esporte</h4>
-                                <a href="https://example.com/post3" target="_blank" class="content-cta">Acessar</a>
-                            </div>
-                        </div>
-                        <div class="content-card" onclick="window.open('https://example.com/video4', '_blank')">
-                            <div class="content-image">
-                                <i data-feather="play-circle"></i>
-                            </div>
-                            <div class="content-info">
-                                <h4 class="content-title">Técnicas Minimamente Invasivas em Ortopedia</h4>
-                                <a href="https://example.com/video4" target="_blank" class="content-cta">Acessar</a>
-                            </div>
-                        </div>
-                        <div class="content-card" onclick="window.open('https://example.com/post4', '_blank')">
-                            <div class="content-image">
-                                <i data-feather="activity"></i>
-                            </div>
-                            <div class="content-info">
-                                <h4 class="content-title">Recuperação Pós-Cirúrgica: Dicas Importantes</h4>
-                                <a href="https://example.com/post4" target="_blank" class="content-cta">Acessar</a>
-                            </div>
-                        </div>
-                        <div class="content-card" onclick="window.open('https://example.com/video5', '_blank')">
-                            <div class="content-image">
-                                <i data-feather="play-circle"></i>
-                            </div>
-                            <div class="content-info">
-                                <h4 class="content-title">Condromalácia Patelar: Causas e Tratamento</h4>
-                                <a href="https://example.com/video5" target="_blank" class="content-cta">Acessar</a>
-                            </div>
-                        </div>
-                        <div class="content-card" onclick="window.open('https://example.com/post5', '_blank')">
-                            <div class="content-image">
-                                <i data-feather="shield"></i>
-                            </div>
-                            <div class="content-info">
-                                <h4 class="content-title">Medicina Regenerativa aplicada ao Joelho</h4>
-                                <a href="https://example.com/post5" target="_blank" class="content-cta">Acessar</a>
-                            </div>
-                        </div>
-                        <div class="content-card" onclick="window.open('https://example.com/video6', '_blank')">
-                            <div class="content-image">
-                                <i data-feather="play-circle"></i>
-                            </div>
-                            <div class="content-info">
-                                <h4 class="content-title">Lesões Meniscais: Diagnóstico Preciso</h4>
-                                <a href="https://example.com/video6" target="_blank" class="content-cta">Acessar</a>
-                            </div>
-                        </div>
-                        <div class="content-card" onclick="window.open('https://example.com/post6', '_blank')">
-                            <div class="content-image">
-                                <i data-feather="compass"></i>
-                            </div>
-                            <div class="content-info">
-                                <h4 class="content-title">Inovações em Cirurgia Ortopédica Mundial</h4>
-                                <a href="https://example.com/post6" target="_blank" class="content-cta">Acessar</a>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-arrow next" id="nextArrow" onclick="moveCarousel(1)">›</button>
-                </div>
-            </div>
+    <section id="conteudos" class="py-32 bg-gray-50 fade-in-section">
+      <div class="container mx-auto px-6 lg:px-8">
+        <div class="text-center mb-24">
+          <h2 class="text-4xl md:text-5xl font-light text-gray-900 mb-8">
+            Conteúdos
+          </h2>
+          <div class="w-24 h-px bg-gray-900 mx-auto mb-12"></div>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
+            Reels, podcasts, entrevistas e depoimentos sobre cirurgia do joelho e ortopedia
+          </p>
         </div>
+
+        <div class="relative max-w-7xl mx-auto">
+          <!-- Carousel Controls -->
+          <button id="prev-btn" class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 p-4 text-gray-400 hover:text-gray-900 transition-colors duration-300 -ml-16 hover:scale-110 hidden md:block">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+          </button>
+
+          <button id="next-btn" class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 p-4 text-gray-400 hover:text-gray-900 transition-colors duration-300 -mr-16 hover:scale-110 hidden md:block">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+
+          <!-- Mobile Controls -->
+          <button id="prev-btn-mobile" class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 p-3 text-gray-400 hover:text-gray-900 transition-colors duration-300 -ml-10 md:hidden">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+          </button>
+
+          <button id="next-btn-mobile" class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 p-3 text-gray-400 hover:text-gray-900 transition-colors duration-300 -mr-10 md:hidden">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+
+          <!-- Carousel Container -->
+          <div class="carousel-container px-12 md:px-0">
+            <div id="carousel-track" class="carousel-track gap-8">
+              <!-- Card 1 -->
+              <div class="carousel-card">
+                <div class="bg-white hover:bg-gray-50 transition-all duration-300 cursor-pointer group">
+                  <div class="aspect-video bg-gray-100 overflow-hidden">
+                    <img src="https://raw.githubusercontent.com/gleisondesign/dr-marco-demange/refs/heads/main/src/foto.jpg" alt="Técnicas Cirúrgicas Avançadas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                  </div>
+                  <div class="p-8">
+                    <div class="text-xs uppercase tracking-wider text-gray-500 mb-3 font-light">Reels</div>
+                    <h3 class="text-lg font-light text-gray-900 mb-4 leading-tight">Técnicas Cirúrgicas Avançadas</h3>
+                    <p class="text-sm text-gray-600 mb-6 font-light leading-relaxed">Vídeos curtos mostrando técnicas inovadoras em cirurgia do joelho e os avanços da medicina ortopédica moderna.</p>
+                    <button class="text-xs uppercase tracking-wider text-gray-900 hover:text-gray-700 font-light transition-colors border-b border-gray-900 pb-1">Acessar</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="carousel-card">
+                <div class="bg-white hover:bg-gray-50 transition-all duration-300 cursor-pointer group">
+                  <div class="aspect-video bg-gray-100 overflow-hidden">
+                    <img src="https://raw.githubusercontent.com/gleisondesign/dr-marco-demange/refs/heads/main/src/foto.jpg" alt="Conversas sobre Ortopedia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                  </div>
+                  <div class="p-8">
+                    <div class="text-xs uppercase tracking-wider text-gray-500 mb-3 font-light">Podcast</div>
+                    <h3 class="text-lg font-light text-gray-900 mb-4 leading-tight">Conversas sobre Ortopedia</h3>
+                    <p class="text-sm text-gray-600 mb-6 font-light leading-relaxed">Discussões aprofundadas sobre os últimos avanços em cirurgia ortopédica e casos clínicos interessantes.</p>
+                    <button class="text-xs uppercase tracking-wider text-gray-900 hover:text-gray-700 font-light transition-colors border-b border-gray-900 pb-1">Acessar</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="carousel-card">
+                <div class="bg-white hover:bg-gray-50 transition-all duration-300 cursor-pointer group">
+                  <div class="aspect-video bg-gray-100 overflow-hidden">
+                    <img src="https://raw.githubusercontent.com/gleisondesign/dr-marco-demange/refs/heads/main/src/foto.jpg" alt="Futuro da Cirurgia Robótica" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                  </div>
+                  <div class="p-8">
+                    <div class="text-xs uppercase tracking-wider text-gray-500 mb-3 font-light">Entrevista</div>
+                    <h3 class="text-lg font-light text-gray-900 mb-4 leading-tight">Futuro da Cirurgia Robótica</h3>
+                    <p class="text-sm text-gray-600 mb-6 font-light leading-relaxed">Entrevista exclusiva sobre as perspectivas e inovações da cirurgia robótica no tratamento do joelho.</p>
+                    <button class="text-xs uppercase tracking-wider text-gray-900 hover:text-gray-700 font-light transition-colors border-b border-gray-900 pb-1">Acessar</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="carousel-card">
+                <div class="bg-white hover:bg-gray-50 transition-all duration-300 cursor-pointer group">
+                  <div class="aspect-video bg-gray-100 overflow-hidden">
+                    <img src="https://raw.githubusercontent.com/gleisondesign/dr-marco-demange/refs/heads/main/src/foto.jpg" alt="Recuperação com Prótese Robótica" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                  </div>
+                  <div class="p-8">
+                    <div class="text-xs uppercase tracking-wider text-gray-500 mb-3 font-light">Depoimento</div>
+                    <h3 class="text-lg font-light text-gray-900 mb-4 leading-tight">Recuperação com Prótese Robótica</h3>
+                    <p class="text-sm text-gray-600 mb-6 font-light leading-relaxed">Relato inspirador de paciente que recuperou sua mobilidade através da cirurgia de prótese robótica.</p>
+                    <button class="text-xs uppercase tracking-wider text-gray-900 hover:text-gray-700 font-light transition-colors border-b border-gray-900 pb-1">Acessar</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 5 -->
+              <div class="carousel-card">
+                <div class="bg-white hover:bg-gray-50 transition-all duration-300 cursor-pointer group">
+                  <div class="aspect-video bg-gray-100 overflow-hidden">
+                    <img src="https://raw.githubusercontent.com/gleisondesign/dr-marco-demange/refs/heads/main/src/foto.jpg" alt="Reabilitação Pós-Cirúrgica" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                  </div>
+                  <div class="p-8">
+                    <div class="text-xs uppercase tracking-wider text-gray-500 mb-3 font-light">Reels</div>
+                    <h3 class="text-lg font-light text-gray-900 mb-4 leading-tight">Reabilitação Pós-Cirúrgica</h3>
+                    <p class="text-sm text-gray-600 mb-6 font-light leading-relaxed">Série de vídeos mostrando exercícios e cuidados essenciais durante a recuperação pós-operatória.</p>
+                    <button class="text-xs uppercase tracking-wider text-gray-900 hover:text-gray-700 font-light transition-colors border-b border-gray-900 pb-1">Acessar</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 6 -->
+              <div class="carousel-card">
+                <div class="bg-white hover:bg-gray-50 transition-all duration-300 cursor-pointer group">
+                  <div class="aspect-video bg-gray-100 overflow-hidden">
+                    <img src="https://raw.githubusercontent.com/gleisondesign/dr-marco-demange/refs/heads/main/src/foto.jpg" alt="Mitos e Verdades sobre Artrose" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                  </div>
+                  <div class="p-8">
+                    <div class="text-xs uppercase tracking-wider text-gray-500 mb-3 font-light">Podcast</div>
+                    <h3 class="text-lg font-light text-gray-900 mb-4 leading-tight">Mitos e Verdades sobre Artrose</h3>
+                    <p class="text-sm text-gray-600 mb-6 font-light leading-relaxed">Esclarecimentos sobre conceitos equivocados e informações corretas sobre o tratamento da artrose.</p>
+                    <button class="text-xs uppercase tracking-wider text-gray-900 hover:text-gray-700 font-light transition-colors border-b border-gray-900 pb-1">Acessar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section id="depoimentos" class="section-bg">
-        <div class="container">
-            <div class="section-title">
-                <h2>Depoimentos</h2>
-                <div class="section-divider"></div>
-                <p class="section-description">Veja o que nossos pacientes dizem sobre os tratamentos e resultados obtidos com excelência.</p>
-            </div>
-
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="quote-icon">
-                            <i data-feather="message-circle"></i>
-                        </div>
-                        <div class="stars">
-                            <div class="star"></div>
-                            <div class="star"></div>
-                            <div class="star"></div>
-                            <div class="star"></div>
-                            <div class="star"></div>
-                        </div>
-                    </div>
-                    <p class="testimonial-text">"Dr. Marco Demange mudou minha vida completamente. Após anos sofrendo com dores no joelho, a cirurgia robótica que ele realizou me devolveu a mobilidade. Profissional excepcional e muito humano no atendimento."</p>
-                    <div class="testimonial-author">Maria S.</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="quote-icon">
-                            <i data-feather="message-circle"></i>
-                        </div>
-                        <div class="stars">
-                            <div class="star"></div>
-                            <div class="star"></div>
-                            <div class="star"></div>
-                            <div class="star"></div>
-                            <div class="star"></div>
-                        </div>
-                    </div>
-                    <p class="testimonial-text">"Excelente médico com técnica impecável! A precisão da cirurgia robótica superou todas as minhas expectativas iniciais. Recuperação rápida e resultado perfeito alcançado. Recomendo sem hesitar para todos."</p>
-                    <div class="testimonial-author">Carlos R.</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="quote-icon">
-                            <i data-feather="message-circle"></i>
-                        </div>
-                        <div class="stars">
-                            <div class="star"></div>
-                            <div class="star"></div>
-                            <div class="star"></div>
-                            <div class="star"></div>
-                            <div class="star"></div>
-                        </div>
-                    </div>
-                    <p class="testimonial-text">"Profissional de altíssimo nível técnico e humano. Dr. Marco explicou todo o procedimento com clareza e cuidou de mim com muita atenção. Hoje posso voltar a praticar esportes sem dor."</p>
-                    <div class="testimonial-author">Ana L.</div>
-                </div>
-            </div>
+    <section id="depoimentos" class="py-32 bg-white fade-in-section">
+      <div class="container mx-auto px-6 lg:px-8">
+        <div class="text-center mb-24">
+          <h2 class="text-4xl md:text-5xl font-light text-gray-900 mb-8">
+            Depoimentos
+          </h2>
+          <div class="w-24 h-px bg-gray-900 mx-auto mb-12"></div>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
+            Histórias reais de pacientes que recuperaram sua qualidade de vida
+          </p>
         </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
+          <div class="text-center fade-in-section">
+            <p class="text-gray-600 mb-8 font-light leading-relaxed italic">
+              "Após a cirurgia robótica, recuperei completamente minha mobilidade. O Dr. Marco é um profissional excepcional."
+            </p>
+            <div class="text-sm text-gray-500 font-light">
+              Maria Silva, 58 anos
+            </div>
+          </div>
+
+          <div class="text-center fade-in-section">
+            <p class="text-gray-600 mb-8 font-light leading-relaxed italic">
+              "A precisão da cirurgia e o cuidado pós-operatório foram fundamentais para minha recuperação rápida."
+            </p>
+            <div class="text-sm text-gray-500 font-light">
+              João Santos, 45 anos
+            </div>
+          </div>
+
+          <div class="text-center fade-in-section">
+            <p class="text-gray-600 mb-8 font-light leading-relaxed italic">
+              "Voltei a praticar esportes sem dor. Gratidão pela dedicação e competência do Dr. Marco."
+            </p>
+            <div class="text-sm text-gray-500 font-light">
+              Ana Costa, 38 anos
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contato">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contato</h2>
-                <div class="section-divider"></div>
-                <p class="section-description">Entre em contato conosco para agendar sua consulta ou esclarecer dúvidas sobre os tratamentos.</p>
-            </div>
-
-            <div class="contact-content">
-                <!-- Contact Info Grid -->
-                <div class="contact-info-grid">
-                    <!-- Contact Information -->
-                    <div class="contact-card">
-                        <h3>Informações de Contato</h3>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i data-feather="map-pin"></i>
-                            </div>
-                            <div>
-                                <h4>Endereço</h4>
-                                <p>Rua Mato Grosso, 306 – 12º andar<br>
-                                Higienópolis – São Paulo – SP<br>
-                                CEP 01239‑040</p>
-                            </div>
-                        </div>
-
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i data-feather="phone"></i>
-                            </div>
-                            <div>
-                                <h4>WhatsApp</h4>
-                                <p>(11) 95055-5000</p>
-                            </div>
-                        </div>
-
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i data-feather="mail"></i>
-                            </div>
-                            <div>
-                                <h4>E-mail</h4>
-                                <a href="mailto:contato@joelho.com">contato@joelho.com</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Hospitals -->
-                    <div class="contact-card">
-                        <h3>Hospitais Credenciados</h3>
-                        <div class="hospitals-grid">
-                            <div class="hospital-item">
-                                <p>Hospital Vila Nova Star</p>
-                            </div>
-                            <div class="hospital-item">
-                                <p>Hospital São Luiz</p>
-                            </div>
-                            <div class="hospital-item">
-                                <p>Hospital Albert Einstein</p>
-                            </div>
-                            <div class="hospital-item">
-                                <p>Hospital Moriah</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Contact Form -->
-                <div class="contact-form">
-                    <h3>Envie sua Mensagem</h3>
-                    
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Nome Completo</label>
-                            <input type="text" id="name" name="name" required placeholder="Seu nome completo">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">E-mail</label>
-                            <input type="email" id="email" name="email" required placeholder="seu@email.com">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Mensagem</label>
-                            <textarea id="message" name="message" required placeholder="Descreva sua dúvida ou necessidade..."></textarea>
-                        </div>
-
-                        <button type="submit" class="form-submit">Enviar</button>
-                    </form>
-                </div>
-            </div>
+    <section id="contato" class="py-32 bg-gray-50 fade-in-section">
+      <div class="container mx-auto px-6 lg:px-8">
+        <div class="text-center mb-24">
+          <h2 class="text-4xl md:text-5xl font-light text-gray-900 mb-8">
+            Contato
+          </h2>
+          <div class="w-24 h-px bg-gray-900 mx-auto mb-12"></div>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
+            Entre em contato para agendar sua consulta
+          </p>
         </div>
+
+        <div class="max-w-4xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div class="fade-in-section">
+              <h3 class="text-2xl font-light text-gray-900 mb-8">
+                Informações de Contato
+              </h3>
+              <div class="space-y-6">
+                <div>
+                  <h4 class="text-lg font-light text-gray-900 mb-2">Telefone</h4>
+                  <p class="text-gray-600 font-light">(11) 99999-9999</p>
+                </div>
+                <div>
+                  <h4 class="text-lg font-light text-gray-900 mb-2">Email</h4>
+                  <p class="text-gray-600 font-light">contato@drmarcodemange.com.br</p>
+                </div>
+                <div>
+                  <h4 class="text-lg font-light text-gray-900 mb-2">Endereço</h4>
+                  <p class="text-gray-600 font-light">
+                    Rua Example, 123<br>
+                    São Paulo - SP
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="fade-in-section">
+              <h3 class="text-2xl font-light text-gray-900 mb-8">
+                Agende sua Consulta
+              </h3>
+              <form class="space-y-6">
+                <div>
+                  <input type="text" placeholder="Nome completo" class="w-full px-4 py-3 border border-gray-300 focus:border-gray-900 focus:outline-none transition-colors font-light">
+                </div>
+                <div>
+                  <input type="email" placeholder="Email" class="w-full px-4 py-3 border border-gray-300 focus:border-gray-900 focus:outline-none transition-colors font-light">
+                </div>
+                <div>
+                  <input type="tel" placeholder="Telefone" class="w-full px-4 py-3 border border-gray-300 focus:border-gray-900 focus:outline-none transition-colors font-light">
+                </div>
+                <div>
+                  <textarea placeholder="Mensagem" rows="4" class="w-full px-4 py-3 border border-gray-300 focus:border-gray-900 focus:outline-none transition-colors font-light resize-none"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-gray-900 hover:bg-gray-700 text-white py-4 text-sm font-light uppercase tracking-wider transition-all duration-300">
+                  Enviar Mensagem
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <h3>Dr. Marco Demange</h3>
-                <p>Especialista em cirurgia do joelho, cirurgia robótica e preservação articular com reconhecimento internacional</p>
+    <footer class="bg-gray-900 text-white py-24">
+      <div class="container mx-auto px-6 lg:px-8">
+        <div class="text-center">
+          <div class="mb-16">
+            <h3 class="text-3xl font-light mb-8 tracking-wide">Dr. Marco Demange</h3>
+            <p class="text-gray-400 max-w-md mx-auto font-light leading-relaxed text-lg">
+              Especialista em cirurgia do joelho, cirurgia robótica e preservação articular
+            </p>
+          </div>
 
-                <div class="social-links">
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                        <i data-feather="instagram"></i>
-                    </a>
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                        <i data-feather="facebook"></i>
-                    </a>
-                </div>
+          <div class="flex justify-center space-x-12 mb-16">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-all duration-300 hover:scale-110">
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987s11.987-5.367 11.987-11.987C24.004 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.323-1.297C4.198 14.891 3.708 13.74 3.708 12.443s.49-2.448 1.297-3.323C5.901 8.245 7.052 7.755 8.349 7.755s2.448.49 3.323 1.297c.897.897 1.297 2.048 1.297 3.345s-.49 2.448-1.297 3.323c-.875.807-2.026 1.268-3.223 1.268z"/>
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-all duration-300 hover:scale-110">
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+          </div>
 
-                <div class="footer-bottom">
-                    <p>© 2025 Dr. Marco Demange. Todos os direitos reservados.</p>
-                </div>
-            </div>
+          <div class="border-t border-gray-800 pt-12">
+            <p class="text-sm text-gray-400 font-light">
+              © 2024 Dr. Marco Demange. Todos os direitos reservados.
+            </p>
+          </div>
         </div>
+      </div>
     </footer>
 
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/5511950555000" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
-        <i data-feather="message-circle"></i>
+    <a href="https://wa.me/5511950555000?text=Olá! Gostaria de agendar uma consulta com o Dr. Marco Demange." target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110" aria-label="Entrar em contato via WhatsApp">
+      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+      </svg>
     </a>
 
-    <script src="https://unpkg.com/feather-icons"></script>
     <script>
-        // Initialize Feather Icons
-        feather.replace();
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
 
-        // Header scroll behavior
-        let lastScrollTop = 0;
-        const header = document.getElementById('header');
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('open');
+      });
 
-        window.addEventListener('scroll', function() {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            
-            if (scrollTop > lastScrollTop && scrollTop > 100) {
-                // Scrolling down
-                header.classList.add('hidden');
-            } else {
-                // Scrolling up
-                header.classList.remove('hidden');
-            }
-            
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+      // Close mobile menu when clicking on links
+      const mobileLinks = mobileMenu.querySelectorAll('a');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('open');
         });
+      });
 
-        // Mobile menu functions
-        function toggleMobileMenu() {
-            const mobileNav = document.getElementById('mobileNav');
-            mobileNav.classList.toggle('active');
+      // Header scroll effect
+      const header = document.getElementById('header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          header.classList.add('shadow-sm');
+        } else {
+          header.classList.remove('shadow-sm');
         }
+      });
 
-        function closeMobileMenu() {
-            const mobileNav = document.getElementById('mobileNav');
-            mobileNav.classList.remove('active');
-        }
+      // Carousel functionality
+      let currentIndex = 0;
+      const carouselTrack = document.getElementById('carousel-track');
+      const cards = carouselTrack.children;
+      const totalCards = cards.length;
 
-        // Carousel functionality
-        let currentIndex = 0;
-        const cardsPerView = window.innerWidth <= 768 ? 1 : 4;
-        const totalCards = 12;
+      function updateCarousel() {
+        const isMobile = window.innerWidth < 768;
+        const cardsPerView = isMobile ? 1 : 3;
         const maxIndex = Math.max(0, totalCards - cardsPerView);
-
-        function moveCarousel(direction) {
-            const container = document.getElementById('carouselContainer');
-            currentIndex += direction;
-            
-            if (currentIndex < 0) currentIndex = 0;
-            if (currentIndex > maxIndex) currentIndex = maxIndex;
-            
-            const cardWidth = container.children[0].offsetWidth + 20; // width + margin
-            const translateX = -(currentIndex * cardWidth);
-            container.style.transform = `translateX(${translateX}px)`;
-            
-            // Update button states
-            document.getElementById('prevArrow').disabled = currentIndex === 0;
-            document.getElementById('nextArrow').disabled = currentIndex === maxIndex;
+        
+        if (currentIndex > maxIndex) {
+          currentIndex = maxIndex;
         }
+        
+        const translateX = isMobile ? 
+          -currentIndex * 100 : 
+          -currentIndex * (100 / cardsPerView);
+        
+        carouselTrack.style.transform = `translateX(${translateX}%)`;
+      }
 
-        // Initialize carousel
-        window.addEventListener('load', function() {
-            moveCarousel(0);
-        });
+      function nextSlide() {
+        const isMobile = window.innerWidth < 768;
+        const cardsPerView = isMobile ? 1 : 3;
+        const maxIndex = Math.max(0, totalCards - cardsPerView);
+        
+        currentIndex = currentIndex >= maxIndex ? 0 : currentIndex + 1;
+        updateCarousel();
+      }
 
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-                if (targetElement) {
-                    const headerHeight = document.querySelector('header').offsetHeight;
-                    const targetPosition = targetElement.offsetTop - headerHeight;
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
+      function prevSlide() {
+        const isMobile = window.innerWidth < 768;
+        const cardsPerView = isMobile ? 1 : 3;
+        const maxIndex = Math.max(0, totalCards - cardsPerView);
+        
+        currentIndex = currentIndex <= 0 ? maxIndex : currentIndex - 1;
+        updateCarousel();
+      }
 
-        // Form submission
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
-            this.reset();
-        });
+      // Desktop carousel controls
+      document.getElementById('next-btn').addEventListener('click', nextSlide);
+      document.getElementById('prev-btn').addEventListener('click', prevSlide);
 
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(e) {
-            const mobileMenu = document.querySelector('.mobile-menu');
-            const mobileNav = document.getElementById('mobileNav');
-            
-            if (!mobileMenu.contains(e.target) && !mobileNav.contains(e.target)) {
-                mobileNav.classList.remove('active');
-            }
-        });
+      // Mobile carousel controls
+      document.getElementById('next-btn-mobile').addEventListener('click', nextSlide);
+      document.getElementById('prev-btn-mobile').addEventListener('click', prevSlide);
 
-        // Update carousel on window resize
-        window.addEventListener('resize', function() {
-            const newCardsPerView = window.innerWidth <= 768 ? 1 : 4;
-            if (newCardsPerView !== cardsPerView) {
-                location.reload();
-            }
+      // Update carousel on window resize
+      window.addEventListener('resize', updateCarousel);
+
+      // Initialize carousel
+      updateCarousel();
+
+      // Intersection Observer for animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          }
         });
+      }, observerOptions);
+
+      // Observe all elements with fade-in-section class
+      const elements = document.querySelectorAll('.fade-in-section');
+      elements.forEach(el => observer.observe(el));
+
+      // Initialize animations on load
+      window.addEventListener('load', () => {
+        const fadeElements = document.querySelectorAll('.fade-in-section');
+        fadeElements.forEach(el => observer.observe(el));
+      });
     </script>
-</body>
+  </body>
 </html>
