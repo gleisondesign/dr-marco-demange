@@ -4,28 +4,16 @@ import { Menu, X } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const controlNavbar = () => {
-      if (typeof window !== 'undefined') {
-        if (window.scrollY > lastScrollY && window.scrollY > 100) {
-          setIsVisible(false);
-        } else {
-          setIsVisible(true);
-        }
-        setLastScrollY(window.scrollY);
-      }
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
     };
 
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', controlNavbar);
-      return () => {
-        window.removeEventListener('scroll', controlNavbar);
-      };
-    }
-  }, [lastScrollY]);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -37,128 +25,128 @@ const Header = () => {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isVisible ? 'translate-y-0' : '-translate-y-full'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled 
+          ? 'bg-white/95 backdrop-blur-sm shadow-sm' 
+          : 'bg-white/90 backdrop-blur-sm'
       }`}
     >
-      <div className="bg-white/95 backdrop-blur-sm border-b border-gray-100">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <div className="flex items-center">
-              <h1 className="text-xl font-light text-gray-900 tracking-wide">
-                Dr. Marco Demange
-              </h1>
-            </div>
+      <div className="container mx-auto px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
+          <div className="flex items-center">
+            <h1 className="text-2xl font-light text-gray-900 tracking-tight">
+              Dr. Marco Demange
+            </h1>
+          </div>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-12">
-              <button
-                onClick={() => scrollToSection('inicio')}
-                className="text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wide transition-colors duration-200"
-              >
-                Início
-              </button>
-              <button
-                onClick={() => scrollToSection('sobre')}
-                className="text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wide transition-colors duration-200"
-              >
-                Sobre
-              </button>
-              <button
-                onClick={() => scrollToSection('cirurgia-joelho')}
-                className="text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wide transition-colors duration-200"
-              >
-                Cirurgia de Joelho
-              </button>
-              <button
-                onClick={() => scrollToSection('tecnologia')}
-                className="text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wide transition-colors duration-200"
-              >
-                Tecnologia
-              </button>
-              <button
-                onClick={() => scrollToSection('conteudos')}
-                className="text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wide transition-colors duration-200"
-              >
-                Conteúdos
-              </button>
-              <button
-                onClick={() => scrollToSection('depoimentos')}
-                className="text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wide transition-colors duration-200"
-              >
-                Depoimentos
-              </button>
-            </nav>
-
-            {/* CTA Button Desktop */}
-            <div className="hidden lg:block">
-              <button
-                onClick={() => scrollToSection('contato')}
-                className="bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 text-sm font-light uppercase tracking-wide transition-all duration-200"
-              >
-                Contato
-              </button>
-            </div>
-
-            {/* Mobile Menu Button */}
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center space-x-10">
             <button
-              className="lg:hidden p-2 text-gray-700 hover:text-gray-900 transition-colors"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              onClick={() => scrollToSection('inicio')}
+              className="text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wider transition-all duration-300 hover:scale-105"
             >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              Início
+            </button>
+            <button
+              onClick={() => scrollToSection('sobre')}
+              className="text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wider transition-all duration-300 hover:scale-105"
+            >
+              Sobre
+            </button>
+            <button
+              onClick={() => scrollToSection('cirurgia-joelho')}
+              className="text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wider transition-all duration-300 hover:scale-105"
+            >
+              Cirurgia de Joelho
+            </button>
+            <button
+              onClick={() => scrollToSection('tecnologia')}
+              className="text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wider transition-all duration-300 hover:scale-105"
+            >
+              Tecnologia
+            </button>
+            <button
+              onClick={() => scrollToSection('conteudos')}
+              className="text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wider transition-all duration-300 hover:scale-105"
+            >
+              Conteúdos
+            </button>
+            <button
+              onClick={() => scrollToSection('depoimentos')}
+              className="text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wider transition-all duration-300 hover:scale-105"
+            >
+              Depoimentos
+            </button>
+          </nav>
+
+          {/* CTA Button Desktop */}
+          <div className="hidden lg:block">
+            <button
+              onClick={() => scrollToSection('contato')}
+              className="bg-gray-900 hover:bg-gray-700 text-white px-8 py-3 text-sm font-light uppercase tracking-wider transition-all duration-300 transform hover:scale-105"
+            >
+              Contato
             </button>
           </div>
 
-          {/* Mobile Navigation */}
-          <div className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-            isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-          }`}>
-            <nav className="py-6 space-y-1 border-t border-gray-100">
-              <button
-                onClick={() => scrollToSection('inicio')}
-                className="block w-full text-left py-3 text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wide transition-colors duration-200"
-              >
-                Início
-              </button>
-              <button
-                onClick={() => scrollToSection('sobre')}
-                className="block w-full text-left py-3 text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wide transition-colors duration-200"
-              >
-                Sobre
-              </button>
-              <button
-                onClick={() => scrollToSection('cirurgia-joelho')}
-                className="block w-full text-left py-3 text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wide transition-colors duration-200"
-              >
-                Cirurgia de Joelho
-              </button>
-              <button
-                onClick={() => scrollToSection('tecnologia')}
-                className="block w-full text-left py-3 text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wide transition-colors duration-200"
-              >
-                Tecnologia
-              </button>
-              <button
-                onClick={() => scrollToSection('conteudos')}
-                className="block w-full text-left py-3 text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wide transition-colors duration-200"
-              >
-                Conteúdos
-              </button>
-              <button
-                onClick={() => scrollToSection('depoimentos')}
-                className="block w-full text-left py-3 text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wide transition-colors duration-200"
-              >
-                Depoimentos
-              </button>
-              <button
-                onClick={() => scrollToSection('contato')}
-                className="block w-full text-left py-3 bg-gray-900 text-white font-light text-sm uppercase tracking-wide transition-colors duration-200 mt-4"
-              >
-                Contato
-              </button>
-            </nav>
-          </div>
+          {/* Mobile Menu Button */}
+          <button
+            className="lg:hidden p-2 text-gray-700 hover:text-gray-900 transition-colors duration-300"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        <div className={`lg:hidden overflow-hidden transition-all duration-500 ease-out ${
+          isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+        }`}>
+          <nav className="py-8 space-y-2 border-t border-gray-100">
+            <button
+              onClick={() => scrollToSection('inicio')}
+              className="block w-full text-left py-4 px-2 text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wider transition-all duration-300"
+            >
+              Início
+            </button>
+            <button
+              onClick={() => scrollToSection('sobre')}
+              className="block w-full text-left py-4 px-2 text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wider transition-all duration-300"
+            >
+              Sobre
+            </button>
+            <button
+              onClick={() => scrollToSection('cirurgia-joelho')}
+              className="block w-full text-left py-4 px-2 text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wider transition-all duration-300"
+            >
+              Cirurgia de Joelho
+            </button>
+            <button
+              onClick={() => scrollToSection('tecnologia')}
+              className="block w-full text-left py-4 px-2 text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wider transition-all duration-300"
+            >
+              Tecnologia
+            </button>
+            <button
+              onClick={() => scrollToSection('conteudos')}
+              className="block w-full text-left py-4 px-2 text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wider transition-all duration-300"
+            >
+              Conteúdos
+            </button>
+            <button
+              onClick={() => scrollToSection('depoimentos')}
+              className="block w-full text-left py-4 px-2 text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wider transition-all duration-300"
+            >
+              Depoimentos
+            </button>
+            <button
+              onClick={() => scrollToSection('contato')}
+              className="block w-full text-left py-4 px-2 mt-6 bg-gray-900 text-white font-light text-sm uppercase tracking-wider transition-all duration-300"
+            >
+              Contato
+            </button>
+          </nav>
         </div>
       </div>
     </header>

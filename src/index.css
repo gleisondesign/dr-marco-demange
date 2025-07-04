@@ -6,69 +6,69 @@
 /* Importar fontes premium */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@300;400;500&display=swap');
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+/* Definition of the design system - Paleta neutra premium */
 
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
+    --foreground: 0 0% 9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
+    --card-foreground: 0 0% 9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
+    --popover-foreground: 0 0% 9%;
 
-    --primary: 0 0% 0%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
 
     --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 0%;
+    --secondary-foreground: 0 0% 9%;
 
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
 
     --accent: 0 0% 96%;
-    --accent-foreground: 0 0% 0%;
+    --accent-foreground: 0 0% 9%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 0 0% 98%;
 
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: 0 0% 0%;
+    --ring: 0 0% 9%;
 
     --radius: 0rem;
   }
 
   .dark {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
+    --background: 0 0% 9%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 0%;
-    --card-foreground: 0 0% 100%;
+    --card: 0 0% 9%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 0%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 0 0% 100%;
-    --primary-foreground: 0 0% 0%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
 
-    --secondary: 0 0% 10%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 0 0% 10%;
+    --muted: 0 0% 15%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 0 0% 10%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 0 0% 98%;
 
     --border: 0 0% 15%;
     --input: 0 0% 15%;
-    --ring: 0 0% 100%;
+    --ring: 0 0% 98%;
   }
 }
 
@@ -81,11 +81,12 @@
     @apply bg-background text-foreground;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-weight: 300;
-    line-height: 1.6;
+    line-height: 1.7;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
+    font-weight: 300;
   }
 }
 
@@ -94,11 +95,11 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Animações suaves para elementos ao rolar */
+/* Animações suaves e premium */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
@@ -115,19 +116,49 @@ html {
   }
 }
 
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .animate-fade-in-up {
-  animation: fadeInUp 0.8s ease-out forwards;
+  animation: fadeInUp 1s ease-out forwards;
 }
 
 .animate-fade-in {
-  animation: fadeIn 0.6s ease-out forwards;
+  animation: fadeIn 0.8s ease-out forwards;
 }
 
-/* Intersection Observer classes */
+.animate-slide-in-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+/* Intersection Observer classes - animações ao rolar */
 .fade-in-section {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transform: translateY(40px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 .fade-in-section.is-visible {
@@ -135,20 +166,40 @@ html {
   transform: translateY(0);
 }
 
-/* Hide scrollbar arrows for carousel */
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
+/* JavaScript para ativar animações */
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in-section {
+    will-change: opacity, transform;
+  }
 }
 
 /* Micro animações suaves */
 .hover-lift {
-  transition: transform 0.3s ease-out;
+  transition: transform 0.4s ease-out;
 }
 
 .hover-lift:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+}
+
+/* Espaçamento generoso e tipografia premium */
+.container {
+  max-width: 1400px;
+}
+
+/* Estilo premium para links e botões */
+button, a {
+  transition: all 0.3s ease-out;
+}
+
+/* Remove sombras pesadas */
+.shadow-none {
+  box-shadow: none !important;
+}
+
+/* Scroll suave melhorado */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
