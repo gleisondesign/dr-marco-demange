@@ -10,7 +10,7 @@
     <style>
       /* Tipografia premium */
       :root {
-        --primary-color: #0b2838;
+        --primary-color: #0e3956;
         --accent-color: #63bda9;
       }
       
@@ -96,23 +96,11 @@
       .carousel-card {
         min-width: 100%;
         padding: 0 8px;
-        flex-shrink: 0;
       }
 
       @media (min-width: 768px) {
         .carousel-card {
           min-width: calc(33.333% - 16px);
-        }
-      }
-
-      @media (max-width: 767px) {
-        .carousel-track {
-          overflow-x: auto;
-          scroll-snap-type: x mandatory;
-        }
-        
-        .carousel-card {
-          scroll-snap-align: center;
         }
       }
     </style>
@@ -124,9 +112,7 @@
         <div class="flex items-center justify-between h-20">
           <!-- Logo -->
           <div class="flex items-center">
-            <a href="#inicio" class="scroll-smooth">
-              <img src="https://gleisondesign.github.io/dr-marco-demange/src/logo-png.png" alt="Dr. Marco Demange" class="h-12 w-auto cursor-pointer hover:scale-105 transition-transform duration-300">
-            </a>
+            <img src="src/logo-png.png" alt="Dr. Marco Demange" class="h-12 w-auto">
           </div>
 
           <!-- Desktop Navigation -->
@@ -200,7 +186,7 @@
       <!-- Background Image -->
       <div class="absolute inset-0 bg-cover bg-no-repeat" style="background-image: url('https://gleisondesign.github.io/dr-marco-demange/src/imagem-home.jpg'); background-position: center 20%;">
         <!-- Overlay -->
-        <div class="absolute inset-0" style="background-color: rgba(11, 40, 56, 0.4);"></div>
+        <div class="absolute inset-0" style="background-color: rgba(14, 57, 86, 0.4);"></div>
       </div>
 
       <!-- Content -->
@@ -244,14 +230,14 @@
     </section>
 
     <!-- Cirurgia de Joelho Section -->
-    <section id="cirurgia-joelho" class="py-40 fade-in-section" style="background-color: #0b2838;"">
+    <section id="cirurgia-joelho" class="py-40 bg-gray-50 fade-in-section">
       <div class="container mx-auto px-6 lg:px-8">
         <div class="text-center mb-24">
-          <h2 class="text-4xl md:text-5xl font-light text-white mb-8">
+          <h2 class="text-4xl md:text-5xl font-light text-gray-900 mb-8">
             Cirurgia de Joelho
           </h2>
-          <div class="w-24 h-px bg-white mx-auto mb-12"></div>
-          <p class="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-light">
+          <div class="w-24 h-px bg-gray-900 mx-auto mb-12"></div>
+          <p class="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light">
             Soluções avançadas e personalizadas para cada tipo de lesão ou problema no joelho
           </p>
         </div>
@@ -259,11 +245,11 @@
         <div class="max-w-7xl mx-auto">
           <!-- Featured Treatment - Prótese Robótica -->
           <div class="mb-20">
-            <div class="bg-gray-800 p-12 text-center max-w-5xl mx-auto">
-              <h3 class="text-3xl md:text-4xl font-light text-white mb-10">
+            <div class="bg-white p-12 text-center max-w-5xl mx-auto">
+              <h3 class="text-3xl md:text-4xl font-light text-gray-900 mb-10">
                 Prótese Robótica
               </h3>
-              <p class="text-lg text-gray-300 leading-relaxed font-light">
+              <p class="text-lg text-gray-600 leading-relaxed font-light">
                 Revolucionária técnica de implante de prótese de joelho assistida por robô, oferecendo precisão milimétrica no posicionamento dos componentes. Esta tecnologia de ponta proporciona melhor alinhamento, maior durabilidade da prótese, recuperação mais rápida e resultados funcionais superiores. O sistema robótico permite planejamento pré-operatório personalizado e execução cirúrgica com precisão incomparável.
               </p>
             </div>
@@ -271,29 +257,29 @@
 
           <!-- Other Treatments -->
           <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
-            <div class="text-center bg-gray-800 p-8 fade-in-section">
-              <h3 class="text-2xl font-light text-white mb-8">
+            <div class="text-center bg-white p-8 fade-in-section">
+              <h3 class="text-2xl font-light text-gray-900 mb-8">
                 Artrose
               </h3>
-              <p class="text-gray-300 leading-relaxed font-light">
+              <p class="text-gray-600 leading-relaxed font-light">
                 Desgaste progressivo da cartilagem articular que causa dor, rigidez e limitação funcional. Oferecemos tratamentos desde conservadores até cirúrgicos avançados, sempre priorizando a preservação da função e alívio da dor.
               </p>
             </div>
 
-            <div class="text-center bg-gray-800 p-8 fade-in-section">
-              <h3 class="text-2xl font-light text-white mb-8">
+            <div class="text-center bg-white p-8 fade-in-section">
+              <h3 class="text-2xl font-light text-gray-900 mb-8">
                 Lesões Ligamentares
               </h3>
-              <p class="text-gray-300 leading-relaxed font-light">
+              <p class="text-gray-600 leading-relaxed font-light">
                 Lesões do ligamento cruzado anterior (LCA) e outros ligamentos do joelho que comprometem a estabilidade articular. Utilizamos técnicas modernas de reconstrução para restaurar a função e permitir retorno seguro às atividades.
               </p>
             </div>
 
-            <div class="text-center bg-gray-800 p-8 fade-in-section">
-              <h3 class="text-2xl font-light text-white mb-8">
+            <div class="text-center bg-white p-8 fade-in-section">
+              <h3 class="text-2xl font-light text-gray-900 mb-8">
                 Preservação Articular
               </h3>
-              <p class="text-gray-300 leading-relaxed font-light">
+              <p class="text-gray-600 leading-relaxed font-light">
                 Tratamentos focados na preservação da cartilagem e menisco através de técnicas biológicas, transplantes e procedimentos minimamente invasivos que adiam ou evitam a necessidade de próteses.
               </p>
             </div>
@@ -347,40 +333,40 @@
     </section>
 
     <!-- Content Section -->
-    <section id="conteudos" class="py-40 fade-in-section" style="background-color: #0b2838;"">
+    <section id="conteudos" class="py-40 bg-gray-50 fade-in-section">
       <div class="container mx-auto px-6 lg:px-8">
         <div class="text-center mb-24">
-          <h2 class="text-4xl md:text-5xl font-light text-white mb-8">
+          <h2 class="text-4xl md:text-5xl font-light text-gray-900 mb-8">
             Conteúdos
           </h2>
-          <div class="w-24 h-px bg-white mx-auto mb-12"></div>
-          <p class="text-xl text-gray-300 max-w-3xl mx-auto font-light leading-relaxed">
+          <div class="w-24 h-px bg-gray-900 mx-auto mb-12"></div>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
             Reels, podcasts, entrevistas e depoimentos sobre cirurgia do joelho e ortopedia
           </p>
         </div>
 
         <div class="relative max-w-7xl mx-auto">
           <!-- Carousel Controls -->
-          <button id="prev-btn" class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 p-4 text-gray-400 hover:text-white transition-colors duration-300 -ml-16 hover:scale-110 hidden md:block">
+          <button id="prev-btn" class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 p-4 text-gray-400 hover:text-gray-900 transition-colors duration-300 -ml-16 hover:scale-110 hidden md:block">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
             </svg>
           </button>
 
-          <button id="next-btn" class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 p-4 text-gray-400 hover:text-white transition-colors duration-300 -mr-16 hover:scale-110 hidden md:block">
+          <button id="next-btn" class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 p-4 text-gray-400 hover:text-gray-900 transition-colors duration-300 -mr-16 hover:scale-110 hidden md:block">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
             </svg>
           </button>
 
           <!-- Mobile Controls -->
-          <button id="prev-btn-mobile" class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 p-3 text-gray-400 hover:text-white transition-colors duration-300 -ml-10 md:hidden">
+          <button id="prev-btn-mobile" class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 p-3 text-gray-400 hover:text-gray-900 transition-colors duration-300 -ml-10 md:hidden">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
             </svg>
           </button>
 
-          <button id="next-btn-mobile" class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 p-3 text-gray-400 hover:text-white transition-colors duration-300 -mr-10 md:hidden">
+          <button id="next-btn-mobile" class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 p-3 text-gray-400 hover:text-gray-900 transition-colors duration-300 -mr-10 md:hidden">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
             </svg>
@@ -478,51 +464,6 @@
                   </div>
                 </div>
               </div>
-
-              <!-- Card 7 -->
-              <div class="carousel-card">
-                <div class="bg-white hover:bg-gray-50 transition-all duration-300 cursor-pointer group">
-                  <div class="aspect-video bg-gray-100 overflow-hidden">
-                    <img src="https://raw.githubusercontent.com/gleisondesign/dr-marco-demange/refs/heads/main/src/foto.jpg" alt="Inovações em Próteses" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                  </div>
-                  <div class="p-8">
-                    <div class="text-xs uppercase tracking-wider text-gray-500 mb-3 font-light">Entrevista</div>
-                    <h3 class="text-lg font-light text-gray-900 mb-4 leading-tight">Inovações em Próteses</h3>
-                    <p class="text-sm text-gray-600 mb-6 font-light leading-relaxed">Discussão sobre as mais recentes inovações em materiais e tecnologia para próteses de joelho.</p>
-                    <button class="text-xs uppercase tracking-wider text-gray-900 hover:text-gray-700 font-light transition-colors border-b border-gray-900 pb-1">Acessar</button>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Card 8 -->
-              <div class="carousel-card">
-                <div class="bg-white hover:bg-gray-50 transition-all duration-300 cursor-pointer group">
-                  <div class="aspect-video bg-gray-100 overflow-hidden">
-                    <img src="https://raw.githubusercontent.com/gleisondesign/dr-marco-demange/refs/heads/main/src/foto.jpg" alt="Medicina Esportiva" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                  </div>
-                  <div class="p-8">
-                    <div class="text-xs uppercase tracking-wider text-gray-500 mb-3 font-light">Reels</div>
-                    <h3 class="text-lg font-light text-gray-900 mb-4 leading-tight">Medicina Esportiva</h3>
-                    <p class="text-sm text-gray-600 mb-6 font-light leading-relaxed">Série sobre prevenção e tratamento de lesões esportivas relacionadas ao joelho.</p>
-                    <button class="text-xs uppercase tracking-wider text-gray-900 hover:text-gray-700 font-light transition-colors border-b border-gray-900 pb-1">Acessar</button>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Card 9 -->
-              <div class="carousel-card">
-                <div class="bg-white hover:bg-gray-50 transition-all duration-300 cursor-pointer group">
-                  <div class="aspect-video bg-gray-100 overflow-hidden">
-                    <img src="https://raw.githubusercontent.com/gleisondesign/dr-marco-demange/refs/heads/main/src/foto.jpg" alt="Qualidade de Vida" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                  </div>
-                  <div class="p-8">
-                    <div class="text-xs uppercase tracking-wider text-gray-500 mb-3 font-light">Depoimento</div>
-                    <h3 class="text-lg font-light text-gray-900 mb-4 leading-tight">Qualidade de Vida</h3>
-                    <p class="text-sm text-gray-600 mb-6 font-light leading-relaxed">Histórias de pacientes que voltaram a ter uma vida ativa após tratamentos cirúrgicos.</p>
-                    <button class="text-xs uppercase tracking-wider text-gray-900 hover:text-gray-700 font-light transition-colors border-b border-gray-900 pb-1">Acessar</button>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -574,14 +515,14 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contato" class="py-40 fade-in-section" style="background-color: #0b2838;"">
+    <section id="contato" class="py-40 bg-gray-50 fade-in-section">
       <div class="container mx-auto px-6 lg:px-8">
         <div class="text-center mb-24">
-          <h2 class="text-4xl md:text-5xl font-light text-white mb-8">
+          <h2 class="text-4xl md:text-5xl font-light text-gray-900 mb-8">
             Contato
           </h2>
-          <div class="w-24 h-px bg-white mx-auto mb-12"></div>
-          <p class="text-xl text-gray-300 max-w-3xl mx-auto font-light leading-relaxed">
+          <div class="w-24 h-px bg-gray-900 mx-auto mb-12"></div>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
             Entre em contato para agendar sua consulta
           </p>
         </div>
@@ -589,21 +530,21 @@
         <div class="max-w-4xl mx-auto">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
             <div class="fade-in-section">
-              <h3 class="text-2xl font-light text-white mb-8">
+              <h3 class="text-2xl font-light text-gray-900 mb-8">
                 Informações de Contato
               </h3>
               <div class="space-y-6">
                 <div>
-                  <h4 class="text-lg font-light text-white mb-2">Telefone</h4>
-                  <p class="text-gray-300 font-light">(11) 99999-9999</p>
+                  <h4 class="text-lg font-light text-gray-900 mb-2">Telefone</h4>
+                  <p class="text-gray-600 font-light">(11) 99999-9999</p>
                 </div>
                 <div>
-                  <h4 class="text-lg font-light text-white mb-2">Email</h4>
-                  <p class="text-gray-300 font-light">contato@drmarcodemange.com.br</p>
+                  <h4 class="text-lg font-light text-gray-900 mb-2">Email</h4>
+                  <p class="text-gray-600 font-light">contato@drmarcodemange.com.br</p>
                 </div>
                 <div>
-                  <h4 class="text-lg font-light text-white mb-2">Endereço</h4>
-                  <p class="text-gray-300 font-light">
+                  <h4 class="text-lg font-light text-gray-900 mb-2">Endereço</h4>
+                  <p class="text-gray-600 font-light">
                     Rua Example, 123<br>
                     São Paulo - SP
                   </p>
@@ -612,23 +553,23 @@
             </div>
 
             <div class="fade-in-section">
-              <h3 class="text-2xl font-light text-white mb-8">
+              <h3 class="text-2xl font-light text-gray-900 mb-8">
                 Agende sua Consulta
               </h3>
               <form class="space-y-6">
                 <div>
-                  <input type="text" placeholder="Nome completo" class="w-full px-4 py-3 border border-gray-300 focus:border-white focus:outline-none transition-colors font-light bg-transparent text-white placeholder-gray-300">
+                  <input type="text" placeholder="Nome completo" class="w-full px-4 py-3 border border-gray-300 focus:border-gray-900 focus:outline-none transition-colors font-light">
                 </div>
                 <div>
-                  <input type="email" placeholder="Email" class="w-full px-4 py-3 border border-gray-300 focus:border-white focus:outline-none transition-colors font-light bg-transparent text-white placeholder-gray-300">
+                  <input type="email" placeholder="Email" class="w-full px-4 py-3 border border-gray-300 focus:border-gray-900 focus:outline-none transition-colors font-light">
                 </div>
                 <div>
-                  <input type="tel" placeholder="Telefone" class="w-full px-4 py-3 border border-gray-300 focus:border-white focus:outline-none transition-colors font-light bg-transparent text-white placeholder-gray-300">
+                  <input type="tel" placeholder="Telefone" class="w-full px-4 py-3 border border-gray-300 focus:border-gray-900 focus:outline-none transition-colors font-light">
                 </div>
                 <div>
-                  <textarea placeholder="Mensagem" rows="4" class="w-full px-4 py-3 border border-gray-300 focus:border-white focus:outline-none transition-colors font-light resize-none bg-transparent text-white placeholder-gray-300"></textarea>
+                  <textarea placeholder="Mensagem" rows="4" class="w-full px-4 py-3 border border-gray-300 focus:border-gray-900 focus:outline-none transition-colors font-light resize-none"></textarea>
                 </div>
-                <button type="submit" class="w-full text-white py-4 text-sm font-light uppercase tracking-wider transition-all duration-300 bg-white text-black hover:bg-gray-200">
+                <button type="submit" class="w-full text-white py-4 text-sm font-light uppercase tracking-wider transition-all duration-300" style="background-color: var(--primary-color);">
                   Enviar Mensagem
                 </button>
               </form>
