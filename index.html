@@ -10,8 +10,9 @@
     <style>
       /* Tipografia premium */
       :root {
-        --primary-color: #0e3956;
+        --primary-color: #0b2838;
         --accent-color: #63bda9;
+        --brushed-steel: #4a4a4a;
       }
       
       body {
@@ -112,7 +113,9 @@
         <div class="flex items-center justify-between h-20">
           <!-- Logo -->
           <div class="flex items-center">
-            <img src="src/logo-png.png" alt="Dr. Marco Demange" class="h-12 w-auto">
+            <a href="#inicio" class="logo-link">
+              <img src="https://gleisondesign.github.io/dr-marco-demange/src/logo-png.png" alt="Dr. Marco Demange" class="h-16 w-auto">
+            </a>
           </div>
 
           <!-- Desktop Navigation -->
@@ -196,9 +199,14 @@
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-light leading-tight">
               Excelência em cirurgia do joelho com precisão, tecnologia e cuidado personalizado
             </h1>
-            <p class="text-lg md:text-xl font-light opacity-95 leading-relaxed max-w-2xl">
-              Mais de 20 anos de experiência, formação internacional e atuação nos principais centros médicos do país. Precisão cirúrgica, recuperação mais rápida e resultados personalizados.
+            <p class="text-lg md:text-xl font-light opacity-95 leading-relaxed max-w-2xl mb-4">
+              Mais de 20 anos de experiência, formação internacional e atuação nos principais centros médicos do Brasil. Especialista em prótese de joelho robótica, técnicas preservadoras de musculatura, reconstrução ligamentar e artroscopia.
             </p>
+            <div class="bg-white/10 backdrop-blur-sm px-6 py-4 rounded-lg">
+              <p class="text-sm md:text-base font-light opacity-90 leading-relaxed">
+                <span class="font-medium">Atendendo em:</span> Vila Nova Star, São Luiz Itaim (Rede D'Or), Hospital Albert Einstein, Sírio-Libanês, Moriah e HCor.
+              </p>
+            </div>
             <div class="flex items-center space-x-6">
               <a href="#contato" class="inline-block bg-white hover:bg-gray-100 text-gray-900 px-10 py-4 text-sm font-light uppercase tracking-wider transition-all duration-300 transform hover:scale-105">
                 Agendar Consulta
@@ -217,71 +225,141 @@
     <!-- About Section -->
     <section id="sobre" class="py-40 bg-white fade-in-section">
       <div class="container mx-auto px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto text-center">
-          <h2 class="text-4xl md:text-5xl font-light text-gray-900 mb-8">
-            Dr. Marco Demange
-          </h2>
-          <div class="w-24 h-px bg-gray-900 mx-auto mb-12"></div>
-          <p class="text-xl text-gray-600 leading-relaxed font-light">
-            Especialista em cirurgia do joelho com mais de 20 anos de experiência, formação internacional e atuação nos principais centros médicos do país. Dedico-me à excelência em cirurgia ortopédica, sempre priorizando o cuidado personalizado e os melhores resultados.
-          </p>
+        <div class="max-w-5xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-light text-gray-900 mb-8">
+              Dr. Marco Demange — Referência em Cirurgia do Joelho, Robótica e Técnicas Minimamente Invasivas
+            </h2>
+            <div class="w-24 h-px bg-gray-900 mx-auto mb-12"></div>
+          </div>
+          
+          <div class="space-y-8 text-gray-700 leading-relaxed">
+            <p class="text-lg font-light">
+              Professor Livre-Docente do Departamento de Ortopedia e Traumatologia da FMUSP, o Dr. Marco Demange atua há mais de 20 anos com foco exclusivo em cirurgia do joelho. Sua trajetória inclui formação internacional em centros de referência e atuação nos principais hospitais de excelência do Brasil — Vila Nova Star, São Luiz Itaim (Rede D'Or), Hospital Albert Einstein, Sírio-Libanês, Moriah e HCor.
+            </p>
+            
+            <p class="text-lg font-light">
+              Pioneiro na adoção de tecnologias robóticas como VELYS (maior destaque), MAKO, ROSA e Skywalker, alia precisão cirúrgica a técnicas minimamente invasivas e preservadoras de musculatura — tema de seu mestrado concluído em 2007.
+            </p>
+            
+            <div class="bg-gray-50 p-8 rounded-lg">
+              <h3 class="text-xl font-light text-gray-900 mb-6">Sua expertise abrange:</h3>
+              <ul class="space-y-3 text-base font-light">
+                <li>• Próteses de joelho robóticas com planejamento 3D e ajustes milimétricos personalizados</li>
+                <li>• Cirurgia artroscópica para tratamento de lesões meniscais, cartilagem e outras patologias intra-articulares</li>
+                <li>• Reconstrução do ligamento cruzado anterior</li>
+                <li>• Preservação articular para prolongar a vida útil do joelho antes de próteses</li>
+              </ul>
+            </div>
+            
+            <p class="text-lg font-light">
+              Comprometido com a medicina baseada em evidências, atua na difusão de conhecimento por meio de palestras, cursos e publicações científicas, sempre com foco em proporcionar ao paciente recuperação mais rápida, menos dor e resultados duradouros.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Cirurgia de Joelho Section -->
-    <section id="cirurgia-joelho" class="py-40 bg-gray-50 fade-in-section">
+    <section id="cirurgia-joelho" class="py-40 fade-in-section" style="background: linear-gradient(135deg, var(--brushed-steel), #2c2c2c);">
       <div class="container mx-auto px-6 lg:px-8">
         <div class="text-center mb-24">
-          <h2 class="text-4xl md:text-5xl font-light text-gray-900 mb-8">
-            Cirurgia de Joelho
+          <h2 class="text-4xl md:text-5xl font-light text-white mb-8">
+            Tratamentos Avançados para a Saúde do Joelho
           </h2>
-          <div class="w-24 h-px bg-gray-900 mx-auto mb-12"></div>
-          <p class="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light">
-            Soluções avançadas e personalizadas para cada tipo de lesão
+          <div class="w-24 h-px bg-white mx-auto mb-12"></div>
+          <p class="text-xl text-white/90 max-w-4xl mx-auto leading-relaxed font-light">
+            Combinando tecnologia de ponta, técnicas minimamente invasivas e experiência cirúrgica de mais de 20 anos, o Dr. Marco Demange oferece soluções personalizadas para cada paciente, visando máxima preservação articular, recuperação acelerada e resultados duradouros.
           </p>
         </div>
 
-        <div class="max-w-7xl mx-auto">
-          <!-- Featured Treatment - Prótese Robótica -->
-          <div class="mb-20">
-            <div class="bg-white p-12 text-center max-w-5xl mx-auto">
-              <h3 class="text-3xl md:text-4xl font-light text-gray-900 mb-10">
-                Prótese Robótica
-              </h3>
-              <p class="text-lg text-gray-600 leading-relaxed font-light">
-                Revolucionária técnica de implante de prótese de joelho assistida por robô, oferecendo precisão milimétrica no posicionamento dos componentes. Esta tecnologia de ponta proporciona melhor alinhamento, maior durabilidade da prótese, recuperação mais rápida e resultados funcionais superiores. O sistema robótico permite planejamento pré-operatório personalizado e execução cirúrgica com precisão incomparável.
-              </p>
+        <div class="max-w-7xl mx-auto space-y-16">
+          <!-- Prótese de Joelho Robótica -->
+          <div class="bg-white/10 backdrop-blur-sm rounded-lg p-10 fade-in-section">
+            <h3 class="text-3xl font-light text-white mb-6">
+              Precisão Milimétrica com Tecnologia Robótica
+            </h3>
+            <p class="text-white/90 leading-relaxed font-light mb-6">
+              O Dr. Demange utiliza sistemas robóticos de última geração — VELYS (principal destaque), MAKO, ROSA e Skywalker — para realizar próteses de joelho com ajustes personalizados e máxima precisão.
+            </p>
+            <p class="text-white/90 leading-relaxed font-light mb-6">
+              Com planejamento digital e simulação prévia, cada corte ósseo e posicionamento do implante é otimizado para garantir alinhamento, estabilidade e sensação natural ao movimento.
+            </p>
+            <p class="text-white/90 leading-relaxed font-light">
+              Essa tecnologia permite intervenções mais seguras, com menor agressão aos tecidos e recuperação mais rápida.
+            </p>
+            <div class="bg-white/5 rounded-lg p-6 mt-6">
+              <p class="text-sm text-white/70 italic">Imagem: Local para aplicar uma imagem que pode ser substituída depois</p>
             </div>
           </div>
 
-          <!-- Other Treatments -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
-            <div class="text-center bg-white p-8 fade-in-section">
-              <h3 class="text-2xl font-light text-gray-900 mb-8">
-                Artrose
+          <!-- Grid de Tratamentos -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Técnicas Minimamente Invasivas -->
+            <div class="bg-white/10 backdrop-blur-sm rounded-lg p-8 fade-in-section">
+              <h3 class="text-2xl font-light text-white mb-6">
+                Cirurgia com Menor Incisão e Preservação Muscular
               </h3>
-              <p class="text-gray-600 leading-relaxed font-light">
-                Desgaste progressivo da cartilagem articular que causa dor, rigidez e limitação funcional. Oferecemos tratamentos desde conservadores até cirúrgicos avançados, sempre priorizando a preservação da função e alívio da dor.
+              <p class="text-white/90 leading-relaxed font-light mb-4">
+                O mestrado do Dr. Demange, concluído em 2007, foi dedicado ao estudo de técnicas minimamente invasivas com preservação da musculatura — como o método quadríceps-sparing.
               </p>
+              <p class="text-white/90 leading-relaxed font-light mb-4">
+                Essas abordagens reduzem o tamanho da incisão, preservam tendões e músculos, diminuem a dor no pós-operatório e aceleram o retorno às atividades.
+              </p>
+              <p class="text-white/90 leading-relaxed font-light">
+                Sempre que possível, o objetivo é tratar a patologia mantendo a integridade máxima da articulação.
+              </p>
+              <div class="bg-white/5 rounded-lg p-4 mt-4">
+                <p class="text-xs text-white/70 italic">Imagem: Local para aplicar uma imagem que pode ser substituída depois</p>
+              </div>
             </div>
 
-            <div class="text-center bg-white p-8 fade-in-section">
-              <h3 class="text-2xl font-light text-gray-900 mb-8">
-                Lesões Ligamentares
+            <!-- Cirurgia Artroscópica -->
+            <div class="bg-white/10 backdrop-blur-sm rounded-lg p-8 fade-in-section">
+              <h3 class="text-2xl font-light text-white mb-6">
+                Tratamento Preciso para Lesões Internas do Joelho
               </h3>
-              <p class="text-gray-600 leading-relaxed font-light">
-                Lesões do ligamento cruzado anterior (LCA) e outros ligamentos do joelho que comprometem a estabilidade articular. Utilizamos técnicas modernas de reconstrução para restaurar a função e permitir retorno seguro às atividades.
+              <p class="text-white/90 leading-relaxed font-light mb-4">
+                A artroscopia é uma técnica pouco invasiva que utiliza pequenas incisões e câmera de alta definição para diagnosticar e tratar lesões dentro do joelho.
               </p>
+              <p class="text-white/90 leading-relaxed font-light">
+                Indicada para casos de lesão de menisco, cartilagem, corpos livres e algumas lesões ligamentares, permite menor trauma, recuperação mais rápida e retorno precoce às atividades físicas.
+              </p>
+              <div class="bg-white/5 rounded-lg p-4 mt-4">
+                <p class="text-xs text-white/70 italic">Imagem: Local para aplicar uma imagem que pode ser substituída depois</p>
+              </div>
             </div>
 
-            <div class="text-center bg-white p-8 fade-in-section">
-              <h3 class="text-2xl font-light text-gray-900 mb-8">
-                Preservação Articular
+            <!-- Reconstrução do LCA -->
+            <div class="bg-white/10 backdrop-blur-sm rounded-lg p-8 fade-in-section">
+              <h3 class="text-2xl font-light text-white mb-6">
+                Estabilidade e Confiança para Retomar a Atividade
               </h3>
-              <p class="text-gray-600 leading-relaxed font-light">
-                Tratamentos focados na preservação da cartilagem e menisco através de técnicas biológicas, transplantes e procedimentos minimamente invasivos que adiam ou evitam a necessidade de próteses.
+              <p class="text-white/90 leading-relaxed font-light mb-4">
+                A lesão do ligamento cruzado anterior é comum em esportes e pode comprometer gravemente a estabilidade do joelho.
               </p>
+              <p class="text-white/90 leading-relaxed font-light">
+                O Dr. Demange realiza a reconstrução do LCA com técnicas modernas que respeitam a anatomia individual, proporcionando maior estabilidade, preservação articular e menor risco de novas lesões.
+              </p>
+              <div class="bg-white/5 rounded-lg p-4 mt-4">
+                <p class="text-xs text-white/70 italic">Imagem: Local para aplicar uma imagem que pode ser substituída depois</p>
+              </div>
+            </div>
+
+            <!-- Preservação Articular -->
+            <div class="bg-white/10 backdrop-blur-sm rounded-lg p-8 fade-in-section">
+              <h3 class="text-2xl font-light text-white mb-6">
+                Manter o Joelho Natural pelo Maior Tempo Possível
+              </h3>
+              <p class="text-white/90 leading-relaxed font-light mb-4">
+                Sempre que possível, o Dr. Demange busca postergar a necessidade de próteses por meio de estratégias de preservação articular, como transplante de cartilagem, menisco e osteotomias.
+              </p>
+              <p class="text-white/90 leading-relaxed font-light">
+                O objetivo é manter a função e a qualidade de vida do paciente, principalmente em casos iniciais de desgaste ou lesões localizadas.
+              </p>
+              <div class="bg-white/5 rounded-lg p-4 mt-4">
+                <p class="text-xs text-white/70 italic">Imagem: Local para aplicar uma imagem que pode ser substituída depois</p>
+              </div>
             </div>
           </div>
         </div>
@@ -293,55 +371,132 @@
       <div class="container mx-auto px-6 lg:px-8">
         <div class="text-center mb-24">
           <h2 class="text-4xl md:text-5xl font-light text-gray-900 mb-8">
-            Tecnologia Avançada
+            Tecnologia de Ponta a Serviço da Precisão Cirúrgica
           </h2>
           <div class="w-24 h-px bg-gray-900 mx-auto mb-12"></div>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
-            Utilizamos as mais modernas tecnologias para garantir precisão e melhores resultados
+          <p class="text-xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed">
+            O Dr. Marco Demange integra os avanços mais modernos da ortopedia para oferecer cirurgias de joelho personalizadas, seguras e com resultados previsíveis. Sistemas robóticos, planejamento digital e técnicas minimamente invasivas transformam a experiência e a recuperação dos pacientes.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
-          <div class="text-center fade-in-section">
-            <h3 class="text-xl font-light text-gray-900 mb-6">
-              Cirurgia Robótica
+        <div class="max-w-7xl mx-auto space-y-16">
+          <!-- VELYS - Destaque Principal -->
+          <div class="bg-gray-50 rounded-lg p-12 fade-in-section">
+            <h3 class="text-3xl font-light text-gray-900 mb-8 text-center">
+              VELYS™ Robotic-Assisted Solution – Destaque Principal
             </h3>
-            <p class="text-gray-600 font-light leading-relaxed">
-              Precisão milimétrica com sistema robótico de última geração
-            </p>
+            <div class="max-w-4xl mx-auto space-y-6">
+              <p class="text-lg text-gray-700 leading-relaxed font-light">
+                O VELYS é um sistema robótico de última geração que oferece precisão milimétrica no posicionamento dos implantes, permitindo ajustes de 0,5 mm e 0,5° para cada paciente.
+              </p>
+              <div class="bg-white p-6 rounded-lg">
+                <h4 class="text-xl font-light text-gray-900 mb-4">Essa tecnologia possibilita:</h4>
+                <ul class="space-y-3 text-gray-700 font-light">
+                  <li>• Planejamento personalizado antes do corte ósseo</li>
+                  <li>• Ajuste ideal dos ligamentos para sensação natural do joelho</li>
+                  <li>• Menor remoção de osso e preservação de tecidos</li>
+                  <li>• Recuperação mais rápida e segura</li>
+                </ul>
+              </div>
+              <div class="bg-gray-100 rounded-lg p-6">
+                <p class="text-sm text-gray-600 italic">Imagem: Foto real do Dr. Demange operando com o VELYS ou close do painel de simulação</p>
+              </div>
+            </div>
           </div>
 
-          <div class="text-center fade-in-section">
-            <h3 class="text-xl font-light text-gray-900 mb-6">
-              Navegação Cirúrgica
-            </h3>
-            <p class="text-gray-600 font-light leading-relaxed">
-              Orientação em tempo real durante procedimentos complexos
-            </p>
+          <!-- Grid de Tecnologias -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <!-- MAKO -->
+            <div class="bg-gray-50 rounded-lg p-8 fade-in-section">
+              <h3 class="text-xl font-light text-gray-900 mb-6">
+                MAKO™ Robotic-Arm Assisted Surgery
+              </h3>
+              <p class="text-gray-700 font-light leading-relaxed mb-4">
+                Com o sistema MAKO, é possível criar um plano cirúrgico 3D individualizado, garantindo cortes precisos e posicionamento exato do implante.
+              </p>
+              <p class="text-gray-700 font-light leading-relaxed">
+                Indicado para próteses totais e parciais de joelho, esse robô oferece previsibilidade e redução no risco de desalinhamento.
+              </p>
+              <div class="bg-gray-200 rounded-lg p-4 mt-4">
+                <p class="text-xs text-gray-600 italic">Imagem: Local para aplicar uma imagem que pode ser substituída depois</p>
+              </div>
+            </div>
+
+            <!-- ROSA -->
+            <div class="bg-gray-50 rounded-lg p-8 fade-in-section">
+              <h3 class="text-xl font-light text-gray-900 mb-6">
+                ROSA® Knee System
+              </h3>
+              <p class="text-gray-700 font-light leading-relaxed mb-4">
+                O ROSA utiliza sensores e câmeras para mapear a anatomia do paciente em tempo real, auxiliando o cirurgião na execução precisa do plano cirúrgico.
+              </p>
+              <p class="text-gray-700 font-light leading-relaxed">
+                Com ele, é possível monitorar o alinhamento durante toda a cirurgia, otimizando a estabilidade e a durabilidade do implante.
+              </p>
+              <div class="bg-gray-200 rounded-lg p-4 mt-4">
+                <p class="text-xs text-gray-600 italic">Imagem: Local para aplicar uma imagem que pode ser substituída depois</p>
+              </div>
+            </div>
+
+            <!-- Skywalker -->
+            <div class="bg-gray-50 rounded-lg p-8 fade-in-section">
+              <h3 class="text-xl font-light text-gray-900 mb-6">
+                Skywalker™ Robotic Platform
+              </h3>
+              <p class="text-gray-700 font-light leading-relaxed">
+                Sistema robótico versátil, o Skywalker combina automação e inteligência artificial para auxiliar em cortes ósseos precisos, preservando ao máximo as estruturas naturais e melhorando a estabilidade pós-cirúrgica.
+              </p>
+              <div class="bg-gray-200 rounded-lg p-4 mt-4">
+                <p class="text-xs text-gray-600 italic">Imagem: Local para aplicar uma imagem que pode ser substituída depois</p>
+              </div>
+            </div>
           </div>
 
-          <div class="text-center fade-in-section">
-            <h3 class="text-xl font-light text-gray-900 mb-6">
-              Artroscopia Avançada
+          <!-- Benefícios da Cirurgia Robótica -->
+          <div class="bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg p-12 fade-in-section">
+            <h3 class="text-2xl font-light text-gray-900 mb-8 text-center">
+              Benefícios da Cirurgia Robótica
             </h3>
-            <p class="text-gray-600 font-light leading-relaxed">
-              Técnicas minimamente invasivas para recuperação mais rápida
-            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div class="text-center">
+                <h4 class="text-lg font-light text-gray-900 mb-3">Precisão milimétrica</h4>
+                <p class="text-gray-700 font-light">nos cortes e no posicionamento do implante</p>
+              </div>
+              <div class="text-center">
+                <h4 class="text-lg font-light text-gray-900 mb-3">Ajustes personalizados</h4>
+                <p class="text-gray-700 font-light">para cada anatomia</p>
+              </div>
+              <div class="text-center">
+                <h4 class="text-lg font-light text-gray-900 mb-3">Preservação muscular</h4>
+                <p class="text-gray-700 font-light">e menor agressão aos tecidos</p>
+              </div>
+              <div class="text-center">
+                <h4 class="text-lg font-light text-gray-900 mb-3">Recuperação acelerada</h4>
+                <p class="text-gray-700 font-light">e menos dor no pós-operatório</p>
+              </div>
+              <div class="text-center">
+                <h4 class="text-lg font-light text-gray-900 mb-3">Resultados previsíveis</h4>
+                <p class="text-gray-700 font-light">e sensação natural ao movimento</p>
+              </div>
+              <div class="bg-gray-200 rounded-lg p-4">
+                <p class="text-xs text-gray-600 italic">Imagem: Local para aplicar uma imagem que pode ser substituída depois</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Content Section -->
-    <section id="conteudos" class="py-40 bg-gray-50 fade-in-section">
+    <section id="conteudos" class="py-40 fade-in-section" style="background: linear-gradient(135deg, var(--brushed-steel), #2c2c2c);">
       <div class="container mx-auto px-6 lg:px-8">
         <div class="text-center mb-24">
-          <h2 class="text-4xl md:text-5xl font-light text-gray-900 mb-8">
-            Conteúdos
+          <h2 class="text-4xl md:text-5xl font-light text-white mb-8">
+            Conhecimento que Transforma a Prática Ortopédica
           </h2>
-          <div class="w-24 h-px bg-gray-900 mx-auto mb-12"></div>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
-            Reels, podcasts, entrevistas e depoimentos sobre cirurgia do joelho e ortopedia
+          <div class="w-24 h-px bg-white mx-auto mb-12"></div>
+          <p class="text-xl text-white/90 max-w-4xl mx-auto font-light leading-relaxed">
+            Além da atuação cirúrgica, o Dr. Marco Demange compartilha experiência e atualizações sobre cirurgia do joelho, tecnologia robótica e inovação na ortopedia, por meio de vídeos, entrevistas e participações em eventos médicos no Brasil e no exterior.
           </p>
         </div>
 
@@ -484,30 +639,63 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
-          <div class="text-center fade-in-section">
-            <p class="text-gray-600 mb-8 font-light leading-relaxed italic">
-              "Após a cirurgia robótica, recuperei completamente minha mobilidade. O Dr. Marco é um profissional excepcional."
+          <div class="bg-gray-50 p-8 rounded-lg text-center fade-in-section">
+            <p class="text-gray-700 mb-8 font-light leading-relaxed italic text-lg">
+              "A cirurgia robótica do Dr. Marco Demange me devolveu a esperança. Após anos convivendo com dores intensas no joelho, hoje posso caminhar sem limitações. A precisão da técnica e o cuidado humanizado fizeram toda a diferença na minha recuperação."
             </p>
-            <div class="text-sm text-gray-500 font-light">
-              Maria Silva, 58 anos
+            <div class="text-sm text-gray-600 font-medium">
+              Carla Mendes, 52 anos
+              <div class="text-xs text-gray-500 mt-1">Paciente - Prótese Robótica</div>
             </div>
           </div>
 
-          <div class="text-center fade-in-section">
-            <p class="text-gray-600 mb-8 font-light leading-relaxed italic">
-              "A precisão da cirurgia e o cuidado pós-operatório foram fundamentais para minha recuperação rápida."
+          <div class="bg-gray-50 p-8 rounded-lg text-center fade-in-section">
+            <p class="text-gray-700 mb-8 font-light leading-relaxed italic text-lg">
+              "Como atleta, pensei que nunca mais poderia competir após a lesão do ligamento. O Dr. Marco realizou uma reconstrução perfeita e hoje estou de volta às competições. Técnica impecável e acompanhamento exemplar durante toda a reabilitação."
             </p>
-            <div class="text-sm text-gray-500 font-light">
-              João Santos, 45 anos
+            <div class="text-sm text-gray-600 font-medium">
+              Roberto Lima, 29 anos
+              <div class="text-xs text-gray-500 mt-1">Atleta - Reconstrução de LCA</div>
             </div>
           </div>
 
-          <div class="text-center fade-in-section">
-            <p class="text-gray-600 mb-8 font-light leading-relaxed italic">
-              "Voltei a praticar esportes sem dor. Gratidão pela dedicação e competência do Dr. Marco."
+          <div class="bg-gray-50 p-8 rounded-lg text-center fade-in-section">
+            <p class="text-gray-700 mb-8 font-light leading-relaxed italic text-lg">
+              "A artroscopia realizada pelo Dr. Demange foi um divisor de águas na minha vida. Procedimento minimamente invasivo, recuperação rápida e resultados que superaram todas as expectativas. Profissional de excelência e tecnologia de ponta."
             </p>
-            <div class="text-sm text-gray-500 font-light">
-              Ana Costa, 38 anos
+            <div class="text-sm text-gray-600 font-medium">
+              Sandra Oliveira, 45 anos
+              <div class="text-xs text-gray-500 mt-1">Paciente - Artroscopia</div>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 p-8 rounded-lg text-center fade-in-section">
+            <p class="text-gray-700 mb-8 font-light leading-relaxed italic text-lg">
+              "Depois de consultar vários especialistas, encontrei no Dr. Marco a solução definitiva. A técnica de preservação articular me permitiu adiar a prótese por muitos anos. Gratidão pela dedicação e conhecimento científico aplicado ao meu caso."
+            </p>
+            <div class="text-sm text-gray-600 font-medium">
+              Eduardo Santos, 58 anos
+              <div class="text-xs text-gray-500 mt-1">Paciente - Preservação Articular</div>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 p-8 rounded-lg text-center fade-in-section">
+            <p class="text-gray-700 mb-8 font-light leading-relaxed italic text-lg">
+              "A experiência internacional do Dr. Marco fez toda a diferença no meu tratamento. Utilizou as mais modernas técnicas robóticas com uma precisão impressionante. Hoje tenho um joelho que funciona melhor que antes da lesão."
+            </p>
+            <div class="text-sm text-gray-600 font-medium">
+              Ana Beatriz Costa, 35 anos
+              <div class="text-xs text-gray-500 mt-1">Paciente - Tecnologia Robótica</div>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 p-8 rounded-lg text-center fade-in-section">
+            <p class="text-gray-700 mb-8 font-light leading-relaxed italic text-lg">
+              "Como médico, reconheço a excelência técnica do Dr. Demange. Quando precisei de uma cirurgia no joelho, não hesitei em procurá-lo. O resultado foi perfeito: técnica cirúrgica impecável e recuperação muito acima do esperado."
+            </p>
+            <div class="text-sm text-gray-600 font-medium">
+              Dr. Fernando Rocha, 48 anos
+              <div class="text-xs text-gray-500 mt-1">Médico e Paciente</div>
             </div>
           </div>
         </div>
@@ -515,14 +703,14 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contato" class="py-40 bg-gray-50 fade-in-section">
+    <section id="contato" class="py-40 fade-in-section" style="background: linear-gradient(135deg, var(--brushed-steel), #2c2c2c);">
       <div class="container mx-auto px-6 lg:px-8">
         <div class="text-center mb-24">
-          <h2 class="text-4xl md:text-5xl font-light text-gray-900 mb-8">
+          <h2 class="text-4xl md:text-5xl font-light text-white mb-8">
             Contato
           </h2>
-          <div class="w-24 h-px bg-gray-900 mx-auto mb-12"></div>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
+          <div class="w-24 h-px bg-white mx-auto mb-12"></div>
+          <p class="text-xl text-white/90 max-w-3xl mx-auto font-light leading-relaxed">
             Entre em contato para agendar sua consulta
           </p>
         </div>
@@ -530,21 +718,21 @@
         <div class="max-w-4xl mx-auto">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
             <div class="fade-in-section">
-              <h3 class="text-2xl font-light text-gray-900 mb-8">
+              <h3 class="text-2xl font-light text-white mb-8">
                 Informações de Contato
               </h3>
               <div class="space-y-6">
                 <div>
-                  <h4 class="text-lg font-light text-gray-900 mb-2">Telefone</h4>
-                  <p class="text-gray-600 font-light">(11) 99999-9999</p>
+                  <h4 class="text-lg font-light text-white mb-2">Telefone</h4>
+                  <p class="text-white/80 font-light">(11) 99999-9999</p>
                 </div>
                 <div>
-                  <h4 class="text-lg font-light text-gray-900 mb-2">Email</h4>
-                  <p class="text-gray-600 font-light">contato@drmarcodemange.com.br</p>
+                  <h4 class="text-lg font-light text-white mb-2">Email</h4>
+                  <p class="text-white/80 font-light">contato@drmarcodemange.com.br</p>
                 </div>
                 <div>
-                  <h4 class="text-lg font-light text-gray-900 mb-2">Endereço</h4>
-                  <p class="text-gray-600 font-light">
+                  <h4 class="text-lg font-light text-white mb-2">Endereço</h4>
+                  <p class="text-white/80 font-light">
                     Rua Example, 123<br>
                     São Paulo - SP
                   </p>
@@ -553,21 +741,21 @@
             </div>
 
             <div class="fade-in-section">
-              <h3 class="text-2xl font-light text-gray-900 mb-8">
+              <h3 class="text-2xl font-light text-white mb-8">
                 Agende sua Consulta
               </h3>
               <form class="space-y-6">
                 <div>
-                  <input type="text" placeholder="Nome completo" class="w-full px-4 py-3 border border-gray-300 focus:border-gray-900 focus:outline-none transition-colors font-light">
+                  <input type="text" placeholder="Nome completo" class="w-full px-4 py-3 border border-white/30 bg-white/10 text-white placeholder-white/70 focus:border-white focus:outline-none transition-colors font-light">
                 </div>
                 <div>
-                  <input type="email" placeholder="Email" class="w-full px-4 py-3 border border-gray-300 focus:border-gray-900 focus:outline-none transition-colors font-light">
+                  <input type="email" placeholder="Email" class="w-full px-4 py-3 border border-white/30 bg-white/10 text-white placeholder-white/70 focus:border-white focus:outline-none transition-colors font-light">
                 </div>
                 <div>
-                  <input type="tel" placeholder="Telefone" class="w-full px-4 py-3 border border-gray-300 focus:border-gray-900 focus:outline-none transition-colors font-light">
+                  <input type="tel" placeholder="Telefone" class="w-full px-4 py-3 border border-white/30 bg-white/10 text-white placeholder-white/70 focus:border-white focus:outline-none transition-colors font-light">
                 </div>
                 <div>
-                  <textarea placeholder="Mensagem" rows="4" class="w-full px-4 py-3 border border-gray-300 focus:border-gray-900 focus:outline-none transition-colors font-light resize-none"></textarea>
+                  <textarea placeholder="Mensagem" rows="4" class="w-full px-4 py-3 border border-white/30 bg-white/10 text-white placeholder-white/70 focus:border-white focus:outline-none transition-colors font-light resize-none"></textarea>
                 </div>
                 <button type="submit" class="w-full text-white py-4 text-sm font-light uppercase tracking-wider transition-all duration-300" style="background-color: var(--primary-color);">
                   Enviar Mensagem
