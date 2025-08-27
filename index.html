@@ -104,6 +104,38 @@
           min-width: calc(33.333% - 16px);
         }
       }
+
+      /* Technology hover effects */
+      .tech-card {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .tech-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(14, 57, 86, 0.5);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .tech-card:hover .tech-overlay {
+        opacity: 1;
+      }
+
+      .tech-overlay-text {
+        color: white;
+        font-size: 16px;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
     </style>
   </head>
   <body class="bg-white text-gray-900">
@@ -134,9 +166,6 @@
             </a>
             <a href="#conteudos" class="text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wider transition-all duration-300 hover:scale-105">
               Conteúdos
-            </a>
-            <a href="#depoimentos" class="text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wider transition-all duration-300 hover:scale-105">
-              Depoimentos
             </a>
             <a href="#locais" class="text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wider transition-all duration-300 hover:scale-105">
               Locais
@@ -175,9 +204,6 @@
             </a>
             <a href="#conteudos" class="block w-full text-left py-4 px-2 text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wider transition-all duration-300">
               Conteúdos
-            </a>
-            <a href="#depoimentos" class="block w-full text-left py-4 px-2 text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wider transition-all duration-300">
-              Depoimentos
             </a>
             <a href="#locais" class="block w-full text-left py-4 px-2 text-gray-700 hover:text-gray-900 font-light text-sm uppercase tracking-wider transition-all duration-300">
               Locais
@@ -236,7 +262,7 @@
             <!-- Text Content -->
             <div>
               <h2 class="text-4xl md:text-5xl font-light text-gray-900 mb-8">
-                Dr. Marco Demange referência em cirurgia do joelho
+                Dr. Marco Demange
               </h2>
               
               <div class="space-y-6 text-gray-700 leading-relaxed mb-8">
@@ -388,8 +414,11 @@
               <p class="text-gray-700 font-light leading-relaxed">
                 Essa tecnologia possibilita: Planejamento personalizado antes do corte ósseo, ajuste ideal dos ligamentos para sensação natural do joelho, menor remoção de osso e preservação de tecidos e recuperação mais rápida e segura.
               </p>
-              <div class="mt-4">
+              <div class="mt-4 tech-card">
                 <img src="https://raw.githubusercontent.com/gleisondesign/dr-marco-demange/refs/heads/main/src/foto.jpg" alt="Sistema VELYS" class="w-full h-48 object-cover rounded-lg">
+                <a href="https://linktest.com/" target="_blank" class="tech-overlay">
+                  <span class="tech-overlay-text">Saber Mais</span>
+                </a>
               </div>
             </div>
 
@@ -404,8 +433,11 @@
               <p class="text-gray-700 font-light leading-relaxed">
                 Indicado para próteses totais e parciais de joelho, esse robô oferece previsibilidade e redução no risco de desalinhamento. A tecnologia MAKO permite aos cirurgiões realizar cortes ósseos extremamente precisos baseados no planejamento pré-operatório personalizado.
               </p>
-              <div class="mt-4">
+              <div class="mt-4 tech-card">
                 <img src="https://raw.githubusercontent.com/gleisondesign/dr-marco-demange/refs/heads/main/src/foto.jpg" alt="Sistema MAKO" class="w-full h-48 object-cover rounded-lg">
+                <a href="https://linktest.com/" target="_blank" class="tech-overlay">
+                  <span class="tech-overlay-text">Saber Mais</span>
+                </a>
               </div>
             </div>
 
@@ -420,8 +452,11 @@
               <p class="text-gray-700 font-light leading-relaxed">
                 Com ele, é possível monitorar o alinhamento durante toda a cirurgia, otimizando a estabilidade e a durabilidade do implante. O sistema ROSA proporciona feedback em tempo real, garantindo que cada movimento cirúrgico seja executado com máxima segurança.
               </p>
-              <div class="mt-4">
+              <div class="mt-4 tech-card">
                 <img src="https://raw.githubusercontent.com/gleisondesign/dr-marco-demange/refs/heads/main/src/foto.jpg" alt="Sistema ROSA" class="w-full h-48 object-cover rounded-lg">
+                <a href="https://linktest.com/" target="_blank" class="tech-overlay">
+                  <span class="tech-overlay-text">Saber Mais</span>
+                </a>
               </div>
             </div>
 
@@ -436,8 +471,11 @@
               <p class="text-gray-700 font-light leading-relaxed">
                 Esta plataforma oferece navegação avançada e controle preciso, permitindo aos cirurgiões realizar procedimentos complexos com confiança e resultados consistentes para cada paciente individual.
               </p>
-              <div class="mt-4">
+              <div class="mt-4 tech-card">
                 <img src="https://raw.githubusercontent.com/gleisondesign/dr-marco-demange/refs/heads/main/src/foto.jpg" alt="Sistema Skywalker" class="w-full h-48 object-cover rounded-lg">
+                <a href="https://linktest.com/" target="_blank" class="tech-overlay">
+                  <span class="tech-overlay-text">Saber Mais</span>
+                </a>
               </div>
             </div>
           </div>
@@ -616,52 +654,6 @@
       </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="depoimentos" class="py-40 bg-white fade-in-section">
-      <div class="container mx-auto px-6 lg:px-8">
-        <div class="text-center mb-24">
-          <h2 class="text-4xl md:text-5xl font-light text-gray-900 mb-8">
-            Depoimentos
-          </h2>
-          <div class="w-24 h-px bg-gray-900 mx-auto mb-12"></div>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
-            Histórias reais de pacientes que recuperaram sua qualidade de vida
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
-          <div class="bg-gray-50 p-8 rounded-lg text-center fade-in-section">
-            <p class="text-gray-700 mb-8 font-light leading-relaxed italic text-lg">
-              "A cirurgia robótica do Dr. Marco Demange me devolveu a esperança. Após anos convivendo com dores intensas no joelho, hoje posso caminhar sem limitações. A precisão da técnica e o cuidado humanizado fizeram toda a diferença na minha recuperação."
-            </p>
-            <div class="text-sm text-gray-600 font-medium">
-              Carla Mendes, 52 anos
-              <div class="text-xs text-gray-500 mt-1">Paciente - Prótese Robótica</div>
-            </div>
-          </div>
-
-          <div class="bg-gray-50 p-8 rounded-lg text-center fade-in-section">
-            <p class="text-gray-700 mb-8 font-light leading-relaxed italic text-lg">
-              "Como atleta, pensei que nunca mais poderia competir após a lesão do ligamento. O Dr. Marco realizou uma reconstrução perfeita e hoje estou de volta às competições. Técnica impecável e acompanhamento exemplar durante toda a reabilitação."
-            </p>
-            <div class="text-sm text-gray-600 font-medium">
-              Roberto Lima, 29 anos
-              <div class="text-xs text-gray-500 mt-1">Atleta - Reconstrução de LCA</div>
-            </div>
-          </div>
-
-          <div class="bg-gray-50 p-8 rounded-lg text-center fade-in-section">
-            <p class="text-gray-700 mb-8 font-light leading-relaxed italic text-lg">
-              "A artroscopia realizada pelo Dr. Demange foi um divisor de águas na minha vida. Procedimento minimamente invasivo, recuperação rápida e resultados que superaram todas as expectativas. Profissional de excelência e tecnologia de ponta."
-            </p>
-            <div class="text-sm text-gray-600 font-medium">
-              Sandra Oliveira, 45 anos
-              <div class="text-xs text-gray-500 mt-1">Paciente - Artroscopia</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Locais Section -->
     <section id="locais" class="py-40 bg-white fade-in-section">
@@ -742,6 +734,10 @@
                 <div>
                   <h4 class="text-lg font-light text-white mb-2">Telefone</h4>
                   <p class="text-white/80 font-light">11 5055-5000</p>
+                </div>
+                <div>
+                  <h4 class="text-lg font-light text-white mb-2">WhatsApp</h4>
+                  <p class="text-white/80 font-light">19 5055-5000</p>
                 </div>
                 <div>
                   <h4 class="text-lg font-light text-white mb-2">Email</h4>
@@ -830,7 +826,7 @@
 
           <div class="border-t border-gray-800 pt-12">
             <p class="text-sm text-gray-400 font-light">
-              © 2024 Dr. Marco Demange. Todos os direitos reservados.
+              © 2025 Dr. Marco Demange. Todos os direitos reservados.
             </p>
           </div>
         </div>
@@ -894,20 +890,12 @@
       }
 
       function nextSlide() {
-        const isMobile = window.innerWidth < 768;
-        const cardsPerView = isMobile ? 1 : 3;
-        const maxIndex = Math.max(0, totalCards - cardsPerView);
-        
-        currentIndex = currentIndex >= maxIndex ? 0 : currentIndex + 1;
+        currentIndex = (currentIndex + 1) % totalCards;
         updateCarousel();
       }
 
       function prevSlide() {
-        const isMobile = window.innerWidth < 768;
-        const cardsPerView = isMobile ? 1 : 3;
-        const maxIndex = Math.max(0, totalCards - cardsPerView);
-        
-        currentIndex = currentIndex <= 0 ? maxIndex : currentIndex - 1;
+        currentIndex = currentIndex <= 0 ? totalCards - 1 : currentIndex - 1;
         updateCarousel();
       }
 
