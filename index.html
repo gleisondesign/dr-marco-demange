@@ -218,8 +218,14 @@
 
     <!-- Hero Section -->
     <section id="inicio" class="relative min-h-screen flex items-center overflow-hidden">
-      <!-- Background Image -->
-      <div class="absolute inset-0 bg-cover bg-no-repeat" style="background-image: url('https://gleisondesign.github.io/dr-marco-demange/src/imagem-home.jpg'); background-position: center 20%; margin-top: 50px;">
+      <!-- Background Image Desktop -->
+      <div class="absolute inset-0 bg-cover bg-no-repeat hidden md:block" style="background-image: url('https://gleisondesign.github.io/dr-marco-demange/src/imagem-home.jpg'); background-position: center 20%; margin-top: 50px;">
+        <!-- Overlay -->
+        <div class="absolute inset-0" style="background-color: rgba(14, 57, 86, 0.4);"></div>
+      </div>
+
+      <!-- Background Image Mobile -->
+      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden" style="background-image: url('https://www.demange.com.br/src/BANNER-MOB.png'); margin-top: 50px;">
         <!-- Overlay -->
         <div class="absolute inset-0" style="background-color: rgba(14, 57, 86, 0.4);"></div>
       </div>
@@ -258,7 +264,8 @@
     <section id="sobre" class="py-40 bg-white fade-in-section">
       <div class="container mx-auto px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <!-- Desktop Layout -->
+          <div class="hidden lg:grid grid-cols-2 gap-16 items-center">
             <!-- Text Content -->
             <div>
               <h2 class="text-4xl md:text-5xl font-light text-gray-900 mb-8">
@@ -292,6 +299,39 @@
               </div>
             </div>
           </div>
+
+          <!-- Mobile Layout -->
+          <div class="lg:hidden text-center">
+            <h2 class="text-4xl font-light text-gray-900 mb-8">
+              Dr. Marco Demange
+            </h2>
+            
+            <div class="space-y-6 text-gray-700 leading-relaxed mb-8">
+              <p class="text-lg font-light">
+                Professor Livre-Docente do Departamento de Ortopedia e Traumatologia da FMUSP, o Dr. Marco Demange atua há mais de 20 anos com foco exclusivo em cirurgia do joelho. Sua trajetória inclui formação internacional em centros de referência e atuação nos principais hospitais de excelência do Brasil: Vila Nova Star, São Luiz Itaim (Rede D'Or), Hospital Albert Einstein, Sírio-Libanês, Moriah e HCor.
+              </p>
+              
+              <p class="text-lg font-light">
+                Pioneiro na adoção de tecnologias robóticas como VELYS (maior destaque), MAKO, ROSA e Skywalker, alia precisão cirúrgica a técnicas minimamente invasivas e preservadoras de musculatura, tema de seu mestrado concluído em 2007.
+              </p>
+              
+              <p class="text-lg font-light">
+                Sua expertise abrange: Próteses de joelho robóticas com planejamento 3D e ajustes milimétricos personalizados, cirurgia artroscópica para tratamento de lesões meniscais, cartilagem e outras patologias intra-articulares, reconstrução do ligamento cruzado anterior e preservação articular para prolongar a vida útil do joelho antes de próteses.
+              </p>
+            </div>
+            
+            <!-- Image Mobile -->
+            <div class="flex justify-center mb-8">
+              <div class="w-full max-w-sm">
+                <img src="https://www.demange.com.br/src/DSC02437.png" alt="Dr. Marco Demange" class="w-full h-auto rounded-lg shadow-lg object-cover">
+              </div>
+            </div>
+            
+            <!-- CTA Button -->
+            <a href="#contato" class="inline-block bg-white hover:bg-gray-100 border-2 border-gray-900 hover:bg-gray-900 hover:text-white text-gray-900 px-10 py-4 text-sm font-light uppercase tracking-wider transition-all duration-300 transform hover:scale-105">
+              Agendar Consulta
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -310,23 +350,28 @@
         </div>
 
         <div class="max-w-7xl mx-auto space-y-16">
-          <!-- Prótese de Joelho Robótica -->
-          <div class="bg-white/10 backdrop-blur-sm rounded-lg p-10 fade-in-section">
-            <h3 class="text-3xl font-light text-white mb-6">
-              Precisão Milimétrica com Tecnologia Robótica
-            </h3>
-            <p class="text-white/90 leading-relaxed font-light mb-6">
-              O Dr. Demange utiliza sistemas robóticos de última geração: VELYS (principal destaque), MAKO, ROSA e Skywalker para realizar próteses de joelho com ajustes personalizados e máxima precisão.
-            </p>
-            <p class="text-white/90 leading-relaxed font-light mb-6">
-              Com planejamento digital e simulação prévia, cada corte ósseo e posicionamento do implante é otimizado para garantir alinhamento, estabilidade e sensação natural ao movimento.
-            </p>
-            <p class="text-white/90 leading-relaxed font-light">
-              Essa tecnologia permite intervenções mais seguras, com menor agressão aos tecidos e recuperação mais rápida.
-            </p>
+          <!-- Grid de Tratamentos -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- New Image Card -->
+            <div class="bg-white/10 backdrop-blur-sm rounded-lg p-8 fade-in-section flex justify-center items-center">
+              <img src="https://www.demange.com.br/src/JOELHO2.png" alt="Joelho" class="max-w-full h-auto object-contain">
+            </div>
+
+            <!-- Prótese de Joelho Robótica -->
+            <div class="bg-white/10 backdrop-blur-sm rounded-lg p-8 fade-in-section">
+              <h3 class="text-2xl font-light text-white mb-6">
+                Precisão Milimétrica com Tecnologia Robótica
+              </h3>
+              <p class="text-white/90 leading-relaxed font-light mb-6">
+                O Dr. Demange utiliza sistemas robóticos de última geração: VELYS (principal destaque), MAKO, ROSA e Skywalker para realizar próteses de joelho com ajustes personalizados e máxima precisão.
+              </p>
+              <p class="text-white/90 leading-relaxed font-light">
+                Com planejamento digital e simulação prévia, cada corte ósseo e posicionamento do implante é otimizado para garantir alinhamento, estabilidade e sensação natural ao movimento.
+              </p>
+            </div>
           </div>
 
-          <!-- Grid de Tratamentos -->
+          <!-- Second Grid Row -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
             <!-- Técnicas Minimamente Invasivas -->
             <div class="bg-white/10 backdrop-blur-sm rounded-lg p-8 fade-in-section">
@@ -890,12 +935,38 @@
       }
 
       function nextSlide() {
+        const isMobile = window.innerWidth < 768;
+        const cardsPerView = isMobile ? 1 : 3;
+        
+        // Infinite loop: go to next slide or back to beginning
         currentIndex = (currentIndex + 1) % totalCards;
+        
+        // For desktop view, make sure we don't exceed the viewable range
+        if (!isMobile) {
+          const maxIndex = Math.max(0, totalCards - cardsPerView);
+          if (currentIndex > maxIndex) {
+            currentIndex = 0; // Reset to beginning
+          }
+        }
+        
         updateCarousel();
       }
 
       function prevSlide() {
+        const isMobile = window.innerWidth < 768;
+        const cardsPerView = isMobile ? 1 : 3;
+        
+        // Infinite loop: go to previous slide or to the end
         currentIndex = currentIndex <= 0 ? totalCards - 1 : currentIndex - 1;
+        
+        // For desktop view, adjust for proper display
+        if (!isMobile) {
+          const maxIndex = Math.max(0, totalCards - cardsPerView);
+          if (currentIndex > maxIndex) {
+            currentIndex = maxIndex;
+          }
+        }
+        
         updateCarousel();
       }
 
