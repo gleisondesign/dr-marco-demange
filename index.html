@@ -30,6 +30,7 @@
       /* Smooth scroll behavior */
       html {
         scroll-behavior: smooth;
+        overflow-x: hidden;
       }
 
       /* Animações suaves e premium */
@@ -353,7 +354,7 @@
           <!-- Grid de Tratamentos -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
             <!-- New Image Card -->
-            <div class="bg-white/10 backdrop-blur-sm rounded-lg p-8 fade-in-section flex justify-center items-center">
+            <div class="bg-white rounded-lg p-8 fade-in-section flex justify-center items-center">
               <img src="https://www.demange.com.br/src/JOELHO2.png" alt="Joelho" class="max-w-full h-auto object-contain">
             </div>
 
@@ -580,26 +581,26 @@
 
         <div class="relative max-w-7xl mx-auto">
           <!-- Carousel Controls -->
-          <button id="prev-btn" class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 p-4 text-gray-400 hover:text-gray-900 transition-colors duration-300 -ml-16 hover:scale-110 hidden md:block">
+          <button id="prev-btn" class="absolute left-2 top-1/2 transform -translate-y-1/2 z-10 p-4 text-gray-400 hover:text-gray-900 transition-colors duration-300 hover:scale-110 hidden md:block">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
             </svg>
           </button>
 
-          <button id="next-btn" class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 p-4 text-gray-400 hover:text-gray-900 transition-colors duration-300 -mr-16 hover:scale-110 hidden md:block">
+          <button id="next-btn" class="absolute right-2 top-1/2 transform -translate-y-1/2 z-10 p-4 text-gray-400 hover:text-gray-900 transition-colors duration-300 hover:scale-110 hidden md:block">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
             </svg>
           </button>
 
           <!-- Mobile Controls -->
-          <button id="prev-btn-mobile" class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 p-3 text-gray-400 hover:text-gray-900 transition-colors duration-300 -ml-10 md:hidden">
+          <button id="prev-btn-mobile" class="absolute left-1 top-1/2 transform -translate-y-1/2 z-10 p-3 text-gray-400 hover:text-gray-900 transition-colors duration-300 md:hidden">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
             </svg>
           </button>
 
-          <button id="next-btn-mobile" class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 p-3 text-gray-400 hover:text-gray-900 transition-colors duration-300 -mr-10 md:hidden">
+          <button id="next-btn-mobile" class="absolute right-1 top-1/2 transform -translate-y-1/2 z-10 p-3 text-gray-400 hover:text-gray-900 transition-colors duration-300 md:hidden">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
             </svg>
