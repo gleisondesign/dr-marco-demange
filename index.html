@@ -540,34 +540,87 @@
           </div>
 
           <!-- Benefícios da Cirurgia Robótica -->
-          <div class="bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg p-12 fade-in-section">
-            <h3 class="text-2xl font-light text-gray-900 mb-8 text-center">
+          <div class="bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg p-8 md:p-12 fade-in-section">
+            <h3 class="text-2xl md:text-3xl font-light text-gray-900 mb-8 text-center">
               Benefícios da Cirurgia Robótica
             </h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div class="text-center">
-                <h4 class="text-lg font-light text-gray-900 mb-3">Precisão milimétrica</h4>
-                <p class="text-gray-700 font-light">nos cortes e no posicionamento do implante</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+              <!-- Accordion Item 1 -->
+              <div class="accordion-item bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
+                <button class="accordion-trigger w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200" onclick="toggleAccordion(this)">
+                  <span class="text-lg font-medium text-gray-900">Precisão milimétrica</span>
+                  <span class="accordion-icon text-2xl text-gray-600 transition-transform duration-200">+</span>
+                </button>
+                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-out">
+                  <div class="px-6 py-4 text-gray-700 font-light leading-relaxed">
+                    nos cortes e no posicionamento do implante
+                  </div>
+                </div>
               </div>
-              <div class="text-center">
-                <h4 class="text-lg font-light text-gray-900 mb-3">Ajustes personalizados</h4>
-                <p class="text-gray-700 font-light">para cada anatomia</p>
+
+              <!-- Accordion Item 2 -->
+              <div class="accordion-item bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
+                <button class="accordion-trigger w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200" onclick="toggleAccordion(this)">
+                  <span class="text-lg font-medium text-gray-900">Ajustes personalizados</span>
+                  <span class="accordion-icon text-2xl text-gray-600 transition-transform duration-200">+</span>
+                </button>
+                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-out">
+                  <div class="px-6 py-4 text-gray-700 font-light leading-relaxed">
+                    para cada anatomia
+                  </div>
+                </div>
               </div>
-              <div class="text-center">
-                <h4 class="text-lg font-light text-gray-900 mb-3">Preservação muscular</h4>
-                <p class="text-gray-700 font-light">e menor agressão aos tecidos</p>
+
+              <!-- Accordion Item 3 -->
+              <div class="accordion-item bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
+                <button class="accordion-trigger w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200" onclick="toggleAccordion(this)">
+                  <span class="text-lg font-medium text-gray-900">Preservação muscular</span>
+                  <span class="accordion-icon text-2xl text-gray-600 transition-transform duration-200">+</span>
+                </button>
+                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-out">
+                  <div class="px-6 py-4 text-gray-700 font-light leading-relaxed">
+                    e menor agressão aos tecidos
+                  </div>
+                </div>
               </div>
-              <div class="text-center">
-                <h4 class="text-lg font-light text-gray-900 mb-3">Recuperação acelerada</h4>
-                <p class="text-gray-700 font-light">e menos dor no pós-operatório</p>
+
+              <!-- Accordion Item 4 -->
+              <div class="accordion-item bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
+                <button class="accordion-trigger w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200" onclick="toggleAccordion(this)">
+                  <span class="text-lg font-medium text-gray-900">Recuperação acelerada</span>
+                  <span class="accordion-icon text-2xl text-gray-600 transition-transform duration-200">+</span>
+                </button>
+                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-out">
+                  <div class="px-6 py-4 text-gray-700 font-light leading-relaxed">
+                    e menos dor no pós-operatório
+                  </div>
+                </div>
               </div>
-              <div class="text-center">
-                <h4 class="text-lg font-light text-gray-900 mb-3">Resultados previsíveis</h4>
-                <p class="text-gray-700 font-light">e sensação natural ao movimento</p>
+
+              <!-- Accordion Item 5 -->
+              <div class="accordion-item bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
+                <button class="accordion-trigger w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200" onclick="toggleAccordion(this)">
+                  <span class="text-lg font-medium text-gray-900">Resultados previsíveis</span>
+                  <span class="accordion-icon text-2xl text-gray-600 transition-transform duration-200">+</span>
+                </button>
+                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-out">
+                  <div class="px-6 py-4 text-gray-700 font-light leading-relaxed">
+                    e sensação natural ao movimento
+                  </div>
+                </div>
               </div>
-              <div class="text-center">
-                <h4 class="text-lg font-light text-gray-900 mb-3">Menor trauma cirúrgico</h4>
-                <p class="text-gray-700 font-light">com maior preservação dos tecidos saudáveis</p>
+
+              <!-- Accordion Item 6 -->
+              <div class="accordion-item bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
+                <button class="accordion-trigger w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200" onclick="toggleAccordion(this)">
+                  <span class="text-lg font-medium text-gray-900">Menor trauma cirúrgico</span>
+                  <span class="accordion-icon text-2xl text-gray-600 transition-transform duration-200">+</span>
+                </button>
+                <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-out">
+                  <div class="px-6 py-4 text-gray-700 font-light leading-relaxed">
+                    com maior preservação dos tecidos saudáveis
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1112,6 +1165,26 @@
           behavior: 'smooth'
         });
       });
+      
+      // Accordion functionality
+      function toggleAccordion(trigger) {
+        const accordionItem = trigger.parentElement;
+        const content = accordionItem.querySelector('.accordion-content');
+        const icon = trigger.querySelector('.accordion-icon');
+        const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+        
+        if (isOpen) {
+          // Close
+          content.style.maxHeight = '0px';
+          icon.textContent = '+';
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          // Open
+          content.style.maxHeight = content.scrollHeight + 'px';
+          icon.textContent = '−';
+          icon.style.transform = 'rotate(180deg)';
+        }
+      }
     </script>
   </body>
 </html>
